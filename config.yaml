@@ -1,6 +1,9 @@
 baseURL: "/"
 languageCode: "en-us"
 title: "Azimuth"
+params:
+    description: "Azimuth: An app for reference-based single-cell analysis"
+
 
 markup:
     goldmark:
