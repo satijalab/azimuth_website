@@ -1,0 +1,11 @@
+baseURL: "/"
+languageCode: "en-us"
+title: "Azimuth"
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+
+
+

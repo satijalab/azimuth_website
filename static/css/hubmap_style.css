@@ -1,0 +1,24 @@
+:root {
+  --primary-light: #696e83;
+  --primary-main: #444a65;
+  --primary-dark: #2f3346;
+  --secondary-light: #828282;
+  --secondary-main: #636363;
+  --secondary-dark: #454545;
+  --error-light: #e15ca1;
+  --error-main: #da348a;
+  --error-dark: #982460;
+  --warning-light: #db765d;
+  --warning-main: #d25435;
+  --warning-dark: #933a25;
+  --info-light: #5f9ada;
+  --info-main: #3781d1;
+  --info-dark: #265a92;
+  --success-light: #89a05f;
+  --success-main: #6c8938;
+  --success-dark: #4b5f27;
+}
+
+body {
+    font-family: Inter;
+}

@@ -1,0 +1,126 @@
+<style>
+.h-ref {
+    margin-bottom: 0.25rem !important;
+}   
+.buttons {
+    margin-bottom: 0.25rem !important;
+}
+.app-btn {
+    background-color: var(--info-main);
+    border-color: var(--info-main);
+}
+.zenodo-btn {
+    background-color: var(--warning-main);
+    border-color: var(--warning-main);
+}
+.snakemake-btn {
+    background-color: var(--success-main);
+    border-color: var(--success-main);
+}
+
+.card-header {
+    background-color: var(--primary-light);
+}
+.card-content {
+    padding-left: 1rem;
+}
+.card {
+    margin-bottom: 0.75rem
+}
+table {     
+    border-collapse: collapse;    
+    margin: 25px 0;    
+    font-size: 0.9em;    
+    font-family: sans-serif;    
+}     
+table thead tr {     
+    background-color: #EEE8AA;    
+    text-align: left;    
+}     
+table th,    
+table td {     
+    padding: 12px 15px;    
+}     
+table tbody tr {     
+    border-bottom: thin solid #dddddd;    
+}     
+    
+table tbody tr:nth-of-type(even) {     
+    background-color: #f3f3f3;    
+}     
+    
+table tbody tr:last-of-type {     
+    border-bottom: 0.25rem solid #EEE8AA;    
+}     
+
+.sticky	{
+	position: sticky;
+  	top: 2rem;
+}
+
+summary {
+    font-size:20px;
+}
+
+</style>
+
+<div class="container">
+
+    <section class="main-content columns is-fullheight">
+    <aside class="column is-3 is-narrow-mobile is-fullheight section is-hidden-mobile">
+        <div class="sticky">
+            <p class="menu-label is-hidden-touch">Reference Tissue</p>
+            <ul class="menu-list">
+                {{ range $.Site.Data.azimuth_references }}
+                    <li>
+                        <a href="#{{ .title }}" class=""> {{ .title }}</a>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+    </aside>
+
+  <div class="container column is-9">
+    <div class="section">
+        <h1 class="title is-1"> Azimuth References </h1>
+        {{ range $.Site.Data.azimuth_references }}
+        <h2 class="title is-2 h-ref" id="{{ .title }}"> {{ .title }} </h2>
+        <div class="buttons">
+            <a class="button app-btn" href="{{ .applink }}">App</a>
+            <a class="button zenodo-btn">Zenodo</a>
+            <a class="button snakemake-btn">Snakemake</a>
+        </div>
+        <div class="card">
+            <header class="card-header"> 
+                <h4 class="title is-4 card-header-title"> Overview </h4>
+            </header>
+            <div class="card-content">
+                <div class="content">
+                    <p> <b>Modalities:</b> {{ .modalities }} </p>
+                    <p> <b>Cells in Reference:</b> {{ .ncells }} </p>
+                    <p> <b>Species:</b> {{ .species }} </p>
+                    <p> <b>Dataset(s) source:</b> {{ .datasource | markdownify }} </p>
+                </div>
+            </div>
+        </div>
+        <p> {{ .details | markdownify }} </p>
+       
+        <br>
+
+        <h4 class="title is-4 h-ref"> Cell Type Labels </h4>
+
+        {{ range .celltypes }}
+            <details> 
+                <summary> {{ .name }} </summary>
+                {{ .labels | markdownify }} 
+            </details>
+        
+        {{ end }}
+       
+        <br>
+
+        {{ end }} 
+    </div>
+  </div>
+</section>
+</div>

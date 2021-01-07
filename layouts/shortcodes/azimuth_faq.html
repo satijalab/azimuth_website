@@ -1,0 +1,85 @@
+<style>
+.is-horizontal-center {
+    justify-content: center;
+    align-items:center;
+}
+.card {
+    height: 100%
+}
+.card-links {
+    color: rgb(74, 74, 74);
+}
+.faq p {
+    margin-bottom: 0.5rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.faq ul {
+    list-style: disc;
+    list-style-position: inside;
+    margin-left: 1.5rem;
+}
+.faq table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+}
+.faq table thead tr {
+    background-color: #EEE8AA;
+    text-align: left;
+}
+.faq table th,
+.faq table td {
+    padding: 12px 15px;
+}
+.faq table tbody tr {
+    border-bottom: thin solid #dddddd;
+}
+
+.faq table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.faq table tbody tr:last-of-type {
+    border-bottom: 0.25rem solid #EEE8AA;
+}
+
+</style>
+
+<section class="section">
+    <div class="container">
+        <h2 class="title is-2 has-text-centered"> Frequently Asked Questions </h2>
+        <div class="columns is-multiline">
+            {{ range $.Site.Data.azimuth_faq }}
+            <div class="column is-one-third is-desktop">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title is-horizontal-center">
+                                {{ .title }}
+                            </p>
+                        </header>
+                        <div class="card-content is-horizontal-center">
+                            <div class="content">
+                                {{ range .questions }}
+                                    {{ if .incard }}
+                                    <p><a class="card-links" href="#{{ .question }}"> {{ .question }} </a></p>
+                                    {{ end}}
+                                {{ end}}
+                            	<p><a style="color:DarkGrey" href="#{{ .title }}"> View all questions </a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+        {{ range $.Site.Data.azimuth_faq }}
+            <h2 id="{{ .title }}" class="title is-2 has-text-centered"> {{ .title }} </h2><hr>
+            {{ range .questions }}
+                <h4 id= "{{ .question }}" class="title is-4"> {{ .question }} </h4></a>
+                <div class="faq"> {{ .answer | markdownify }} </div> <br> 
+            {{ end }}
+        {{ end }}
+    </div>
+</section>
+

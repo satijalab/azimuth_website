@@ -1,0 +1,72 @@
+<style>
+.is-horizontal-center {
+    justify-content: center;
+    align-items:center;
+}
+.card-ref {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between
+}
+.card-header {
+    background-color: var(--primary-main);
+}
+.card-header-title{
+    color: white;
+}
+.ref-btn {
+    width: 50%;
+    margin-top: 0.25rem;
+    margin-bottom:0.25rem;
+    margin-left: 0.25rem;
+    margin-right:0.25rem;
+    display: inline-block;
+    align-self: flex-end;
+    background-color: var(--info-light);
+    color: white;
+}
+
+.content figure{
+    margin: 0rem;
+}
+
+.content figure img{
+    margin: auto;
+    max-width: 15rem;
+    max-height: 15rem;
+    object-fit: cover;
+}
+
+</style>
+
+<section class="section">
+    <div class="container">
+        <h2 class="title is-2 has-text-centered"> References </h2>
+        <div class="columns is-multiline">
+            {{ range $.Site.Data.azimuth_references }}
+            <div class="column is-one-quarter-desktop is-half-tablet">
+                    <div class="card card-ref">
+                        <header class="card-header">
+                            <p class="card-header-title is-horizontal-center">
+                                {{ .title }}
+                            </p>
+                        </header>
+                        <div class="card-content is-horizontal-center">
+                            <div class="content">
+                                <figure class="image ref-img">
+                                    <img src= "/img/references/{{ .image }}">
+                                </figure>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a class="button is-outlined ref-btn" href="{{ .infolink }}"> Learn more </a>
+                            <a class="button is-outlined ref-btn" href="{{ .applink }}"> Go to App </a>
+                        </footer>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+	</div>
+</div>
+</section>
+

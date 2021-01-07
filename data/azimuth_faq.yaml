@@ -1,0 +1,223 @@
+- category: General
+  title: General
+  questions:
+    - question: The app didn’t work!
+      incard: true
+      answer: |
+          To respect user privacy, we only collect basic usage statistics and do not store logs from user sessions of the app, so our ability to diagnose your specific problem is very limited. We have tried to clearly document the requirements for user-uploaded data, provide a detailed FAQ here, and display descriptive error messages in the app whenever possible.
+
+          If the app doesn’t work for any reason, you can perform an identical analysis using Seurat v4 following [mapping vignette](https://satijalab.org/seurat/reference_mapping.html) and seek support for any problems that arise during your use of the Seurat package [here](https://github.com/satijalab/seurat/issues).
+          
+          If you would like to help us improve the app, and you believe a dataset meets the requirements and it is publicly available for us to use for debugging but the app doesn’t work, please file a Github issue linking to the dataset and describing the issue [here](https://github.com/satijalab/azimuth/issues). 
+    
+    - question: Can I run the app myself?
+      incard: true
+      answer: |
+          The source code is available [here](https://github.com/satijalab/azimuth). However, we do not actively support users running the app themselves and strongly suggest you use Seurat v4 directly for reference mapping [mapping vignette](https://satijalab.org/seurat/reference_mapping.html). You can also download a Seurat v4 R script from the app once your analysis is complete to reproduce the results locally.
+
+- category: Uploading Data
+  title: Uploading Data
+  questions:
+    - question: What file types can I upload?
+      incard: true
+      answer: |
+        We accept the following file types as input:
+
+        * Seurat objects as RDS
+        * 10x Genomics H5 
+        * H5AD
+        * H5Seurat
+        * Matrix/matrix/data.frame as RDS
+        
+        Objects must contain an assay named 'RNA' with raw data in the 'counts' slot. Note that Azimuth uses only the counts matrix (unnormalized), and will discard additional data that is present if you choose to upload a Seurat object or H5AD file.
+
+    - question: Can you provide me with a sample input?
+      incard: true
+      answer: |
+          [Here](https://www.dropbox.com/s/cmbvq2og93lnl9z/pbmc_10k_v3_filtered_feature_bc_matrix.h5?dl=0) is a sample dataset of ~10,000 PBMC produced with the 10X v3 Chromium kit, and downloaded from their website. The file contains only a counts matrix, and can be uploaded directly into Azimuth
+    
+    - question: How big can my uploaded dataset be?
+      incard: true
+      answer: |
+          Uploads must be smaller than 1GB and contain less than 100,000 cells. You can always map your dataset locally using Seurat v4 if your dataset is too large for the app. 
+
+          If your Seurat object contains analysis results already, you can use `DietSeurat` to pare down the Seurat object before uploading it, as everything except cell-level metadata and the counts in the "RNA" assay of the object are removed.
+          
+          ```R
+          DefaultAssay(object) <- “RNA”
+          object <- DietSeurat(object = object, assays = “RNA”)
+          ```
+
+    - question: What datasets can I map?
+      incard: false
+      answer: |
+          This version of Azimuth only supports datasets derived from human PBMC. We have successfully mapped datasets from both healthy PBMC, and a large variety of disease conditions. For example we have successfully mapped PBMC that have been stimulated in-vitro with interferon, as well as from patients with lupus, sepsis, osteoarthritis, rheumatoid arthritis, and COVID-19. 
+          
+          We have also successfully mapped datasets with highly skewed ratios of canonical PBMC cell types (for example, samples with a severe depletion of monocytes or T cells). However, in this version of Azimuth, we do not recommend mapping samples that have been enriched to consist primarily of a single cell type. This is due to assumptions that are made during SCTransform normalization, and will be extended in future versions. 
+          
+          While our reference was constructed using the 10X platform, you can upload datasets from any scRNA-seq technology to Azimuth. For example, [this manuscript](https://www.nature.com/articles/s41587-020-0465-8) has sample PBMC data from the 10X, inDrops, Drop-seq, SeqWell, SMART-Seq, and Fluidigm platforms. In our testing, all datasets can be successfully mapped using Azimuth.
+          
+          To use your data in the app, we require that it has between 100 and 100,000 cells; has at least 250 genes in common with the reference; and has an expression profile that is similar to human PBMC (as assessed by pseudo-bulk correlation). You should run the mapping algorithm locally in Seurat v4 or consider alternatives to reference mapping if your dataset does not meet these criteria.
+
+    - question: My dataset is PBMCs, but it failed with the “Query is too dissimilar” message. / Can I map datasets containing a single cell type?
+      incard: false
+      answer: |
+          We calculate the correlation of pseudo-bulk gene expression for genes in common between your uploaded query and our reference, based on 5000 variable genes. If this correlation is below 0.75, we do not support mapping in the web app. As described above, even datasets from heavily perturbed PBMC can be successfully mapped using our web app, and should pass these thresholds.
+
+    - question: Should I filter the genes in my dataset before uploading?
+      incard: false
+      answer: |
+          No, do not filter genes in the data you upload.
+
+    - question: Should I map my batches separately or combined?
+      incard: false
+      answer: |
+          We have observed that the UMAP and label transfer results are very similar whether a dataset containing multiple batches is mapped one batch at a time or combined. However, the mapping score returned by the app (see below for more discussion) may change. In the presence of batch effects, cells from certain batches sometimes receive high mapping scores when the batches are mapped separately but receive low mapping scores when batches are mapped together. Since the mapping score is meant to identify cells that are defined by a source of heterogeneity that is not present in the reference dataset, the presence of batch effects may cause low mapping scores.
+    
+    - question: What optimizations are in the app that are not default in Seurat?
+      incard: false
+      answer: |
+          To optimize the web app time and resource consumption, we made several changes to the base Seurat mapping workflow.
+          * SCTransform
+            * When fitting generalized linear models, we use a representative set of 2000 genes and 2000 cells 
+            * To further speed up GLM model fitting, we use the recently developed  [glmGamPoi package](https://github.com/const-ae/glmGamPoi) from Constantin Ahlmann-Eltze and Wolfgang Huber. 
+          * Mapping
+            * We leverage a downsampled reference with 40,000 cells. Downsampling was done to ensure good representation of all datasets present in the full reference.
+            * We leverage a previously computed and cached  neighbor index and neighbor list for the reference. This speeds up the neighbor-finding steps in the mapping algorithm.
+            * For the approximate nearest neighbor finding steps in the algorithm, we use `n.trees = 20`, which provides speedup compared to default `n.trees = 50` with minimal impact on the quality of downstream results.
+          * Analysis
+            * We leverage the [presto package](https://github.com/immunogenomics/presto) from Ilya Korsunsky and Soumya Rayachauduri, for differential expression 
+
+- category: Preprocessing
+  title: Preprocessing
+  questions:
+    - question: Can I preprocess my data myself?
+      incard: true
+      answer: |
+          You can filter cells based on any criteria you want before uploading data to the app. However, the query data must be normalized uniformly with the reference by the app, so you must include the raw data in the ‘RNA’ assay ‘counts’ slot. 
+    
+    - question: I can’t map cells after filtering in the “Preprocessing” tab
+      incard: true
+      answer: |
+          There must be at least 100 cells remaining after filtering to proceed.
+
+- category: Mapping
+  title: Mapping
+  questions:
+    - question: How long will mapping take?
+      incard: true
+      answer: |
+          Datasets of <10,000 cells will often finish processing in less than 1 minute. A 50,000 cell dataset may take around 3-4 minutes to preprocess, perform mapping, and prepare the visualizations; 100,000 cells may take around 8-9 minutes. Please be patient if we’re experiencing high load. It’s still running if you see the progress bar in the bottom right corner. 
+
+    - question: Can I run the mapping algorithm myself?
+      incard: true
+      answer: |
+          Yes! Reference mapping is available in Seurat v4. See the reference mapping vignette [here](https://satijalab.org/seurat/reference_mapping.html). You can also download a customized Seurat v4 R script template after mapping on the “Download Results” tab to reproduce the analysis performed in the app.
+    
+    - question: What is the reference dataset?
+      incard: false
+      answer: |
+          The reference used in the app contains 40,000 cells from the 160,000 cell PBMC CITE-seq dataset from ["Integrated analysis of multimodal single-cell data" (Y. Hao, S. Hao, bioRxiv 2020)](http://www.satijalab.org/v4preprint). The reference is downsampled so that mapping in the web app runs more quickly and with less computational resources. Mapping to this downsampled reference is illustrated in the Seurat v4 script you can download from the app.
+          
+          We note that the reference was compiled using CITE-seq, which simultaneously measures RNA and surface protein expression in single cells. However, you can map to this reference using only scRNA-seq data.
+
+    - question: Can I map to a different reference?
+      incard: true
+      answer: |
+          Right now, the app only contains the multimodal PBMC atlas. However, you can build a reference and map query datasets to it using Seurat v4. 
+
+- category: Results
+  title: Results
+  questions:
+    - question: What do the columns in the biomarkers table mean?
+      incard: true
+      answer: |
+          The top 10 RNA and imputed protein biomarkers for predicted cell type clusters with at least 15 query cells are calculated using differential expression analysis, using the [presto package](https://github.com/immunogenomics/presto). The columns of the table are:
+            
+            * avgExpr: mean value of feature for cells in cluster
+            * auc: area under ROC
+            * padj: Benjamini-Hochberg adjusted p value
+            * pct_in: percent of cells in the cluster with nonzero feature value 
+            * pct_out: percent of cells out of the cluster with nonzero feature value
+
+    - question: Can I visualize my own metadata?
+      incard: false
+      answer: |
+          If the file format you upload supports metadata and your file contains cell-level metadata, after mapping you can visualize categorical metadata fields (with up to 50 categories) on the "Cell Plots" tab, and numerical metadata fields on the "Feature Plots" tab.
+    
+    - question: What are the possible predicted cell types?
+      incard: false
+      answer: |
+          There are 30 cell types in the reference:
+          | Abbreviated Name | Full Name                          |
+          |------------------|----------------------------------- |
+          | ASDC             | AXL+-Siglec6+ DC                   |
+          | B intermediate   | Intermediate B                     |
+          | B memory         | Memory B                           |
+          | B naive          | Naive B                            |
+          | CD14 Mono        | CD14+ Monocytes                    |
+          | CD16 Mono        | CD16+ Monocytes                    |
+          | CD4 CTL          | CD4+ Cytotoxic T Lymphocyte        |
+          | CD4 Naive        | CD4+ T Naive                       |
+          | CD4 Proliferating| CD4+ T Proliferating               |
+          | CD4 TCM          | CD4+ T Central Memory              |
+          | CD4 TEM          | CD4+ T Effector Memory             |
+          | CD8 Naive        | CD8+ T Naive                       |
+          | CD8 Proliferating| CD8+ Proliferating                 |
+          | CD8 TCM          | CD8+ T Central Memory              |
+          | CD8 TEM          | CD8+ T Effector Memory             |
+          | cDC1             | CD141+ Conventional DC             |
+          | cDC2             | CD1C+ Conventional DC              |
+          | dnT              | double-negative T                  |
+          | Eryth            | erythroid                          |
+          | gdT              | gamma-delta T                      |
+          | HSPC             | Hematopoietic Stem Progenitor Cell |
+          | ILC              | innate lymphoid cell               |
+          | MAIT             | mucosal associated invariant T     |
+          | NK               | CD56dim NK                         |
+          | NK Proliferating | NK Proliferating                   |
+          | NK_CD56bright    | CD56bright NK                      |
+          | pDC              | plasmacytoid DC                    |
+          | Plasmablast      | Plasmablast                        |
+          | Platelet         | Platelet                           |
+          | Treg             | CD4+ Regulatory T                  |
+    - question: Some of the labels on the UMAP aren’t near the cluster.
+      incard: false
+      answer: |
+          Gamma-delta cells, for example, are represented by three disjoint clusters in the UMAP. On the plot, the label appears in between the clusters, which happens to be over the CD8 TEM cells. We’re working on a visual fix.
+
+    - question: What are the prediction scores?
+      incard: true
+      answer: |
+          The "[NAME]" feature, available to plot in the "Prediction scores and continuous metadata" menu in the Feature Plots tab, is the prediction score for the cell type [NAME]. The "predicted.id.score" column available to plot in the Feature Plots tab, and provided in the download TSV file, is the prediction score for the assigned cell type, and is the maximum score over all possible cell types. For a given cell, the sum of prediction scores for all cell types is 1. Prediction scores are calculated based on the cell type identities of the reference cells near to the mapped query cell.
+    
+    - question: What are the mapping scores?
+      incard: false
+      answer: |
+          The "mapping.score" column is available to plot in the Feature Plots tab, and is provided in the download TSV file. This value from 0 to 1 reflects confidence that this cell is well represented by the reference.
+
+    - question: How can a cell get a high prediction score and a low mapping score?
+      incard: false
+      answer: |
+          A high prediction score means that a high proportion of reference cells near a query cell have the same label. However, these reference cells may not represent the query cell well, resulting in a low mapping score. Cell types that are not present in the reference should have lower mapping scores. For example, we have observed that query datasets containing neutrophils (which are not present in our reference), will be confidently annotated as CD14 Monocytes, as Monocytes are the closest cell type to neutrophils, but receive a low mapping score.
+    
+    - question: How can a cell get a low prediction score and a high mapping score?
+      incard: false
+      answer: |
+          A cell can get a low prediction score because its probability is equally split between two clusters (for example, for some cells, it may not be possible to confidently classify them between the two possibilities of CD4 Central Memory (CM), and Effector Memory (EM), which lowers the prediction score, but the mapping score will remain high.
+
+    - question: Why aren’t all the predicted cell types available in the biomarkers table?
+      incard: false
+      answer: |
+          Cell types must have at least 15 query cells of that predicted type to find biomarkers.
+    
+    - question: Where do the imputed protein values come from?
+      incard: true
+      answer: |
+          Expression values for 224 proteins are imputed for all query cells based on expression values measured using antibody-derived tags (ADTs) for reference cells using [CITE-seq](https://cite-seq.com/). Imputed expression values are computed based on the measured expression values in reference cells near to a mapped query cell. They are available to download as an Assay and to visualize in the Feature Plots tab.
+    
+    - question: Can I save my results?
+      incard: false
+      answer: |
+          We do not support saving app sessions, so make sure to download the files you need before navigating away from the webpage in your browser. You can download the UMAP (Seurat Reduction RDS), cell type predictions and prediction scores (TSV), and imputed protein (Seurat Assay RDS) from the Downloads tab after mapping.
+

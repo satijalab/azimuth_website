@@ -1,0 +1,66 @@
+- title: PBMC
+  applink: https://azimuth.satijalab.org
+  infolink: references
+  image: pbmc.png
+  snakemake: https://github.com/andrewwbutler/azimuth-references/tree/master/pbmc
+  zenodo: https://zenodo.org/
+  modalities: RNA, ADT
+  ncells: 161,764
+  species: Human
+  datasource: |
+      [Hao and Hao et al, bioRvix 2020](https://satijalab.org/v4preprint)
+  details: |
+      This PBMC reference dataset was generated as part of the [Hao and Hao et al, bioRvix 2020](https://satijalab.org/v4preprint) paper. It is comprised of data from eight volunteers enrolled in an HIV vaccine trial from which three time point samples were taken at day 0, 3, and 7 following vaccination. All 24 samples were processed with a CITE-seq panel of 228 TotalSeq A antibodies to generate single-cell RNA and ADT data. The data were then integrated using metholody described in the pre-print linked above to generate a weighted nearest neighbor (WNN) representation of the RNA and protein data jointly. This WNN representation is used in the Azimuth app to assign query celltypes, embed in the reference UMAP, and impute protein levels in the query dataset.  
+  celltypes: 
+    - name: "celltype.l2"
+      labels: |
+        | Abbreviated Name | Full Name                          |    
+        |------------------|----------------------------------- |    
+        | ASDC             | AXL+-Siglec6+ DC                   |    
+        | B intermediate   | Intermediate B                     |    
+        | B memory         | Memory B                           |    
+        | B naive          | Naive B                            |    
+        | CD14 Mono        | CD14+ Monocytes                    |    
+        | CD16 Mono        | CD16+ Monocytes                    |    
+        | CD4 CTL          | CD4+ Cytotoxic T Lymphocyte        |    
+        | CD4 Naive        | CD4+ T Naive                       |    
+        | CD4 Proliferating| CD4+ T Proliferating               |    
+        | CD4 TCM          | CD4+ T Central Memory              |    
+        | CD4 TEM          | CD4+ T Effector Memory             |    
+        | CD8 Naive        | CD8+ T Naive                       |    
+        | CD8 Proliferating| CD8+ Proliferating                 |    
+        | CD8 TCM          | CD8+ T Central Memory              |    
+        | CD8 TEM          | CD8+ T Effector Memory             |    
+        | cDC1             | CD141+ Conventional DC             |    
+        | cDC2             | CD1C+ Conventional DC              |    
+        | dnT              | double-negative T                  |    
+        | Eryth            | erythroid                          |    
+        | gdT              | gamma-delta T                      |    
+        | HSPC             | Hematopoietic Stem Progenitor Cell |    
+        | ILC              | innate lymphoid cell               |    
+        | MAIT             | mucosal associated invariant T     |    
+        | NK               | CD56dim NK                         |    
+        | NK Proliferating | NK Proliferating                   |    
+        | NK_CD56bright    | CD56bright NK                      |    
+        | pDC              | plasmacytoid DC                    |    
+        | Plasmablast      | Plasmablast                        |    
+        | Platelet         | Platelet                           |    
+        | Treg             | CD4+ Regulatory T                  |    
+
+- title: Pancreas
+  applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-pancreas
+  infolink: references
+  image: pancreas.png
+
+- title: Mouse Motor Cortex
+  applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-mouse-brain
+  infolink: references
+  image: brain.png
+
+- title: Human Motor Cortex
+  applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-brain
+  infolink: references
+  image: brain.png
+
+
+
