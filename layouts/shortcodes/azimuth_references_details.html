@@ -34,7 +34,7 @@ table {
     font-family: sans-serif;    
 }     
 table thead tr {     
-    background-color: #EEE8AA;    
+    background-color: var(--primary-light);    
     text-align: left;    
 }     
 table th,    
@@ -50,7 +50,7 @@ table tbody tr:nth-of-type(even) {
 }     
     
 table tbody tr:last-of-type {     
-    border-bottom: 0.25rem solid #EEE8AA;    
+    border-bottom: 0.25rem solid var(--primary-light);    
 }     
 
 .sticky	{
@@ -108,17 +108,36 @@ summary {
         <br>
 
         <h4 class="title is-4 h-ref"> Cell Type Labels </h4>
-
         {{ range .celltypes }}
-            <details> 
-                <summary> {{ .name }} </summary>
-                {{ .labels | markdownify }} 
-            </details>
-        
+        <details><summary> {{ .name }} </summary>
+            {{ $csv := printf "%s/%s" "static/csv" .file }}
+            {{$sep := ","}}
+            <table>
+            {{range $i, $r := getCSV $sep $csv}}
+                {{ if eq $i 0 }}
+                    <thead>
+                        <tr>
+                        {{ range $j, $c := $r }}
+                            {{ if gt $j 1 }}
+                                <th> {{ index $r $j }} </th>
+                            {{ end }}
+                        {{ end }}
+                        </tr>
+                    </thead>
+                {{ else }}
+                    <tr>
+                    {{ range $j, $c := $r }}
+                        {{ if gt $j 1 }}
+                            <td> {{ index $r $j }} </td> 
+                        {{ end }}
+                    {{ end }}
+                    </tr>
+                {{ end }}
+            {{end}}
+            </table>
         {{ end }}
-       
+        </details>
         <br>
-
         {{ end }} 
     </div>
   </div>

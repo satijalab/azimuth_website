@@ -1,8 +1,26 @@
 .logo h1 {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 3rem;
-    padding-right: 1.5rem;
-    color: #3a41b8;
-    text-transform: uppercase;
+    font-size: 2rem;
+    padding-left: 1.75rem;
+    color: white;
+    font-weight: bold;
 }
 
+.navbar {
+    background-color: var(--primary-main);
+}
+
+.navbar-end {
+    padding-right: 2rem;
+}
+
+.navbar-item {
+    color: white;    
+}
+
+.section.nopad {
+    padding: 0.5rem;
+}
+
+.section {
+    padding-top: 1rem;
+}

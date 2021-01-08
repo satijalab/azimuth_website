@@ -6,7 +6,7 @@
 .card-ref {
     display:flex;
     flex-direction:column;
-    justify-content:space-between
+    justify-content:space-between;
 }
 .card-header {
     background-color: var(--primary-main);
@@ -16,13 +16,14 @@
 }
 .ref-btn {
     width: 50%;
-    margin-top: 0.25rem;
-    margin-bottom:0.25rem;
-    margin-left: 0.25rem;
-    margin-right:0.25rem;
+    margin-top: 0.2rem;
+    margin-bottom:0.2rem;
+    margin-left: 0.2rem;
+    margin-right:0.2rem;
     display: inline-block;
     align-self: flex-end;
     background-color: var(--info-light);
+    border-color: var(--info-light);
     color: white;
 }
 
@@ -37,6 +38,7 @@
     object-fit: cover;
 }
 
+
 </style>
 
 <section class="section">
@@ -45,7 +47,7 @@
         <div class="columns is-multiline">
             {{ range $.Site.Data.azimuth_references }}
             <div class="column is-one-quarter-desktop is-half-tablet">
-                    <div class="card card-ref">
+                    <div class="card card-ref shadow">
                         <header class="card-header">
                             <p class="card-header-title is-horizontal-center">
                                 {{ .title }}
@@ -59,7 +61,7 @@
                             </div>
                         </div>
                         <footer class="card-footer">
-                            <a class="button is-outlined ref-btn" href="{{ .infolink }}"> Learn more </a>
+                            <a class="button is-outlined ref-btn" href="references/#{{ .title }}"> Learn more </a>
                             <a class="button is-outlined ref-btn" href="{{ .applink }}"> Go to App </a>
                         </footer>
                     </div>

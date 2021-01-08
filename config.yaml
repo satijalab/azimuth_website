@@ -1,8 +1,15 @@
 baseURL: "/"
 languageCode: "en-us"
 title: "Azimuth"
-params:
-    description: "Azimuth: An app for reference-based single-cell analysis"
+
+menu:
+    main:
+        - name: "Home"
+          url: "/"
+          weight: 1
+        - name: "References"
+          url: "/references"
+          weight: 2
 
 
 markup:
@@ -10,5 +17,7 @@ markup:
         renderer:
             unsafe: true
 
+params:
+    description: "Azimuth: An app for reference-based single-cell analysis"
 
 

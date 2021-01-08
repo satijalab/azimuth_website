@@ -1,2 +1,38 @@
 <header>
+   <div class="container">     
+        <nav class="navbar has-shadow" role="navigation">     
+            <div class="navbar-brand">     
+                <!---<a href="/" title="home" class="navbar-item">     
+                    <span class="logo"><h1>{{ .Site.Title }}</h1></span>     
+                </a> --->    
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">     
+                    <span aria-hidden="true"></span>     
+                    <span aria-hidden="true"></span>     
+                    <span aria-hidden="true"></span>     
+                </a>     
+            </div>     
+            <div class="navbar-menu">     
+                <div class="navbar-end">     
+                    {{ range .Site.Menus.main }}    
+                    <a href="{{ .URL }}" class="navbar-item">{{ .Name }}</a>    
+                    {{ end }}    
+                </div>     
+            </div>     
+        </nav>     
+    </div>     
+    <script>     
+        $(document).ready(function () {     
+            $(".navbar-burger").click(function () {     
+                $(".navbar-burger").toggleClass("is-active");    
+                $(".navbar-menu").toggleClass("is-active");    
+            })    
+        })    
+    </script> 
+    <div class="section nopad">
+        <div class="container">
+            <div class = "content">
+                <img src="/img/azimuth_banner.png">
+            </div>
+        </div>
+    </div> 
 </header>
