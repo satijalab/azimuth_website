@@ -26,5 +26,20 @@
   applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-brain
   image: brain.png
 
+- title: Lung
+  applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-lung-refsct
+  image: lungs.png
+ 
+- title: Liver
+  applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-liver-logsupport
+  image: liver.png
+  
+- title: Colon
+  applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-colon-logsupport
+  image: colon.png
+  
+- title: Esophagus
+  applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-esophagus-refsct
+  image: esophagus.png
 
 
