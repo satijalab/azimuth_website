@@ -87,8 +87,8 @@ summary {
         <h2 class="title is-2 h-ref" id="{{ .title }}"> {{ .title }} </h2>
         <div class="buttons">
             <a class="button app-btn" href="{{ .applink }}">App</a>
-            <a class="button zenodo-btn">Zenodo</a>
-            <a class="button snakemake-btn">Snakemake</a>
+            <a class="button zenodo-btn" href="{{ .zenodo }}">Zenodo</a>
+            <a class="button snakemake-btn" href="{{ .snakemake }}">Snakemake</a>
         </div>
         <div class="card">
             <header class="card-header"> 
@@ -97,9 +97,10 @@ summary {
             <div class="card-content">
                 <div class="content">
                     <p> <b>Modalities:</b> {{ .modalities }} </p>
-                    <p> <b>Cells in Reference:</b> {{ .ncells }} </p>
+                    <p> <b>{{ .unit }} in Reference:</b> {{ .nunit }} </p>
                     <p> <b>Species:</b> {{ .species }} </p>
-                    <p> <b>Dataset(s) source:</b> {{ .datasource | markdownify }} </p>
+                    <p> <b>Dataset(s):</b> {{ .dataref | markdownify }} </p>
+                    <p> <b>Demo Dataset:</b> {{ .demodata | markdownify }} </p>
                 </div>
             </div>
         </div>
@@ -107,8 +108,8 @@ summary {
        
         <br>
 
-        <h4 class="title is-4 h-ref"> Cell Type Labels </h4>
-        {{ range .celltypes }}
+        <h4 class="title is-4 h-ref"> Annotation Details </h4>
+        {{ range .annotations }}
         <details><summary> {{ .name }} </summary>
             {{ $csv := printf "%s/%s" "static/csv" .file }}
             {{$sep := ","}}
