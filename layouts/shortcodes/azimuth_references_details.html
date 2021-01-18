@@ -120,7 +120,7 @@ summary {
                         <tr>
                         {{ range $j, $c := $r }}
                             {{ if gt $j 0 }}
-                                <th> {{ index $r $j }} </th>
+                                <th> {{ index $r $j | markdownify }} </th>
                             {{ end }}
                         {{ end }}
                         </tr>
@@ -129,7 +129,7 @@ summary {
                     <tr>
                     {{ range $j, $c := $r }}
                         {{ if gt $j 0 }}
-                            <td> {{ index $r $j }} </td> 
+                            <td> {{ index $r $j | markdownify }} </td> 
                         {{ end }}
                     {{ end }}
                     </tr>
