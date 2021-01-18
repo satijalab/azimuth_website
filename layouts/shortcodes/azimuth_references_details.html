@@ -119,7 +119,7 @@ summary {
                     <thead>
                         <tr>
                         {{ range $j, $c := $r }}
-                            {{ if gt $j 1 }}
+                            {{ if gt $j 0 }}
                                 <th> {{ index $r $j }} </th>
                             {{ end }}
                         {{ end }}
@@ -128,7 +128,7 @@ summary {
                 {{ else }}
                     <tr>
                     {{ range $j, $c := $r }}
-                        {{ if gt $j 1 }}
+                        {{ if gt $j 0 }}
                             <td> {{ index $r $j }} </td> 
                         {{ end }}
                     {{ end }}
