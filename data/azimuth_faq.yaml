@@ -15,6 +15,11 @@
       answer: |
           The source code is available [here](https://github.com/satijalab/azimuth). However, we do not actively support users running the app themselves and strongly suggest you use Seurat v4 directly for reference mapping [mapping vignette](https://satijalab.org/seurat/reference_mapping.html). You can also download a Seurat v4 R script from the app once your analysis is complete to reproduce the results locally.
 
+    - question: What is HuBMAP and how can I learn more?
+      incard: true
+      answer: |
+          HuBMAP is a consortium of diverse research teams funded by the [Common Fund at the National Institutes of Health](https://commonfund.nih.gov/HuBMAP) that is working to create a framework for mapping the body at single cell resolution to better understand how the relationships among our cells affects out health. To learn more, visit the corsortium home page [here](https://hubmapconsortium.org/).
+
 - category: Uploading Data
   title: Uploading Data
   questions:
@@ -34,8 +39,8 @@
     - question: Can you provide me with a sample input?
       incard: true
       answer: |
-          [Here](https://www.dropbox.com/s/cmbvq2og93lnl9z/pbmc_10k_v3_filtered_feature_bc_matrix.h5?dl=0) is a sample dataset of ~10,000 PBMC produced with the 10X v3 Chromium kit, and downloaded from their website. The file contains only a counts matrix, and can be uploaded directly into Azimuth
-    
+        All reference apps come with a 'demo' dataset which can be loaded with a button on the home sidebar. These represent datasets of the same tissue as the reference but were not included in the reference itself. These can be mapped to explore the app and mapping process without requiring the user to upload any data themselves. 
+
     - question: How big can my uploaded dataset be?
       incard: true
       answer: |
@@ -51,18 +56,7 @@
     - question: What datasets can I map?
       incard: false
       answer: |
-          This version of Azimuth only supports datasets derived from human PBMC. We have successfully mapped datasets from both healthy PBMC, and a large variety of disease conditions. For example we have successfully mapped PBMC that have been stimulated in-vitro with interferon, as well as from patients with lupus, sepsis, osteoarthritis, rheumatoid arthritis, and COVID-19. 
-          
-          We have also successfully mapped datasets with highly skewed ratios of canonical PBMC cell types (for example, samples with a severe depletion of monocytes or T cells). However, in this version of Azimuth, we do not recommend mapping samples that have been enriched to consist primarily of a single cell type. This is due to assumptions that are made during SCTransform normalization, and will be extended in future versions. 
-          
-          While our reference was constructed using the 10X platform, you can upload datasets from any scRNA-seq technology to Azimuth. For example, [this manuscript](https://www.nature.com/articles/s41587-020-0465-8) has sample PBMC data from the 10X, inDrops, Drop-seq, SeqWell, SMART-Seq, and Fluidigm platforms. In our testing, all datasets can be successfully mapped using Azimuth.
-          
-          To use your data in the app, we require that it has between 100 and 100,000 cells; has at least 250 genes in common with the reference; and has an expression profile that is similar to human PBMC (as assessed by pseudo-bulk correlation). You should run the mapping algorithm locally in Seurat v4 or consider alternatives to reference mapping if your dataset does not meet these criteria.
-
-    - question: My dataset is PBMCs, but it failed with the “Query is too dissimilar” message. / Can I map datasets containing a single cell type?
-      incard: false
-      answer: |
-          We calculate the correlation of pseudo-bulk gene expression for genes in common between your uploaded query and our reference, based on 5000 variable genes. If this correlation is below 0.75, we do not support mapping in the web app. As described above, even datasets from heavily perturbed PBMC can be successfully mapped using our web app, and should pass these thresholds.
+          To use your data in the app, we require that it has between 100 and 100,000 cells and has at least 250 genes in common with the reference. You should run the mapping algorithm locally in Seurat v4 or consider alternatives to reference mapping if your dataset does not meet these criteria.
 
     - question: Should I filter the genes in my dataset before uploading?
       incard: false
@@ -114,17 +108,10 @@
       answer: |
           Yes! Reference mapping is available in Seurat v4. See the reference mapping vignette [here](https://satijalab.org/seurat/reference_mapping.html). You can also download a customized Seurat v4 R script template after mapping on the “Download Results” tab to reproduce the analysis performed in the app.
     
-    - question: What is the reference dataset?
-      incard: false
-      answer: |
-          The reference used in the app contains 40,000 cells from the 160,000 cell PBMC CITE-seq dataset from ["Integrated analysis of multimodal single-cell data" (Y. Hao, S. Hao, bioRxiv 2020)](http://www.satijalab.org/v4preprint). The reference is downsampled so that mapping in the web app runs more quickly and with less computational resources. Mapping to this downsampled reference is illustrated in the Seurat v4 script you can download from the app.
-          
-          We note that the reference was compiled using CITE-seq, which simultaneously measures RNA and surface protein expression in single cells. However, you can map to this reference using only scRNA-seq data.
-
     - question: Can I map to a different reference?
       incard: true
       answer: |
-          Right now, the app only contains the multimodal PBMC atlas. However, you can build a reference and map query datasets to it using Seurat v4. 
+          Currently, we provide apps for the references summarized [here](/references/). However, you can build a reference and map query datasets to it using Seurat v4. 
 
 - category: Results
   title: Results
@@ -145,46 +132,10 @@
       answer: |
           If the file format you upload supports metadata and your file contains cell-level metadata, after mapping you can visualize categorical metadata fields (with up to 50 categories) on the "Cell Plots" tab, and numerical metadata fields on the "Feature Plots" tab.
     
-    - question: What are the possible predicted cell types?
-      incard: false
-      answer: |
-          There are 30 cell types in the reference:
-          | Abbreviated Name | Full Name                          |
-          |------------------|----------------------------------- |
-          | ASDC             | AXL+-Siglec6+ DC                   |
-          | B intermediate   | Intermediate B                     |
-          | B memory         | Memory B                           |
-          | B naive          | Naive B                            |
-          | CD14 Mono        | CD14+ Monocytes                    |
-          | CD16 Mono        | CD16+ Monocytes                    |
-          | CD4 CTL          | CD4+ Cytotoxic T Lymphocyte        |
-          | CD4 Naive        | CD4+ T Naive                       |
-          | CD4 Proliferating| CD4+ T Proliferating               |
-          | CD4 TCM          | CD4+ T Central Memory              |
-          | CD4 TEM          | CD4+ T Effector Memory             |
-          | CD8 Naive        | CD8+ T Naive                       |
-          | CD8 Proliferating| CD8+ Proliferating                 |
-          | CD8 TCM          | CD8+ T Central Memory              |
-          | CD8 TEM          | CD8+ T Effector Memory             |
-          | cDC1             | CD141+ Conventional DC             |
-          | cDC2             | CD1C+ Conventional DC              |
-          | dnT              | double-negative T                  |
-          | Eryth            | erythroid                          |
-          | gdT              | gamma-delta T                      |
-          | HSPC             | Hematopoietic Stem Progenitor Cell |
-          | ILC              | innate lymphoid cell               |
-          | MAIT             | mucosal associated invariant T     |
-          | NK               | CD56dim NK                         |
-          | NK Proliferating | NK Proliferating                   |
-          | NK_CD56bright    | CD56bright NK                      |
-          | pDC              | plasmacytoid DC                    |
-          | Plasmablast      | Plasmablast                        |
-          | Platelet         | Platelet                           |
-          | Treg             | CD4+ Regulatory T                  |
     - question: Some of the labels on the UMAP aren’t near the cluster.
       incard: false
       answer: |
-          Gamma-delta cells, for example, are represented by three disjoint clusters in the UMAP. On the plot, the label appears in between the clusters, which happens to be over the CD8 TEM cells. We’re working on a visual fix.
+          One example of this is in the PBMC reference, gamma-delta cells, are represented by three disjoint clusters in the UMAP. On the plot, the label appears in between the clusters, which happens to be over the CD8 TEM cells. We’re working on a visual fix.
 
     - question: What are the prediction scores?
       incard: true
