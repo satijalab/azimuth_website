@@ -4,42 +4,61 @@
   snakemake: https://github.com/andrewwbutler/azimuth-references/tree/master/pbmc
   zenodo: https://zenodo.org/
   modalities: RNA, ADT
-  ncells: 161,764
+  unit: Cells
+  nunit: 161,764
   species: Human
-  datasource: |
+  dataref: |
       [Hao and Hao et al, bioRvix 2020](https://satijalab.org/v4preprint)
+  demodata: "[11,769 PBMCs from 10x Genomics](https://support.10xgenomics.com/single-cell-gene-expression/datasets/3.0.0/pbmc_10k_v3)" 
   details: |
-      This PBMC reference dataset was generated as part of the [Hao and Hao et al, bioRvix 2020](https://satijalab.org/v4preprint) paper. It is comprised of data from eight volunteers enrolled in an HIV vaccine trial from which three time point samples were taken at day 0, 3, and 7 following vaccination. All 24 samples were processed with a CITE-seq panel of 228 TotalSeq A antibodies to generate single-cell RNA and ADT data. The data were then integrated using metholody described in the pre-print linked above to generate a weighted nearest neighbor (WNN) representation of the RNA and protein data jointly. This WNN representation is used in the Azimuth app to assign query celltypes, embed in the reference UMAP, and impute protein levels in the query dataset.  
-  celltypes:
+      This PBMC reference dataset was generated as part of the [Hao and Hao et al, bioRvix 2020](https://satijalab.org/v4preprint) paper. It is comprised of data from eight volunteers enrolled in an HIV vaccine trial from which three time point samples were taken at day 0, 3, and 7 following vaccination. All 24 samples were processed with a CITE-seq panel of 228 TotalSeq A antibodies to generate single-cell RNA and ADT data. The data were then integrated using metholody described in the pre-print linked above to generate a weighted nearest neighbor (WNN) representation of the RNA and protein data jointly. This WNN representation is used in the Azimuth app to assign celltypes, embed in the reference UMAP, and impute protein levels for the query dataset.  
+  annotations:
       - name: celltype.l2
         file: pbmc_celltype.l2.csv
 
 - title: Pancreas
   applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-pancreas
   image: pancreas.png
-
+  snakemake: https://github.com/andrewwbutler/azimuth-references/tree/master/pancreas
+  zenodo: https://zenodo.org/
+  modalities: RNA
+  unit: Cells
+  nunit: 35,674
+  species: Human
+  demodata: "[Enge et al, Cell 2017](https://doi.org/10.1016/j.cell.2017.09.004)"
+  dataref: |
+      [[Grün et al, Cell Stem Cell 2016](https://dx.doi.org/10.1016%2Fj.stem.2016.05.010)], [[Muraro, Dharmadhikari et al, Cell Systems 2016](https://doi.org/10.1016/j.cels.2016.09.002)], [[ Segerstolpe, Palasantza, et al, Cell Metabolism 2016](https://doi.org/10.1016/j.cmet.2016.08.020)], [[Lawlor, George, et al, Genome Research 2017](https://doi.org/10.1101/gr.212720.116)], [[Baron, Veres, Wolock, Faust et al, Cell Systems 2016](https://doi.org/10.1016/j.cels.2016.08.011)], [[Xin et al, J. Vis. Exp 2019](https://doi.org/10.3791/59866)]
+  details: |
+      This integrated pancreas reference dataset is an aggregate of multiple pancreas single-cell RNA-seq datasets from the literature. It is comprised of data from six different studies, generated using six different single-cell technologies, and integrated into a single reference using Seurat. Details of the integration procedure can be explored in the Snakemake workflow linked above.
+      
 - title: Mouse Motor Cortex
   applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-mouse-brain
   image: brain.png
+  snakemake: https://github.com/andrewwbutler/azimuth-references/tree/master/mouse_motorcortex
+  zenodo: https://zenodo.org/
+  modalities: RNA
+  unit: Nuclei
+  nunit: 159,738
+  species: Mouse
+  demodata: "[Yao et al, bioRxiv 2020](https://www.biorxiv.org/content/10.1101/2020.03.30.015214v1) ([Portal](https://portal.brain-map.org/atlases-and-data/rnaseq/mouse-whole-cortex-and-hippocampus-10x))"
+  dataref: | 
+    [Yao, Liu, Xie, Fischer, et al, bioRxiv 2020](https://doi.org/10.1101/2020.03.31.016972)
+  details: |
+      Dataset details 
 
 - title: Human Motor Cortex
   applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-brain
   image: brain.png
-
-- title: Lung
-  applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-lung-refsct
-  image: lungs.png
- 
-- title: Liver
-  applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-liver-logsupport
-  image: liver.png
-  
-- title: Colon
-  applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-colon-logsupport
-  image: colon.png
-  
-- title: Esophagus
-  applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-esophagus-refsct
-  image: esophagus.png
+  snakemake: https://github.com/andrewwbutler/azimuth-references/tree/master/human_motorcortex
+  zenodo: https://zenodo.org/
+  modalities: RNA
+  unit: Nuclei
+  nunit: 76,533
+  species: Human
+  demodata: "Subset of M1C Data ([Portal](https://portal.brain-map.org/atlases-and-data/rnaseq/human-multiple-cortical-areas-smart-seq))"
+  dataref: | 
+    [Bakken et al, bioRxiv 2020](https://doi.org/10.1101/2020.03.31.016972) ([Portal](https://portal.brain-map.org/atlases-and-data/rnaseq/human-m1-10x))
+  details: |
+      Dataset details
 
 
