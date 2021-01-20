@@ -1,5 +1,5 @@
 - title: PBMC
-  applink: https://azimuth.satijalab.org
+  applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-pbmc
   image: pbmc.png
   snakemake: https://github.com/andrewwbutler/azimuth-references/tree/master/pbmc
   zenodo: https://zenodo.org/
