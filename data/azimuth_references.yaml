@@ -35,7 +35,7 @@
   details: |
       This integrated pancreas reference dataset is an aggregate of multiple pancreas single-cell RNA-seq datasets from the literature. It is comprised of data from six different studies, generated using six different single-cell technologies, and integrated into a single reference using Seurat. Details of the integration procedure can be explored in the Snakemake workflow linked above.
   annotations:
-      - name: celltype
+      - name: annotation.l1
         file: pancreas.csv
         
 - title: Mouse Motor Cortex
@@ -51,9 +51,9 @@
   dataref: | 
     [Yao, Liu, Xie, Fischer, et al, bioRxiv 2020](https://doi.org/10.1101/2020.03.31.016972)
   details: |
-      Dataset details 
+      The data used in this reference was generated as part of the effort by [Yao, Liu, Xie, Fischer, et al, bioRxiv 2020](https://doi.org/10.1101/2020.03.31.016972) to generate an integrated transcriptomic and epigenomic atlas of the primary motor cortex in mouse. To generate the reference used in Azimuth, we applied a reference-based integration strategy to harmonize the 10x v3 snRNA-seq data across 12 individual mice. Annotations are provided at the level of _class_ (e.g. GABAergic) and _subclass_ (e.g. L2/3 IT). 
   annotations:
-      - name: celltype
+      - name: subclass
         file: mousebrain.csv
   
 - title: Human Motor Cortex
@@ -69,8 +69,8 @@
   dataref: | 
     [Bakken et al, bioRxiv 2020](https://doi.org/10.1101/2020.03.31.016972) ([Portal](https://portal.brain-map.org/atlases-and-data/rnaseq/human-m1-10x))
   details: |
-      Dataset details
+      This reference of human motor cortex was generated from data and annotations available from the Allen Institute. Originally described in [Bakken et al, bioRxiv 2020](https://doi.org/10.1101/2020.03.31.016972), this data was the integrated across the two individual donors to create the Azimuth reference used here. Annotations are provided at the level of _class_ (e.g. GABAergic) and _subclass_ (e.g. L2/3 IT). 
   annotations:
-      - name: celltype
+      - name: subclass
         file: humanbrain.csv
 
