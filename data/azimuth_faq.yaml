@@ -6,7 +6,7 @@
       answer: |
           To respect user privacy, we only collect basic usage statistics and do not store logs from user sessions of the app, so our ability to diagnose your specific problem is very limited. We have tried to clearly document the requirements for user-uploaded data, provide a detailed FAQ here, and display descriptive error messages in the app whenever possible.
 
-          If the app doesn’t work for any reason, you can perform an identical analysis using Seurat v4 following [mapping vignette](https://satijalab.org/seurat/reference_mapping.html) and seek support for any problems that arise during your use of the Seurat package [here](https://github.com/satijalab/seurat/issues).
+          If the app does not work for any reason, you can perform an identical analysis using Seurat v4 following [mapping vignette](https://satijalab.org/seurat/reference_mapping.html) and seek support for any problems that arise during your use of the Seurat package [here](https://github.com/satijalab/seurat/issues).
           
           If you would like to help us improve the app, and you believe a dataset meets the requirements and it is publicly available for us to use for debugging but the app doesn’t work, please file a Github issue linking to the dataset and describing the issue [here](https://github.com/satijalab/azimuth/issues). 
     
