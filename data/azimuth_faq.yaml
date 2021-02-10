@@ -13,7 +13,7 @@
     - question: Can I run the app myself?
       incard: true
       answer: |
-          The source code is available [here](https://github.com/satijalab/azimuth). However, we do not actively support users running the app themselves and strongly suggest you use Seurat v4 directly for reference mapping [mapping vignette](https://satijalab.org/seurat/reference_mapping.html). You can also download a Seurat v4 R script from the app once your analysis is complete to reproduce the results locally.
+          The source code is available [here](https://github.com/satijalab/azimuth). However, we do not actively support users running the app themselves and strongly suggest you use Seurat v4 directly for reference mapping [mapping vignette](https://satijalab.org/seurat/articles/multimodal_reference_mapping.html). You can also download a Seurat v4 R script from the app once your analysis is complete to reproduce the results locally.
 
     - question: What is HuBMAP and how can I learn more?
       incard: true
@@ -76,7 +76,7 @@
             * When fitting generalized linear models, we use a representative set of 2000 genes and 2000 cells 
             * To further speed up GLM model fitting, we use the recently developed  [glmGamPoi package](https://github.com/const-ae/glmGamPoi) from Constantin Ahlmann-Eltze and Wolfgang Huber. 
           * Mapping
-            * We leverage a downsampled reference with 40,000 cells. Downsampling was done to ensure good representation of all datasets present in the full reference.
+            * For many references, we leverage a downsampled reference. Downsampling is done to ensure good representation of all datasets and celltypes present in the full reference.
             * We leverage a previously computed and cached  neighbor index and neighbor list for the reference. This speeds up the neighbor-finding steps in the mapping algorithm.
             * For the approximate nearest neighbor finding steps in the algorithm, we use `n.trees = 20`, which provides speedup compared to default `n.trees = 50` with minimal impact on the quality of downstream results.
           * Analysis
@@ -106,7 +106,7 @@
     - question: Can I run the mapping algorithm myself?
       incard: true
       answer: |
-          Yes! Reference mapping is available in Seurat v4. See the reference mapping vignette [here](https://satijalab.org/seurat/reference_mapping.html). You can also download a customized Seurat v4 R script template after mapping on the “Download Results” tab to reproduce the analysis performed in the app.
+          Yes! Reference mapping is available in Seurat v4. See the reference mapping vignette [here](https://satijalab.org/seurat/articles/multimodal_reference_mapping.html). You can also download a customized Seurat v4 R script template after mapping on the “Download Results” tab to reproduce the analysis performed in the app.
     
     - question: Can I map to a different reference?
       incard: true
@@ -119,7 +119,7 @@
     - question: What do the columns in the biomarkers table mean?
       incard: true
       answer: |
-          The top 10 RNA and imputed protein biomarkers for predicted cell type clusters with at least 15 query cells are calculated using differential expression analysis, using the [presto package](https://github.com/immunogenomics/presto). The columns of the table are:
+          The top 10 biomarkers for predicted cell type clusters with at least 15 query cells are calculated using differential expression analysis, using the [presto package](https://github.com/immunogenomics/presto). The columns of the table are:
             
             * avgExpr: mean value of feature for cells in cluster
             * auc: area under ROC
@@ -165,7 +165,7 @@
     - question: Where do the imputed protein values come from?
       incard: true
       answer: |
-          Expression values for 224 proteins are imputed for all query cells based on expression values measured using antibody-derived tags (ADTs) for reference cells using [CITE-seq](https://cite-seq.com/). Imputed expression values are computed based on the measured expression values in reference cells near to a mapped query cell. They are available to download as an Assay and to visualize in the Feature Plots tab.
+          If you are using a reference with ADT data (e.g. PBMC), expression values for the proteins are imputed for all query cells based on expression values measured using antibody-derived tags (ADTs) for reference cells using [CITE-seq](https://cite-seq.com/). Imputed expression values are computed based on the measured expression values in reference cells near to a mapped query cell. They are available to download as an Assay and to visualize in the Feature Plots tab.
     
     - question: Can I save my results?
       incard: false
