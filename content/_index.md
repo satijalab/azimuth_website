@@ -2,12 +2,11 @@
 type: "static"
 ---
 
-{{< section >}}
-
-Azimuth is a web application that enables rapid mapping of your own single-cell RNA-seq datasets ("queries") onto a larger dataset that we provide ("reference"). Information from the reference, which may include detailed cell type annotations and single-cell protein expression, can then be transferred onto your query. Azimuth also implements functionality for quality control, DE testing & biomarker identification, and visualization of query metadata and feature expression. Results from Azimuth can be downloaded at the click of a button and ported into your favorite software package for further analysis.
+{{< section >}} 
 
 <div class="column">
-    <img src="/img/azimuth_screenshot.png"></img>
+    <div style = 'flex:35%'> Azimuth is a web application that enables rapid mapping of your own single-cell RNA-seq datasets ("queries") onto a larger dataset that we provide ("reference"). Information from the reference, which may include detailed cell type annotations and single-cell protein expression, can then be transferred onto your query. Azimuth also implements functionality for quality control, DE testing & biomarker identification, and visualization of query metadata and feature expression. Results from Azimuth can be downloaded at the click of a button and ported into your favorite software package for further analysis.</div>
+    <img src="/img/azimuth_screenshot.png" style='flex:65%'></img>
 </div>
 
 {{< /section >}}
