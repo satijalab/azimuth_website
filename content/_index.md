@@ -4,10 +4,11 @@ type: "static"
 
 {{< section >}} 
 
-<div class="column" style='display:flex'>
-    <div style = 'flex:35%;text-align:justify'> Azimuth is a web application that enables rapid mapping of your own single-cell RNA-seq datasets ("queries") onto a larger dataset that we provide ("reference"). Information from the reference, which may include detailed cell type annotations and single-cell protein expression, can then be transferred onto your query. Azimuth also implements functionality for quality control, DE testing & biomarker identification, and visualization of query metadata and feature expression. Results from Azimuth can be downloaded at the click of a button and ported into your favorite software package for further analysis.</div>
-    <img src="/img/azimuth_screenshot.png" style='flex:65%;padding: 0px 15px'></img>
-</div>
+<p style='font-size:18px'> 
+Azimuth is a web application that uses an annotated reference dataset to <b>automate the processing, analysis, and interpretation of a new single-cell RNA-seq experiment</b>. Azimuth leverages a <b>'reference-based mapping'</b> pipeline that inputs a counts matrix of gene expression in single cells, and performs normalization, visualization, cell annotation, and differential expression (biomarker discovery). All results can be explored within the app, and easily downloaded for additional downstream analysis.
+</p>
+
+The development of Azimuth is led by the New York Genome Center Mapping Component as part of the [NIH Human Biomlecular Atlas Project (HuBMAP)](https://commonfund.nih.gov/hubmap). Molecular reference maps are currently available for four organs, listed below, with more coming soon. 
 
 {{< /section >}}
 
