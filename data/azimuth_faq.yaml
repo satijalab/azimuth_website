@@ -6,7 +6,7 @@
       answer: |
           To respect user privacy, we only collect basic usage statistics and do not store logs from user sessions of the app. We aim to clearly document the requirements for user-uploaded data, provide a detailed FAQ here, and display descriptive error messages in the app whenever possible.
 
-          If the app returns an error message, you can also perform the same identical analysis using Seurat v4 following [mapping vignette](https://satijalab.org/seurat/reference_mapping.html) and seek support for any problems that arise during your use of the Seurat package [here](https://github.com/satijalab/seurat/issues).
+          If the app returns an error message, you can also perform the same identical analysis using Seurat v4 following [mapping vignette](https://satijalab.org/seurat/articles/integration_mapping.html) and find support for any problems that arise during your use of the Seurat package [here](https://github.com/satijalab/seurat/issues).
 
           If you are receiving an error message or are unable generate output with the app, please read the FAQ below to ensure that your dataset meets our requirements. If this doesn't resolve your issue, and you'd like to help us improve the app, please file a Github issue describing the issue [here](https://github.com/satijalab/azimuth/issues).
 
@@ -88,7 +88,7 @@
     - question: Can I preprocess my data myself?
       incard: true
       answer: |
-          You can filter cells based on any criteria you want before uploading data to the app. However, the query data must be normalized uniformly with the reference by the app, so you must include the unnnormalized data in the ‘RNA’ assay ‘counts’ slot. 
+          You can filter cells based on any criteria you want before uploading data to the app. However, the query data must be normalized uniformly with the reference by the app, so you must include the unnnormalized data in the ‘RNA’ assay ‘counts’ slot.
 
     - question: I can’t map cells after filtering in the “Preprocessing” tab
       incard: true
@@ -132,26 +132,6 @@
       answer: |
           If the file format you upload supports metadata and your file contains cell-level metadata, after mapping you can visualize categorical metadata fields (with up to 50 categories) on the "Cell Plots" tab, and numerical metadata fields on the "Feature Plots" tab.
 
-    - question: What are the prediction scores?
-      incard: true
-      answer: |
-          The "[NAME]" feature, available to plot in the "Prediction scores and continuous metadata" menu in the Feature Plots tab, is the prediction score for the cell type [NAME]. The "predicted.id.score" column available to plot in the Feature Plots tab, and provided in the download TSV file, is the prediction score for the assigned cell type, and is the maximum score over all possible cell types. For a given cell, the sum of prediction scores for all cell types is 1. Prediction scores are calculated based on the cell type identities of the reference cells near to the mapped query cell.
-
-    - question: What are the mapping scores?
-      incard: false
-      answer: |
-          The "mapping.score" column is available to plot in the Feature Plots tab, and is provided in the download TSV file. This value from 0 to 1 reflects confidence that this cell is well represented by the reference.
-
-    - question: How can a cell get a high prediction score and a low mapping score?
-      incard: false
-      answer: |
-          A high prediction score means that a high proportion of reference cells near a query cell have the same label. However, these reference cells may not represent the query cell well, resulting in a low mapping score. Cell types that are not present in the reference should have lower mapping scores. For example, we have observed that query datasets containing neutrophils (which are not present in our reference), will be confidently annotated as CD14 Monocytes, as Monocytes are the closest cell type to neutrophils, but receive a low mapping score.
-
-    - question: How can a cell get a low prediction score and a high mapping score?
-      incard: false
-      answer: |
-          A cell can get a low prediction score because its probability is equally split between two clusters (for example, for some cells, it may not be possible to confidently classify them between the two possibilities of CD4 Central Memory (CM), and Effector Memory (EM), which lowers the prediction score, but the mapping score will remain high.
-
     - question: Why aren’t all the predicted cell types available in the biomarkers table?
       incard: false
       answer: |
@@ -166,3 +146,33 @@
       incard: false
       answer: |
           We do not support saving app sessions, so make sure to download the files you need before navigating away from the webpage in your browser. You can download the UMAP (Seurat Reduction RDS), cell type predictions and prediction scores (TSV), and imputed protein (Seurat Assay RDS) from the Downloads tab after mapping.
+
+- category: Mapping QC
+  title: Mapping QC
+  questions:
+
+    - question: How can I tell if my mapping results are accurate?
+      incard: true
+      answer: |
+          Azimuth computes a series of metrics that relate to QC for the mapping procedure. We've found that a single metric is insufficient to describe the quality of mapping, and therefore compute each of the metrics below. We emphasize that users should not limit their evaluation of mapping to these QC metrics, and can should explore their results. In particular, we encourage users to explore whether the differentially expressed genes associated with each annotated biological population are consistent with their biological expectations. We intend to support these metrics and QC analyses with additional visualizations in future versions.
+
+          Dataset-level Metrics:
+            * % of query cells with anchors: The Azimuth reference-mapping procedure first identifies a set of 'anchors', or pairwise correspondences between cells predicted to be in a similar biological state, between query and reference datasets. Here we report the percentage of query cells participating in an anchor correspondence. Typically, we observe values >15% when mapping is successful. Processing mismatched biological datasets (i.e. mapping a query dataset of human brain cells onto a reference dataset of human blood cells) will return few anchors (<5%). However, in some cases, when there is an extremely large batch effect between query and reference datasets from the same tissue, this metric can fall below 15% even if mapping is successful.
+            * Cluster preservation score: For each query dataset, we downsample to at most 5,000 cells, and perform an unsupervised clustering. Once cells have been mapped onto the reference dataset, we expect that this cluster structure will be preserved. This score reflects the preservation of this unsupervised cluster structure, and is based on the entropy of unsupervised cluster labels in each query cell's local neighborhood after mapping. Scores are scaled from 0 (poor) to 5 (best). This metric relies on the unsupervised clustering representing corresponding to biologically distinct cell states. If the query dataset consists of a homogeneous group of cells, or if the query dataset contains cells from multiple batches (which would be corrected by Azimuth), this metric may return a low value even in cases where mapping is successful. The score is calculated using the `ClusterPreservationScore` function in Azimuth.
+            <br>
+
+            
+          Cell-level Metrics:
+            * Prediction scores: Cell prediction scores range from 0 to 1 and reflect the confidence associated with each annotation. Cells with high-confidence annotations (for example, prediction scores > 0.75) reflect predictions that are supported by mulitple consistent anchors. Prediction scores can be visualized on the Feature Plots tab, or downloaded on the Download Results tab. The prediction depends on the specific annotation for each cell. Therefore, if you are mapping cells at multiple levels of resolution (for example level 1/2/3 annotations in the Human PBMC reference), each level will be associated with a different prediction score.
+            * Mapping scores: This value from 0 to 1 reflects confidence that this cell is well represented by the reference. The "mapping.score" column is available to plot in the Feature Plots tab, and is provided in the download TSV file. The mapping score is independent of a specific annotation, and reflects how well the unique structure of a cell's local neighborhood is preserved during reference mapping.
+
+    - question: How can a cell get a low prediction score and a high mapping score?
+      incard: false
+      answer: |
+          A cell can get a low prediction score because its probability is equally split between two clusters (for example, for some cells, it may not be possible to confidently classify them between the two possibilities of CD4 Central Memory (CM), and Effector Memory (EM), which lowers the prediction score, but the mapping score will remain high.
+
+
+    - question: How can a cell get a high prediction score and a low mapping score?
+      incard: false
+      answer: |
+          A high prediction score means that a high proportion of reference cells near a query cell have the same label. However, these reference cells may not represent the query cell well, resulting in a low mapping score. Cell types that are not present in the reference should have lower mapping scores. For example, we have observed that query datasets containing neutrophils (which are not present in our reference), will be confidently annotated as CD14 Monocytes, as Monocytes are the closest cell type to neutrophils, but receive a low mapping score.
