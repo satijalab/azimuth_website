@@ -20,24 +20,6 @@
       - name: celltype.l3
         file: pbmc3.csv
 
-- title: Pancreas
-  applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-pancreas
-  image: pancreasumap.png
-  snakemake: https://github.com/andrewwbutler/azimuth-references/tree/master/pancreas
-  zenodo: https://zenodo.org/
-  modalities: RNA
-  unit: Cells
-  nunit: 35,674
-  species: Human
-  demodata: "[Enge et al, Cell 2017](https://doi.org/10.1016/j.cell.2017.09.004) [[Seurat Object](https://seurat.nygenome.org/azimuth/demo_datasets/enge.rds)]"
-  dataref: |
-      [[Grün et al, Cell Stem Cell 2016](https://dx.doi.org/10.1016%2Fj.stem.2016.05.010)], [[Muraro, Dharmadhikari et al, Cell Systems 2016](https://doi.org/10.1016/j.cels.2016.09.002)], [[ Segerstolpe, Palasantza, et al, Cell Metabolism 2016](https://doi.org/10.1016/j.cmet.2016.08.020)], [[Lawlor, George, et al, Genome Research 2017](https://doi.org/10.1101/gr.212720.116)], [[Baron, Veres, Wolock, Faust et al, Cell Systems 2016](https://doi.org/10.1016/j.cels.2016.08.011)], [[Xin et al, J. Vis. Exp 2019](https://doi.org/10.3791/59866)]
-  details: |
-      This integrated pancreas reference dataset is an aggregate of multiple pancreas single-cell RNA-seq datasets from the literature. It is comprised of data from six different studies, generated using six different single-cell technologies, and integrated into a single reference using Seurat. Details of the integration procedure can be explored in the Snakemake workflow linked above.
-  annotations:
-      - name: annotation.l1
-        file: pancreas.csv
-        
 - title: Mouse Motor Cortex
   applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-mouse-brain
   image: mousebrainumap.png
@@ -86,3 +68,20 @@
       - name: cross-species cluster
         file: humanbrain_crossspecies.csv
 
+- title: Pancreas
+  applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-pancreas
+  image: pancreasumap.png
+  snakemake: https://github.com/andrewwbutler/azimuth-references/tree/master/pancreas
+  zenodo: https://zenodo.org/
+  modalities: RNA
+  unit: Cells
+  nunit: 35,674
+  species: Human
+  demodata: "[Enge et al, Cell 2017](https://doi.org/10.1016/j.cell.2017.09.004) [[Seurat Object](https://seurat.nygenome.org/azimuth/demo_datasets/enge.rds)]"
+  dataref: |
+      [[Grün et al, Cell Stem Cell 2016](https://dx.doi.org/10.1016%2Fj.stem.2016.05.010)], [[Muraro, Dharmadhikari et al, Cell Systems 2016](https://doi.org/10.1016/j.cels.2016.09.002)], [[ Segerstolpe, Palasantza, et al, Cell Metabolism 2016](https://doi.org/10.1016/j.cmet.2016.08.020)], [[Lawlor, George, et al, Genome Research 2017](https://doi.org/10.1101/gr.212720.116)], [[Baron, Veres, Wolock, Faust et al, Cell Systems 2016](https://doi.org/10.1016/j.cels.2016.08.011)], [[Xin et al, J. Vis. Exp 2019](https://doi.org/10.3791/59866)]
+  details: |
+      This integrated pancreas reference dataset is an aggregate of multiple pancreas single-cell RNA-seq datasets from the literature. It is comprised of data from six different studies, generated using six different single-cell technologies, and integrated into a single reference using Seurat. Details of the integration procedure can be explored in the Snakemake workflow linked above.
+  annotations:
+      - name: annotation.l1
+        file: pancreas.csv
