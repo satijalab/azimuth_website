@@ -1,6 +1,6 @@
 - title: PBMC
   applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-pbmc
-  image: pbmc.png
+  image: pbmcumap.png
   snakemake: https://github.com/andrewwbutler/azimuth-references/tree/master/pbmc
   zenodo: https://zenodo.org/
   modalities: RNA, ADT
@@ -22,7 +22,7 @@
 
 - title: Pancreas
   applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-pancreas
-  image: pancreas.png
+  image: pancreasumap.png
   snakemake: https://github.com/andrewwbutler/azimuth-references/tree/master/pancreas
   zenodo: https://zenodo.org/
   modalities: RNA
@@ -40,7 +40,7 @@
         
 - title: Mouse Motor Cortex
   applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-mouse-brain
-  image: brain.png
+  image: mousebrainumap.png
   snakemake: https://github.com/andrewwbutler/azimuth-references/tree/master/mouse_motorcortex
   zenodo: https://zenodo.org/
   modalities: RNA
@@ -64,7 +64,7 @@
   
 - title: Human Motor Cortex
   applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-brain
-  image: brain.png
+  image: humanbrainumap.png
   snakemake: https://github.com/andrewwbutler/azimuth-references/tree/master/human_motorcortex
   zenodo: https://zenodo.org/
   modalities: RNA
