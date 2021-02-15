@@ -20,6 +20,11 @@
       answer: |
           HuBMAP is a consortium of diverse research teams funded by the [Common Fund at the National Institutes of Health](https://commonfund.nih.gov/HuBMAP) that is working to create a framework for mapping the body at single cell resolution to better understand how the relationships among our cells affects out health. To learn more, visit the corsortium home page [here](https://hubmapconsortium.org/).
 
+    - question: How do I cite Azimuth if I use it in my own work?
+      incard: true
+      answer: |
+          If you use Azimuth, please consider citing [Hao et al, bioRxiv 2020](https://www.biorxiv.org/content/10.1101/2020.10.12.335331v1). We also encourage you to cite the original source of the reference dataset, as indicated [here](/references). For example, if you map to the Human Motor Cortex reference, please consider citing [Bakken  et al, bioRxiv 2020](https://www.biorxiv.org/content/10.1101/2020.03.31.016972v1).
+
 - category: Uploading Data
   title: Uploading Data
   questions:
@@ -66,7 +71,7 @@
     - question: Should I map my batches separately or combined?
       incard: false
       answer: |
-          We have observed that the UMAP and label transfer results are very similar whether a dataset containing multiple batches is mapped one batch at a time or combined. However, the mapping score returned by the app (see below for more discussion) may change. In the presence of batch effects, cells from certain batches sometimes receive high mapping scores when the batches are mapped separately but receive low mapping scores when batches are mapped together. Since the mapping score is meant to identify cells that are defined by a source of heterogeneity that is not present in the reference dataset, the presence of batch effects may cause low mapping scores.
+          We have observed that the results (both for visualization and annotation) are very similar when mapping individual batches separately, or combined together. This is because Azimuth can successfully remove batch effects between query and reference cells, even when there are multiple query batches. However, as discussed further below, the results of QC metrics may change. For example, cells from certain batches sometimes receive high mapping scores when the batches are mapped separately but receive low mapping scores when batches are mapped together, as the batch effect represents a source of heterogeneity in the query that is removed by Azimuth.
 
     - question: What optimizations are in the app that are not default in Seurat?
       incard: false
@@ -88,7 +93,7 @@
     - question: Can I preprocess my data myself?
       incard: true
       answer: |
-          You can filter cells based on any criteria you want before uploading data to the app. However, the query data must be normalized uniformly with the reference by the app, so you must include the unnnormalized data in the ‘RNA’ assay ‘counts’ slot.
+          You can filter cells based on your own criteria prior to uploading data to the app. However, the query data must be normalized uniformly with the reference by the app, so you must include the unnnormalized data in the ‘RNA’ assay ‘counts’ slot.
 
     - question: I can’t map cells after filtering in the “Preprocessing” tab
       incard: true
@@ -98,6 +103,12 @@
 - category: Mapping
   title: Mapping
   questions:
+
+    - question: Can I map at different levels of resolution?
+      incard: true
+      answer: |
+          Azimuth supports the ability to annotate cells at multiple levels of resolution, by selecting multiple options from the `Reference metadata to transfer` box of the Preprocessing tab. For example, with the human PBMC reference, you can annotate cells based on broad celltype definition (celltype.l1), but also at two additional levels of granularity (celltype.l2 and celltype.l3)
+
     - question: How long will mapping take?
       incard: true
       answer: |
@@ -157,14 +168,13 @@
           Azimuth computes a series of metrics that relate to QC for the mapping procedure. We've found that a single metric is insufficient to describe the quality of mapping, and therefore compute each of the metrics below. We emphasize that users should not limit their evaluation of mapping to these QC metrics, and can should explore their results. In particular, we encourage users to explore whether the differentially expressed genes associated with each annotated biological population are consistent with their biological expectations. We intend to support these metrics and QC analyses with additional visualizations in future versions.
 
           Dataset-level Metrics:
-            * % of query cells with anchors: The Azimuth reference-mapping procedure first identifies a set of 'anchors', or pairwise correspondences between cells predicted to be in a similar biological state, between query and reference datasets. Here we report the percentage of query cells participating in an anchor correspondence. Typically, we observe values >15% when mapping is successful. Processing mismatched biological datasets (i.e. mapping a query dataset of human brain cells onto a reference dataset of human blood cells) will return few anchors (<5%). However, in some cases, when there is an extremely large batch effect between query and reference datasets from the same tissue, this metric can fall below 15% even if mapping is successful.
-            * Cluster preservation score: For each query dataset, we downsample to at most 5,000 cells, and perform an unsupervised clustering. Once cells have been mapped onto the reference dataset, we expect that this cluster structure will be preserved. This score reflects the preservation of this unsupervised cluster structure, and is based on the entropy of unsupervised cluster labels in each query cell's local neighborhood after mapping. Scores are scaled from 0 (poor) to 5 (best). This metric relies on the unsupervised clustering representing corresponding to biologically distinct cell states. If the query dataset consists of a homogeneous group of cells, or if the query dataset contains cells from multiple batches (which would be corrected by Azimuth), this metric may return a low value even in cases where mapping is successful. The score is calculated using the `ClusterPreservationScore` function in Azimuth.
-            <br>
+            * % of query cells with anchors: The Azimuth reference-mapping procedure first identifies a set of 'anchors', or pairwise correspondences between cells predicted to be in a similar biological state, between query and reference datasets. Here we report the percentage of query cells participating in an anchor correspondence. Typically, we observe values >15% when mapping is successful. Processing mismatched biological datasets (i.e. mapping a query dataset of human brain cells onto a reference dataset of human blood cells) will return few anchors (<5%). However, in some cases, when there is a large batch effect between query and reference datasets from the same tissue, this metric can fall below 15% even when mapping is successful.
+            * Cluster preservation score: For each query dataset, we downsample to at most 5,000 cells, and perform an unsupervised clustering. This score reflects the preservation of the unsupervised cluster structure, and is based on the entropy of unsupervised cluster labels in each query cell's local neighborhood after mapping. Scores are scaled from 0 (poor) to 5 (best). This metric relies on the unsupervised clustering representing corresponding to biologically distinct cell states. If the query dataset consists of a homogeneous group of cells, or if the query dataset contains cells from multiple batches (which would be corrected by Azimuth), this metric may return a low value even in cases where mapping is successful. The score is calculated using the `ClusterPreservationScore` function in Azimuth.
+            <br></br>
 
-            
           Cell-level Metrics:
             * Prediction scores: Cell prediction scores range from 0 to 1 and reflect the confidence associated with each annotation. Cells with high-confidence annotations (for example, prediction scores > 0.75) reflect predictions that are supported by mulitple consistent anchors. Prediction scores can be visualized on the Feature Plots tab, or downloaded on the Download Results tab. The prediction depends on the specific annotation for each cell. Therefore, if you are mapping cells at multiple levels of resolution (for example level 1/2/3 annotations in the Human PBMC reference), each level will be associated with a different prediction score.
-            * Mapping scores: This value from 0 to 1 reflects confidence that this cell is well represented by the reference. The "mapping.score" column is available to plot in the Feature Plots tab, and is provided in the download TSV file. The mapping score is independent of a specific annotation, and reflects how well the unique structure of a cell's local neighborhood is preserved during reference mapping.
+            * Mapping scores: This value from 0 to 1 reflects confidence that this cell is well represented by the reference. The "mapping.score" column is available to plot in the Feature Plots tab, and is provided in the download TSV file. The mapping score is independent of a specific annotation, is calculated using the `MappingScore` function in Seurat, and reflects how well the unique structure of a cell's local neighborhood is preserved during reference mapping.
 
     - question: How can a cell get a low prediction score and a high mapping score?
       incard: false
