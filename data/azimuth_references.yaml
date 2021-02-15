@@ -1,7 +1,7 @@
 - title: Human - PBMC
-  applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-pbmc
+  applink: https://app.azimuth.hubmapconsortium.org/app/human-pbmc
   image: pbmcumap.png
-  snakemake: https://github.com/andrewwbutler/azimuth-references/tree/master/pbmc
+  snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_pbmc
   zenodo: https://zenodo.org/
   modalities: RNA, ADT
   unit: Cells
@@ -21,9 +21,9 @@
         file: pbmc3.csv
 
 - title: Human - Motor Cortex
-  applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-brain
+  applink: https://app.azimuth.hubmapconsortium.org/app/human-motorcortex
   image: humanbrainumap.png
-  snakemake: https://github.com/andrewwbutler/azimuth-references/tree/master/human_motorcortex
+  snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_motorcortex
   zenodo: https://zenodo.org/
   modalities: RNA
   unit: Nuclei
@@ -45,9 +45,9 @@
         file: humanbrain_crossspecies.csv
 
 - title: Mouse - Motor Cortex
-  applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-mouse-brain
+  applink: https://app.azimuth.hubmapconsortium.org/app/mouse-motorcortex
   image: mousebrainumap.png
-  snakemake: https://github.com/andrewwbutler/azimuth-references/tree/master/mouse_motorcortex
+  snakemake: https://github.com/satijalab/azimuth-references/tree/master/mouse_motorcortex
   zenodo: https://zenodo.org/
   modalities: RNA
   unit: Nuclei
@@ -60,7 +60,7 @@
       The data used in this reference was generated as part of the effort by [Yao, Liu, Xie, Fischer, et al, bioRxiv 2020](https://doi.org/10.1101/2020.03.31.016972) to generate an integrated transcriptomic and epigenomic atlas of the primary motor cortex in mouse. To generate the reference used in Azimuth, we applied a reference-based integration strategy to harmonize the 10x v3 snRNA-seq data across 12 individual mice. Annotations are provided at the level of _class_ (e.g. GABAergic), _subclass_ (e.g. L2/3 IT), _cluster_ (e.g. L2/3 IT_3), and _cross-species cluster_ (e.g.  
 
 - title: Human - Pancreas
-  applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-pancreas
+  applink: https://github.com/satijalab/azimuth-references/tree/master/human_pancreas
   image: pancreasumap.png
   snakemake: https://github.com/andrewwbutler/azimuth-references/tree/master/pancreas
   zenodo: https://zenodo.org/
