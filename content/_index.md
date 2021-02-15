@@ -17,12 +17,12 @@ The development of Azimuth is led by the New York Genome Center Mapping Componen
 {{< section >}}
 
 # General Workflow
-1. Upload a file containing raw data and optional cell-level metadata.
-2. If desired, filter cells by `nCount_RNA`, `nFeature_RNA`, and `percent.mt` in the Preprocessing tab.
-3. Click "Map cells to reference" to preprocess with SCTransform and run the mapping algorithm         
-4. View the results.                                                                        
-    * "Cell Plots" tab: DimPlot of the reference; DimPlot of the query colored by predicted cell type OR your metadata; table of metadata categories
-    * "Feature Plots" tab: FeaturePlot and ViolinPlot of RNA, imputed protein, continuous metadata/prediction scores/mapping score; tables of RNA and imputed protein biomarkers for each predicted cell type cluster (click on a table row and it switches the plot to that feature!)
+1. Upload a single-cell gene expression matrix, or click the `Load demo dataset` button.
+2. If desired, filter cells based on common QC metrics in the Preprocessing tab.
+3. Click the `"Map cells to reference` button to launch analysis. A query dataset of 10,000 cells will typically finish processing in less than 1 minute.    
+4. View results.                                                                        
+    * "Cell Plots" tab: Visualize query cells and annotations projected onto the reference UMAP.
+    * "Feature Plots" tab: Explore the expression of individual features (genes) in your data, and automatically identify differentially expressed genes and biomarkers.
 5. If desired, download files for further analysis from the "Download Results" tab.
 
 {{< /section >}}
