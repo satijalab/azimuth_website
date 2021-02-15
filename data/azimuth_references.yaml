@@ -1,4 +1,4 @@
-- title: PBMC
+- title: Human - PBMC
   applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-pbmc
   image: pbmcumap.png
   snakemake: https://github.com/andrewwbutler/azimuth-references/tree/master/pbmc
@@ -20,31 +20,7 @@
       - name: celltype.l3
         file: pbmc3.csv
 
-- title: Mouse Motor Cortex
-  applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-mouse-brain
-  image: mousebrainumap.png
-  snakemake: https://github.com/andrewwbutler/azimuth-references/tree/master/mouse_motorcortex
-  zenodo: https://zenodo.org/
-  modalities: RNA
-  unit: Nuclei
-  nunit: 159,738
-  species: Mouse
-  demodata: "[Yao et al, bioRxiv 2020](https://www.biorxiv.org/content/10.1101/2020.03.30.015214v1) ([Portal](https://portal.brain-map.org/atlases-and-data/rnaseq/mouse-whole-cortex-and-hippocampus-10x)) [[Seurat Object](https://seurat.nygenome.org/azimuth/demo_datasets/allen_mop_2020.rds)]"
-  dataref: | 
-    [Yao, Liu, Xie, Fischer, et al, bioRxiv 2020](https://doi.org/10.1101/2020.03.31.016972)
-  details: |
-      The data used in this reference was generated as part of the effort by [Yao, Liu, Xie, Fischer, et al, bioRxiv 2020](https://doi.org/10.1101/2020.03.31.016972) to generate an integrated transcriptomic and epigenomic atlas of the primary motor cortex in mouse. To generate the reference used in Azimuth, we applied a reference-based integration strategy to harmonize the 10x v3 snRNA-seq data across 12 individual mice. Annotations are provided at the level of _class_ (e.g. GABAergic), _subclass_ (e.g. L2/3 IT), _cluster_ (e.g. L2/3 IT_3), and _cross-species cluster_ (e.g. Sst_6)
-  annotations:
-      - name: class
-        file: mousebrain_class.csv
-      - name: subclass
-        file: mousebrain_subclass.csv
-      - name: cluster
-        file: mousebrain_cluster.csv
-      - name: cross-species cluster
-        file: mousebrain_crossspecies.csv
-  
-- title: Human Motor Cortex
+- title: Human - Motor Cortex
   applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-brain
   image: humanbrainumap.png
   snakemake: https://github.com/andrewwbutler/azimuth-references/tree/master/human_motorcortex
@@ -68,7 +44,22 @@
       - name: cross-species cluster
         file: humanbrain_crossspecies.csv
 
-- title: Pancreas
+- title: Mouse - Motor Cortex
+  applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-mouse-brain
+  image: mousebrainumap.png
+  snakemake: https://github.com/andrewwbutler/azimuth-references/tree/master/mouse_motorcortex
+  zenodo: https://zenodo.org/
+  modalities: RNA
+  unit: Nuclei
+  nunit: 159,738
+  species: Mouse
+  demodata: "[Yao et al, bioRxiv 2020](https://www.biorxiv.org/content/10.1101/2020.03.30.015214v1) ([Portal](https://portal.brain-map.org/atlases-and-data/rnaseq/mouse-whole-cortex-and-hippocampus-10x)) [[Seurat Object](https://seurat.nygenome.org/azimuth/demo_datasets/allen_mop_2020.rds)]"
+  dataref: | 
+    [Yao, Liu, Xie, Fischer, et al, bioRxiv 2020](https://doi.org/10.1101/2020.03.31.016972)
+  details: |
+      The data used in this reference was generated as part of the effort by [Yao, Liu, Xie, Fischer, et al, bioRxiv 2020](https://doi.org/10.1101/2020.03.31.016972) to generate an integrated transcriptomic and epigenomic atlas of the primary motor cortex in mouse. To generate the reference used in Azimuth, we applied a reference-based integration strategy to harmonize the 10x v3 snRNA-seq data across 12 individual mice. Annotations are provided at the level of _class_ (e.g. GABAergic), _subclass_ (e.g. L2/3 IT), _cluster_ (e.g. L2/3 IT_3), and _cross-species cluster_ (e.g.  
+
+- title: Human - Pancreas
   applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-pancreas
   image: pancreasumap.png
   snakemake: https://github.com/andrewwbutler/azimuth-references/tree/master/pancreas
