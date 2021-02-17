@@ -14,14 +14,24 @@
       incard: true
       answer: |
           The source code is available [here](https://github.com/satijalab/azimuth). However, for users interested in performing these analyses outside the context of the Azimuth app, we suggest using Seurat v4 and using our vignette on [Mapping and annotating query datasets](https://satijalab.org/seurat/articles/integration_mapping.html) as an example. You can also download a Seurat v4 R script from the app once your analysis is complete to reproduce the results locally.
+  
+    - question: The app won’t load!
+      incard: true
+      answer: | 
+           If you see a blank screen, try clearing your cache or browser history. A previous session of yours may be interfering with the current one.
 
-    - question: What is HuBMAP and how can I learn more?
+    - question: Can I open multiple apps simultaneously?
+      incard: true
+      answer: |
+           Opening multiple instances of the same app may result in unpredictable behaviors. If you would like to run multiple apps, please open them in Incognito windows or in separate browsers.
+
+   - question: What is HuBMAP and how can I learn more?
       incard: true
       answer: |
           HuBMAP is a consortium of diverse research teams funded by the [Common Fund at the National Institutes of Health](https://commonfund.nih.gov/HuBMAP) that is working to create a framework for mapping the body at single cell resolution to better understand how the relationships among our cells affects out health. To learn more, visit the corsortium home page [here](https://hubmapconsortium.org/).
 
     - question: How do I cite Azimuth if I use it in my own work?
-      incard: true
+      incard: false
       answer: |
           If you use Azimuth, please consider citing [Hao et al, bioRxiv 2020](https://www.biorxiv.org/content/10.1101/2020.10.12.335331v1). We also encourage you to cite the original source of the reference dataset, as indicated [here](/references). For example, if you map to the Human Motor Cortex reference, please consider citing [Bakken  et al, bioRxiv 2020](https://www.biorxiv.org/content/10.1101/2020.03.31.016972v1).
 
@@ -29,7 +39,7 @@
   title: Uploading Data
   questions:
     - question: What file types can I upload?
-      incard: true
+      incard: false
       answer: |
         We accept the following file types as input:
 
