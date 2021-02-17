@@ -25,7 +25,7 @@
       answer: |
            Opening multiple instances of the same app may result in unpredictable behaviors. If you would like to run multiple apps, please open them in Incognito windows or in separate browsers.
 
-   - question: What is HuBMAP and how can I learn more?
+    - question: What is HuBMAP and how can I learn more?
       incard: true
       answer: |
           HuBMAP is a consortium of diverse research teams funded by the [Common Fund at the National Institutes of Health](https://commonfund.nih.gov/HuBMAP) that is working to create a framework for mapping the body at single cell resolution to better understand how the relationships among our cells affects out health. To learn more, visit the corsortium home page [here](https://hubmapconsortium.org/).
