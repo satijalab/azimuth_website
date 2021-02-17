@@ -2,7 +2,7 @@
   applink: https://app.azimuth.hubmapconsortium.org/app/human-pbmc
   image: pbmcumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_pbmc
-  zenodo: https://zenodo.org/
+  zenodo: https://zenodo.org/record/4546839
   modalities: RNA, ADT
   unit: Cells
   nunit: 161,764
@@ -24,7 +24,7 @@
   applink: https://app.azimuth.hubmapconsortium.org/app/human-motorcortex
   image: humanbrainumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_motorcortex
-  zenodo: https://zenodo.org/
+  zenodo: https://zenodo.org/record/4546932
   modalities: RNA
   unit: Nuclei
   nunit: 76,533
@@ -48,7 +48,7 @@
   applink: https://app.azimuth.hubmapconsortium.org/app/mouse-motorcortex
   image: mousebrainumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/mouse_motorcortex
-  zenodo: https://zenodo.org/
+  zenodo: https://zenodo.org/record/4546935
   modalities: RNA
   unit: Nuclei
   nunit: 159,738
@@ -63,7 +63,7 @@
   applink: https://app.azimuth.hubmapconsortium.org/app/human-pancreas
   image: pancreasumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_pancreas
-  zenodo: https://zenodo.org/
+  zenodo: https://zenodo.org/record/4546926
   modalities: RNA
   unit: Cells
   nunit: 35,674
