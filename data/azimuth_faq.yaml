@@ -151,7 +151,7 @@
     - question: What if my query dataset contains cell types that aren't present in the reference? 
       incard: true
       answer: |
-         If your query dataset primarily comprises cell types that are not in the reference, the mapping will likely return poor 'Dataset-level' QC metrics  (see Mapping QC section below). In other cases, your query dataset is mostly comprised of reference cell types, but includes a subset of additional new populations. In this case, these cells will map to the closest cell type in the reference (e.g., neutrophils will map to monocytes in our PBMC reference). However, we expect these cells to receive poor 'cell-level' QC metrics, including low mapping scores (see Mapping QC section below).
+         If your query dataset primarily comprises cell types that are not in the reference, the mapping will likely return poor 'Dataset-level' QC metrics  (see Mapping QC section below). Alternately, your query dataset may be mostly comprised of reference cell types, but includes a subset of additional new populations. In this case, these cells will map to the closest cell type in the reference (e.g., neutrophils will map to monocytes in our PBMC reference). However, we expect these cells to receive poor 'cell-level' QC metrics, including low mapping scores (see Mapping QC section below).
     
     - question: Can I visualize my own metadata?
       incard: false
