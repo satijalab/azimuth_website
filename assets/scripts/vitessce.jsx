@@ -1,0 +1,14 @@
+import myViewConfig from 'json/human_motor_cortex.json';
+
+export default function VitessceApp() {
+    return (
+        <vitessce.Vitessce
+            config={myViewConfig}
+            height={800}
+            theme="dark"
+        />
+    );
+}
+
+ReactDOM.render(React.createElement(VitessceApp),
+    document.getElementById("vitessce"));

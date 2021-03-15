@@ -1,0 +1,37 @@
+{
+ "author": "",
+ "bugs": {
+  "url": "https://github.com/satijalab/azimuth_website/issues"
+ },
+ "comments": {
+  "dependencies": {
+   "@babel/cli": "project",
+   "@babel/core": "project",
+   "@babel/preset-react": "project",
+   "vitessce": "project"
+  },
+  "devDependencies": {}
+ },
+ "dependencies": {
+  "@babel/cli": "^7.13.0",
+  "@babel/core": "^7.13.8",
+  "@babel/preset-react": "^7.12.13",
+  "vitessce": "^1.1.5",
+  "webpack": "^5.24.4",
+  "webpack-cli": "^4.5.0"
+ },
+ "description": "",
+ "devDependencies": {},
+ "homepage": "https://github.com/satijalab/azimuth_website#readme",
+ "license": "ISC",
+ "main": "index.js",
+ "name": "azimuth_website",
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/satijalab/azimuth_website.git"
+ },
+ "scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1"
+ },
+ "version": "1.0.0"
+}
