@@ -1,0 +1,24 @@
+{
+  "name": "azimuth_website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaisonj708/azimuth_website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaisonj708/azimuth_website/issues"
+  },
+  "homepage": "https://github.com/jaisonj708/azimuth_website#readme",
+  "dependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/preset-react": "^7.12.13"
+  }
+}
