@@ -10,9 +10,9 @@ menu:
         - name: "References"
           url: "/references"
           weight: 2
-	- name: "Test"
-	  url: "/test"
-	  weight: 2
+        - name: "Test"
+          url: "/test"
+          weight: 3
 
 
 markup:
