@@ -11,4 +11,4 @@ function Example() {
     );
   }
 ReactDOM.render(React.createElement(Example),
-    document.getElementById("app"));
+    document.getElementById("vitessce"));
