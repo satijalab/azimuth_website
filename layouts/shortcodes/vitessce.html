@@ -1,9 +1,8 @@
 <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 
-{{ $externals := slice "react" "react-dom" }}
 {{ $defines := dict "process.env.NODE_ENV" `"production"` }}
-{{ $opts := dict "targetPath" "vitessce.js" "externals" $externals "defines" $defines }}
+{{ $opts := dict "targetPath" "vitessce.js" defines" $defines }}
 {{ $vitessce := resources.Get "scripts/vitessce.jsx" | resources.ExecuteAsTemplate "vitessce.js" . | babel | js.Build $opts  }}
 <script type="text/javascript" src="{{ $vitessce.RelPermalink }}" defer></script>
 
