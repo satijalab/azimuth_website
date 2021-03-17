@@ -4,8 +4,9 @@
 
 {{ $externals := slice "react" "react-dom" "vitessce" }}
 {{ $defines := dict "process.env.NODE_ENV" `"production"` }}
-{{ $opts := dict "targetPath" "vitessce.js" "externals" $externals defines" $defines }}
+{{ $opts := dict "targetPath" "vitessce.js" "externals" $externals "defines" $defines }}
 {{ $vitessce := resources.Get "scripts/vitessce.jsx" | resources.ExecuteAsTemplate "vitessce.js" . | babel | js.Build $opts  }}
 <script type="text/javascript" src="{{ $vitessce.RelPermalink }}" defer></script>
 
 <div id='vitessce'></div>
+z
