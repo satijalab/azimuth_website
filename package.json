@@ -22,7 +22,9 @@
     "@babel/plugin-syntax-jsx": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
     "react-native": "^0.64.0",
-    "vitessce": "^1.1.6"
+    "vitessce": "^1.1.6",
+    "webpack": "^5.26.3",
+    "webpack-cli": "^4.5.0"
   },
   "devDependencies": {
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
