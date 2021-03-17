@@ -16,13 +16,13 @@ export default function VitessceApp() {
   return (
     <div className="vitessce-container vitessce-theme-light">
       <div className="card card-body bg-secondary" style={dimensions}>
-        <Status
+        <Vitessce.Status
           info="Hello world"
           removeGridComponent={() => { }}
         />
       </div>
       <div className="card card-body bg-secondary" style={dimensions}>
-        <Scatterplot
+        <Vitessce.Scatterplot
           uuid="my-vitessce-scatterplot"
           view={view}
           mapping={mapping}
