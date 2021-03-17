@@ -15,7 +15,7 @@ export default function VitessceApp() {
   return (
     <div className="vitessce-container vitessce-theme-light">
       <div className="card card-body bg-secondary" style={dimensions}>
-        <Status
+        <vitessce.Status
           info="Hello world"
           removeGridComponent={() => { }}
         />
