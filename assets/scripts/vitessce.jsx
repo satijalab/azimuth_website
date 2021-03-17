@@ -1,6 +1,6 @@
-import myViewConfig from './static/json/human_motor_cortex.json';
-import * as vitessce from 'vitessce';
-
+// import myViewConfig from './static/json/human_motor_cortex.json';
+// import * as vitessce from 'vitessce';
+const myViewConfig = require('./static/json/human_motor_cortex.json');
 
 function Example() {
   const [count, setCount] = React.useState(0);
