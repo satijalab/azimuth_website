@@ -1,14 +1,15 @@
-function Example() {
-    const [count, setCount] = React.useState(0);
-  
+import myViewConfig from 'json/human_motor_cortex.json';
+import * as vitessce from 'vitessce'
+
+export default function VitessceApp() {
     return (
-      <div>
-        <p>You clicked {count} times</p>
-        <button onClick={() => setCount(count + 1)}>
-          Click me
-        </button>
-      </div>
+        <vitessce.Vitessce
+            config={myViewConfig}
+            height={800}
+            theme="dark"
+        />
     );
-  }
-ReactDOM.render(React.createElement(Example),
+}
+
+ReactDOM.render(React.createElement(VitessceApp),
     document.getElementById("vitessce"));
