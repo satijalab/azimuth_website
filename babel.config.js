@@ -4,7 +4,10 @@ module.exports = function (api) {
     ["@babel/preset-react"]
     ]
   const plugins = [
-    "@babel/plugin-syntax-jsx"
+    "@babel/plugin-syntax-jsx",
+    replace({
+      'process.env.NODE_ENV': JSON.stringify( 'production' )
+    })
   ];
   return {
     presets,
