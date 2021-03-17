@@ -1,4 +1,4 @@
-import myViewConfig from 'static/json/human_motor_cortex.json';
+import myViewConfig from './static/json/human_motor_cortex.json';
 import * as vitessce from 'vitessce'
 
 export default function VitessceApp() {
