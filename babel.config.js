@@ -1,6 +1,7 @@
-import replace from 'rollup-plugin-replace';
 
 module.exports = function (api) {
+  import replace from 'rollup-plugin-replace';
+
   api.cache(true);
   const presets = [
     ["@babel/preset-react"]
