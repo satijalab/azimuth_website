@@ -4,11 +4,9 @@ const myViewConfig = require('./static/json/human_motor_cortex.json');
 
 export default function VitessceApp() {
     return (
-        <vitessce.Vitessce
-            config={myViewConfig}
-            height={800}
-            theme="dark"
-        />
+        <div>
+          Hi Hi Hi
+        </div>
     );
 }
 
