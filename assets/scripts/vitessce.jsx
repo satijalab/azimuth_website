@@ -34,7 +34,17 @@ class VitessceApp extends React.Component {
     const dimensions = { width: '400px', height: '400px', margin: '10px' };
 
     return (
-      <div className="vitessce-container vitessce-theme-light">
+      <div>
+        Hi Hi Hi
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<VitessceApp />, document.getElementById('vitessce'));
+
+
+{/* <div className="vitessce-container vitessce-theme-light">
         <div className="card card-body bg-secondary" style={dimensions}>
           <Status
             info="Hello world"
@@ -56,9 +66,4 @@ class VitessceApp extends React.Component {
             clearPleaseWait={(layerName) => { }}
           />
         </div>
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(<VitessceApp />, document.getElementById('vitessce'));
+      </div> */}
