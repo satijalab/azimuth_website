@@ -1,4 +1,8 @@
-function Example() {
+import myViewConfig from './static/json/human_motor_cortex.json';
+import * as vitessce from 'vitessce';
+
+
+export default function Example() {
   const [count, setCount] = React.useState(0);
 
   return (
