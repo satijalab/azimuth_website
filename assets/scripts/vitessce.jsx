@@ -1,7 +1,7 @@
 // import myViewConfig from './static/json/human_motor_cortex.json';
 // import * as vitessce from 'vitessce';
 const myViewConfig = require('./static/json/human_motor_cortex.json');
-// import { Scatterplot, Status } from 'vitessce';
+import { Scatterplot, Status } from 'vitessce';
 
 export default function VitessceApp() {
   const view = { target: [0, 0, 0], zoom: 0.75 };
@@ -16,13 +16,13 @@ export default function VitessceApp() {
   return (
     <div className="vitessce-container vitessce-theme-light">
       <div className="card card-body bg-secondary" style={dimensions}>
-        <vitessce.Status
+        <Status
           info="Hello world"
           removeGridComponent={() => { }}
         />
       </div>
       <div className="card card-body bg-secondary" style={dimensions}>
-        <vitessce.Scatterplot
+        <Scatterplot
           uuid="my-vitessce-scatterplot"
           view={view}
           mapping={mapping}
