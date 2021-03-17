@@ -1,3 +1,5 @@
+import replace from 'rollup-plugin-replace';
+
 module.exports = function (api) {
   api.cache(true);
   const presets = [
