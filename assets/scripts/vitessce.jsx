@@ -2,20 +2,34 @@
 // import * as vitessce from 'vitessce';
 const myViewConfig = require('./static/json/human_motor_cortex.json');
 
-function Example() {
-  const [count, setCount] = React.useState(0);
-
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
-  );
+export default function VitessceApp() {
+    return (
+        <vitessce.Vitessce
+            config={myViewConfig}
+            height={800}
+            theme="dark"
+        />
+    );
 }
-ReactDOM.render(React.createElement(Example),
-  document.getElementById("vitessce"));
+
+ReactDOM.render(React.createElement(VitessceApp),
+    document.getElementById("vitessce"));
+
+
+// function Example() {
+//   const [count, setCount] = React.useState(0);
+
+//   return (
+//     <div>
+//       <p>You clicked {count} times</p>
+//       <button onClick={() => setCount(count + 1)}>
+//         Click me
+//       </button>
+//     </div>
+//   );
+// }
+// ReactDOM.render(React.createElement(Example),
+//   document.getElementById("vitessce"));
 
 
 // // import myViewConfig from './static/json/human_motor_cortex.json';
