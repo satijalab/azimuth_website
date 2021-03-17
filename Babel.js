@@ -3,7 +3,9 @@ module.exports = function (api) {
   const presets = [
     ["@babel/preset-react"]
     ]
-  const plugins = [];
+  const plugins = [
+    "@babel/plugin-syntax-jsx"
+  ];
   return {
     presets,
     plugins
