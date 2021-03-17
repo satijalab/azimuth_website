@@ -17,9 +17,9 @@
 
 
 
-import { Scatterplot } from './vitessce/dist/es/production/scatterplot.min.js';
-import { Status } from './vitessce/dist/es/production/status.min.js';
-import './vitessce/dist/es/production/static/css/index.css';
+import { Scatterplot } from 'vitessce';
+import { Status } from 'vitessce';
+import '../../node_modules/vitessce/dist/es/production/static/css/index.css';
 
 export default function VitessceApp() {
     const view = { target: [0, 0, 0], zoom: 0.75 };
