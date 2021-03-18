@@ -43,8 +43,10 @@ export default function VitessceApp() {
   );
 }
 
-ReactDOM.render(React.createElement(VitessceApp),
-  document.getElementById("vitessce"));
+function renderMyVitessce() {
+  ReactDOM.render(<VitessceApp />, document.getElementById("vitessce"));
+}
+renderMyVitessce()
 
 
 // function Example() {
