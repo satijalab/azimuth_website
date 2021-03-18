@@ -4,7 +4,7 @@
 // import { Scatterplot, Status } from 'vitessce';
 const React = window.React;
 const ReactDOM = window.ReactDOM;
-const { Vitessce, VitessceConfig, hconcat, vconcat } = window.vitessce.index;
+const { Vitessce, VitessceConfig, Status, Scatterplot } = window.vitessce.index;
 
 export default function VitessceApp() {
   const view = { target: [0, 0, 0], zoom: 0.75 };
@@ -19,13 +19,13 @@ export default function VitessceApp() {
   return (
     <div className="vitessce-container vitessce-theme-light">
       <div className="card card-body bg-secondary" style={dimensions}>
-        <Vitessce.Status
+        <Status
           info="Hello world"
           removeGridComponent={() => { }}
         />
       </div>
       <div className="card card-body bg-secondary" style={dimensions}>
-        <Vitessce.Scatterplot
+        <Scatterplot
           uuid="my-vitessce-scatterplot"
           view={view}
           mapping={mapping}
