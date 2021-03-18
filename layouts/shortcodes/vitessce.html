@@ -1,19 +1,12 @@
-<!-- Import the React and ReactDOM JS -->
+
 <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 <!-- Import the Vitessce JS -->
 <script crossorigin src="https://unpkg.com/vitessce@1.1.6/dist/umd/production/index.min.js"></script>
 
+<!-- Import the custom JS -->
 {{ $externals := slice "react" "react-dom" "vitessce" }}
-{{ $opts := dict "targetPath" "vitessce.js" "externals" $externals }}
-{{ $vitessce := resources.Get "scripts/vitessce.jsx" | resources.ExecuteAsTemplate "vitessce.js" . | babel | js.Build $opts  }}
-<script type="text/javascript" src="{{ $vitessce.RelPermalink }}" defer></script>
-
-<!-- {{ $externals := slice "react" "react-dom" "vitessce" }}
-{{ $defines := dict "process.env.NODE_ENV" `"production"` }}
-{{ $opts := dict "targetPath" "vitessce.js" "externals" $externals "defines" $defines }}
-{{ $vitessce := resources.Get "scripts/vitessce.jsx" | resources.ExecuteAsTemplate "vitessce.js" . | babel | js.Build $opts  }}
-<script type="text/javascript" src="{{ $vitessce.RelPermalink }}" defer></script>-->
-
-<div id='vitessce'></div> 
+{{ $opts := dict "targetPath" "main.js" "externals" $externals }}
+{{ $built := resources.Get "scripts/vitessce.js" | babel | js.Build $opts }}
+<script type="text/javascript" src="{{ $built.RelPermalink }}" defer></script>
 
