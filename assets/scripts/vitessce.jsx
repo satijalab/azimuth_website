@@ -1,7 +1,10 @@
 // import myViewConfig from './static/json/human_motor_cortex.json';
 // import * as vitessce from 'vitessce';
-const myViewConfig = require('./static/json/human_motor_cortex.json');
-import { Scatterplot, Status } from 'vitessce';
+// const myViewConfig = require('./static/json/human_motor_cortex.json');
+// import { Scatterplot, Status } from 'vitessce';
+const React = window.React;
+const ReactDOM = window.ReactDOM;
+const { Vitessce, VitessceConfig, hconcat, vconcat } = window.vitessce.index;
 
 export default function VitessceApp() {
   const view = { target: [0, 0, 0], zoom: 0.75 };
