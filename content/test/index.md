@@ -1,6 +1,0 @@
----
-type: "static"
-----
-
-{{< vitessce >}}
-

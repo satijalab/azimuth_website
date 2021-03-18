@@ -25,6 +25,7 @@
   image: humanbrainumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_motorcortex
   zenodo: https://zenodo.org/record/4546932
+  vitessce: /references/human_motorcortex
   modalities: RNA
   unit: Nuclei
   nunit: 76,533
