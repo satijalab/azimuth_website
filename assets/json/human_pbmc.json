@@ -1,0 +1,80 @@
+{
+	"version": "1.0.0",
+	"name": "Human PBMC",
+	"datasets": [
+		{
+			"uid": "human-pbmc",
+			"name": "Human PBMC",
+			"files": [
+				{
+					"type": "cells",
+					"fileType": "anndata-cells.zarr",
+					"url": "https://vitessce-references.s3.us-east-2.amazonaws.com/human-pbmc/vitessce_ref.zarr",
+					"options": {
+						"mappings": {
+							"UMAP": {
+							  "key": "obsm/X_umap",
+							  "dims": [0,1]
+							}
+						},
+						"factors": [
+						  "obs/celltype.l1",
+						  "obs/celltype.l2",
+						  "obs/celltype.l3"
+						]
+					}
+				},
+				{
+					"type": "cell-sets",
+					"fileType": "anndata-cell-sets.zarr",
+					"url": "https://vitessce-references.s3.us-east-2.amazonaws.com/human-pbmc/vitessce_ref.zarr",
+					"options": [
+						{
+							"groupName": "celltype.l1",
+							"setName": "obs/celltype.l1"
+						},
+						{
+							"groupName": "celltype.l2",
+							"setName": "obs/celltype.l2"
+						},
+						{
+							"groupName": "celltype.l3",
+							"setName": "obs/celltype.l3"
+						}
+					]
+				},
+				{
+					"type": "expression-matrix",
+					"fileType": "anndata-expression-matrix.zarr",
+					"url": "https://vitessce-references.s3.us-east-2.amazonaws.com/human-pbmc/vitessce_ref.zarr",
+					"options": {
+					  "matrix": "X"
+					}
+				}
+			]
+		}
+	],
+	"initStrategy": "auto",
+	"coordinationSpace": {
+		"embeddingType": {
+			"UMAP": "UMAP"
+		}
+	},
+	"layout": [{
+		"component": "cellSets",
+		"h": 3,"w": 3,"x": 9,"y": 0,
+		"coordinationScopes": {}
+	},
+	{
+		"component": "genes","h": 3,"w": 3,"x": 9,"y": 3,
+		"coordinationScopes": {}
+	},
+	{
+		"component": "scatterplot","h": 6,"w": 9,"x": 0,"y": 0,
+		"coordinationScopes": {
+			"embeddingType": "UMAP"
+		}
+	}
+    ]
+}
+

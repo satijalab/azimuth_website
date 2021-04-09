@@ -3,6 +3,7 @@
   image: pbmcumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_pbmc
   zenodo: https://zenodo.org/record/4546839
+  vitessce: /references/human_pbmc
   modalities: RNA, ADT
   unit: Cells
   nunit: 161,764
@@ -50,6 +51,7 @@
   image: mousebrainumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/mouse_motorcortex
   zenodo: https://zenodo.org/record/4546935
+  vitessce: /references/mouse_motorcortex
   modalities: RNA
   unit: Nuclei
   nunit: 159,738
@@ -65,6 +67,7 @@
   image: pancreasumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_pancreas
   zenodo: https://zenodo.org/record/4546926
+  vitessce: /references/human_pancreas
   modalities: RNA
   unit: Cells
   nunit: 35,674
