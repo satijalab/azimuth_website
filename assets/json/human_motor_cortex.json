@@ -79,18 +79,7 @@
 		"coordinationScopes": {
 			"embeddingType": "UMAP"
 		}
-	},
-    {
-      "component": "heatmap",
-      "props": {
-        "transpose": true
-      },
-      "h": 6,"w": 6,"x": 0,"y": 6
-    },
-    {
-      "component": "cellSetExpression",
-      "h": 6, "w": 6, "x": 6,"y": 6
-    }
+	}
     ]
 }
 
