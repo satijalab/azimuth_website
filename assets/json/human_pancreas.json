@@ -44,30 +44,38 @@
 			]
 		}
 	],
-	"initStrategy": "auto",
-	"coordinationSpace": {
-		"embeddingType": {
-			"UMAP": "UMAP"
-        },
-        "embeddingCellRadius": {
-            "UMAP": 0.25
-        }
-	},
-	"layout": [{
-		"component": "cellSets",
-		"h": 3,"w": 3,"x": 9,"y": 0,
-		"coordinationScopes": {}
-	},
-	{
-		"component": "genes","h": 3,"w": 3,"x": 9,"y": 3,
-		"coordinationScopes": {}
-	},
-	{
-		"component": "scatterplot","h": 6,"w": 9,"x": 0,"y": 0,
-		"coordinationScopes": {
-			"embeddingType": "UMAP"
-		}
-	}
-    ]
+    "initStrategy": "auto",                                                                         
+    "coordinationSpace": {                                                                          
+        "embeddingType": {                                                                          
+            "UMAP": "UMAP"                                                                          
+        },                                                                                          
+        "embeddingCellRadius": {                                                                    
+            "UMAP": 0.25                                                                            
+        },                                                                                          
+        "embeddingCellSetLabelsVisible": {                                                          
+            "UMAP": true                                                                            
+        },                                                                                          
+        "embeddingCellSetLabelSize": {                                                              
+            "UMAP": 10                                                                              
+        }                                                                                           
+    },                                                                                              
+    "layout": [{                                                                                    
+        "component": "cellSets",                                                                    
+        "h": 3,"w": 3,"x": 9,"y": 0,                                                                
+        "coordinationScopes": {}                                                                    
+    },                                                                                              
+    {                                                                                               
+        "component": "genes","h": 3,"w": 3,"x": 9,"y": 3,                                           
+        "coordinationScopes": {}                                                                    
+    },                                                                                              
+    {                                                                                               
+        "component": "scatterplot","h": 6,"w": 9,"x": 0,"y": 0,                                     
+        "coordinationScopes": {                                                                     
+            "embeddingType": "UMAP",                                                                
+            "embeddingCellRadius": "UMAP",                                                          
+            "embeddingCellSetLabelsVisible": "UMAP",                                                
+            "embeddingCellSetLabelSize": "UMAP"                                                     
+        }                                                                                           
+    }                                                                                               
+    ]                                                                                               
 }
-

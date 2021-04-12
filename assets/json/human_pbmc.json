@@ -18,8 +18,8 @@
 							}
 						},
 						"factors": [
-						  "obs/celltype.l1",
 						  "obs/celltype.l2",
+						  "obs/celltype.l1",
 						  "obs/celltype.l3"
 						]
 					}
@@ -30,12 +30,12 @@
 					"url": "https://vitessce-references.s3.us-east-2.amazonaws.com/human-pbmc/vitessce_ref.zarr",
 					"options": [
 						{
-							"groupName": "celltype.l1",
-							"setName": "obs/celltype.l1"
-						},
-						{
 							"groupName": "celltype.l2",
 							"setName": "obs/celltype.l2"
+						},
+						{
+							"groupName": "celltype.l1",
+							"setName": "obs/celltype.l1"
 						},
 						{
 							"groupName": "celltype.l3",
@@ -64,7 +64,10 @@
 		},
 		"embeddingCellSetLabelsVisible": {
 			"UMAP": true
-		}
+		},
+        "embeddingCellSetLabelSize": {
+            "UMAP": 10
+        }
 	},
 	"layout": [{
 		"component": "cellSets",
@@ -80,7 +83,8 @@
 		"coordinationScopes": {
 			"embeddingType": "UMAP",
 			"embeddingCellRadius": "UMAP",
-			"embeddingCellSetLabelsVisible": "UMAP"
+			"embeddingCellSetLabelsVisible": "UMAP",
+            "embeddingCellSetLabelSize": "UMAP"
 		}
 	}
     ]
