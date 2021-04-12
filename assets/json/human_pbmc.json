@@ -58,6 +58,12 @@
 	"coordinationSpace": {
 		"embeddingType": {
 			"UMAP": "UMAP"
+		},
+		"embeddingCellRadius": {
+			"UMAP": 0.25
+		},
+		"embeddingCellSetLabelsVisible": {
+			"UMAP": true
 		}
 	},
 	"layout": [{
@@ -72,7 +78,9 @@
 	{
 		"component": "scatterplot","h": 6,"w": 9,"x": 0,"y": 0,
 		"coordinationScopes": {
-			"embeddingType": "UMAP"
+			"embeddingType": "UMAP",
+			"embeddingCellRadius": "UMAP",
+			"embeddingCellSetLabelsVisible": "UMAP"
 		}
 	}
     ]
