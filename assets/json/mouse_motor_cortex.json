@@ -9,7 +9,7 @@
 				{
 					"type": "cells",
 					"fileType": "anndata-cells.zarr",
-					"url": "https://vitessce-references.s3.us-east-2.amazonaws.com/mouse-motor-cortex/vitessce_ref.zarr",
+					"url": "https://azimuth-vitessce.s3.us-west-2.amazonaws.com/mouse-motor-cortex/vitessce_ref.zarr",
 					"options": {
 						"mappings": {
 							"UMAP": {
@@ -28,7 +28,7 @@
 				{
 					"type": "cell-sets",
 					"fileType": "anndata-cell-sets.zarr",
-					"url": "https://vitessce-references.s3.us-east-2.amazonaws.com/mouse-motor-cortex/vitessce_ref.zarr",
+					"url": "https://azimuth-vitessce.s3.us-west-2.amazonaws.com/mouse-motor-cortex/vitessce_ref.zarr",
 					"options": [
 						{
 							"groupName": "subclass",
@@ -51,7 +51,7 @@
 				{
 					"type": "expression-matrix",
 					"fileType": "anndata-expression-matrix.zarr",
-					"url": "https://vitessce-references.s3.us-east-2.amazonaws.com/mouse-motor-cortex/vitessce_ref.zarr",
+					"url": "https://azimuth-vitessce.s3.us-west-2.amazonaws.com/mouse-motor-cortex/vitessce_ref.zarr",
 					"options": {
 					  "matrix": "X"
 					}
