@@ -9,7 +9,7 @@ function MyVitessce() {
             <Vitessce
                 config={myViewConfig}
                 height={800}
-                theme="light"
+                theme="dark"
             />
         </div>
     );

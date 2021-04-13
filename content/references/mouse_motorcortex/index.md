@@ -8,4 +8,4 @@ type: "static"
 {{< /section >}}
 
 {{< vitessce script="mouse_motorcortex.jsx" >}}
-
+{{< vitessce_marker_tables ref="Mouse - Motor Cortex" >}}

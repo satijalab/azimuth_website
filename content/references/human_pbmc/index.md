@@ -8,4 +8,4 @@ type: "static"
 {{< /section >}}
 
 {{< vitessce script="human_pbmc.jsx" >}}
-
+{{< vitessce_marker_tables ref="Human - PBMC" >}}
