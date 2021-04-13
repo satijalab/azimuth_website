@@ -35,6 +35,11 @@
       answer: |
           If you use Azimuth, please consider citing [Hao et al, bioRxiv 2020](https://www.biorxiv.org/content/10.1101/2020.10.12.335331v1). We also encourage you to cite the original source of the reference dataset, as indicated [here](/references). For example, if you map to the Human Motor Cortex reference, please consider citing [Bakken  et al, bioRxiv 2020](https://www.biorxiv.org/content/10.1101/2020.03.31.016972v1).
 
+    - question: How can I explore gene expression patterns in the reference?
+      incard: false
+      answer: |
+        You can visualize gene expression in each reference using the explore button. This loads a page with a [vitessce](http://vitessce.io/) view of the reference data. Here you can toggle between cell annotations and also view gene expression measurements displayed on the same UMAP plot. For gene expression measurements, the color scale is the plasma option for [viridis](https://bids.github.io/colormap/); a continuous scale between dark purple (low expression) and yellow (high expression). 
+
 - category: Uploading Data
   title: Uploading Data
   questions:
