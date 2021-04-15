@@ -1,0 +1,74 @@
+<style>
+.marker_table {     
+    border-collapse: collapse;    
+    margin: 25px 0;    
+    font-size: 0.9em;    
+    font-family: sans-serif;    
+}     
+.marker_table thead tr {     
+    background-color: var(--primary-light);    
+    text-align: left;    
+}     
+.marker_table th,    
+.marker_table td {     
+    padding: 12px 15px;    
+}     
+.marker_table tbody tr {     
+    border-bottom: thin solid #dddddd;    
+}     
+    
+.marker_table tbody tr:nth-of-type(even) {     
+    background-color: #f3f3f3;    
+}     
+    
+.marker_table tbody tr:last-of-type {     
+    border-bottom: 0.25rem solid var(--primary-light);    
+}     
+
+summary {
+    font-size:20px;
+}
+
+</style>
+
+{{ $ref := .Get "ref" }}
+
+<div class="container">
+    {{ range $.Site.Data.azimuth_references }}
+    {{ if eq .title $ref }}
+    <div class="section">
+        <h1 class="title is-3 h-ref"> Annotation Markers </h1>
+        {{ range .annotations }}
+        <details><summary> {{ .name }} </summary>
+            {{ $csv := printf "%s/%s" "static/csv" .file }}
+            {{$sep := ","}}
+            <table class = "marker_table">
+            {{range $i, $r := getCSV $sep $csv}}
+                {{ if eq $i 0 }}
+                    <thead>
+                        <tr>
+                        {{ range $j, $c := $r }}
+                            {{ if gt $j 0 }}
+                                <th> {{ index $r $j | markdownify }} </th>
+                            {{ end }}
+                        {{ end }}
+                        </tr>
+                    </thead>
+                {{ else }}
+                    <tr>
+                    {{ range $j, $c := $r }}
+                        {{ if gt $j 0 }}
+                            <td> {{ index $r $j | markdownify }} </td> 
+                        {{ end }}
+                    {{ end }}
+                    </tr>
+                {{ end }}
+            {{end}}
+            </table>
+        </details>
+        {{ end }}
+        <br>
+        {{ end }} 
+        {{ end }}
+    </div>
+</div>

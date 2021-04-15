@@ -1,0 +1,38 @@
+{{ $script := .Get "script" }}
+
+<!-- Import the Vitessce CSS -->
+<link crossorigin href="https://unpkg.com/vitessce@1.1.7/dist/umd/production/static/css/index.css" rel="stylesheet" />
+<!-- Style the Vitessce element -->
+<style>
+    .vitessce-app .vitessce-container {
+        height: 800px;
+        width: 100%;
+    }
+    .section {
+        padding-bottom: 0rem;
+    }
+    .vitessce-container.vitessce-theme-dark table td,
+    .vitessce-container.vitessce-theme-dark table th {
+        color: #d3d3d3;
+    }
+</style>
+
+<section class = 'section'>
+    <div class="container">
+        <div id='vitessce'></div>
+        <div id='vitessce-footer'>
+            <p align="right"> Powered by <a href='http://vitessce.io' target="_blank">Vitessce</a> </p>
+        </div>
+    </div>
+</section>
+
+
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script crossorigin src="https://unpkg.com/vitessce@1.1.7/dist/umd/production/index.min.js"></script>
+
+{{ $externals := slice "react" "react-dom" "vitessce" }}
+{{ $opts := dict "targetPath" $script "externals" $externals }}
+{{ $vitessce := resources.Get $script | resources.ExecuteAsTemplate $script . | babel | js.Build $opts }}
+<script type="text/javascript" src="{{ $vitessce.RelPermalink }}" defer></script>
+
