@@ -60,7 +60,7 @@
             "UMAP": "UMAP"                                                                          
         },                                                                                          
         "embeddingCellRadius": {                                                                    
-            "UMAP": 0.25                                                                            
+            "UMAP": 0.03                                                                            
         },                                                                                          
         "embeddingCellSetLabelsVisible": {                                                          
             "UMAP": true                                                                            
