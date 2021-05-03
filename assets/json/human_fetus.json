@@ -63,7 +63,7 @@
             "UMAP": 0.03                                                                            
         },                                                                                          
         "embeddingCellSetLabelsVisible": {                                                          
-            "UMAP": true                                                                            
+            "UMAP": false                                                                            
         },                                                                                          
         "embeddingCellSetLabelSize": {                                                              
             "UMAP": 10                                                                              
