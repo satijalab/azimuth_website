@@ -100,9 +100,9 @@
   unit: Cells
   nunit: 377,456
   species: Human
-  demodata: "[Asp et al, Cell 2019](https://doi.org/10.1016/j.cell.2019.11.025); [Enge et al, Cell 2017](https://doi.org/10.1016/j.cell.2017.09.004); [Lindstrom et al, Developmental Cell 2018](https://doi.org/10.1016/j.devcel.2018.05.010); [Cao et al, Science 2020](https://doi.org/10.1126/science.aba7721);"
+  demodata: "[Asp et al, Cell 2019](https://doi.org/10.1016/j.cell.2019.11.025); [Enge et al, Cell 2017](https://doi.org/10.1016/j.cell.2017.09.004); [Lindstrom et al, Developmental Cell 2018](https://doi.org/10.1016/j.devcel.2018.05.010); [Cao et al, Science 2020](https://doi.org/10.1126/science.aba7721)"
   dataref: |
-      [[Cao et al, Science 2020](https://doi.org/10.1126/science.aba7721)]
+      [Cao et al, Science 2020](https://doi.org/10.1126/science.aba7721)
   details: |
       This reference consists of 378,000 subsampled human fetal cells from Cao et al., 2020. Details of the reference construction procedure can be explored in the Snakemake workflow linked above.
   annotations:
