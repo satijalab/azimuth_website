@@ -18,8 +18,8 @@
 							}
 						},
 						"factors": [
+					      "obs/annotation.l1",
 						  "obs/annotation.l2",
-						  "obs/annotation.l1",
 						  "obs/organ"
 						]
 					}
@@ -30,12 +30,12 @@
 					"url": "https://azimuth-vitessce.s3.us-west-2.amazonaws.com/human-fetus/vitessce_ref.zarr",
 					"options": [
 						{
-							"groupName": "annotation.l2",
-							"setName": "obs/annotation.l2"
-						},
-						{
 							"groupName": "annotation.l1",
 							"setName": "obs/annotation.l1"
+						},
+						{
+							"groupName": "annotation.l2",
+							"setName": "obs/annotation.l2"
 						},
 						{
 							"groupName": "organ",
