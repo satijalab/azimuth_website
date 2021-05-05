@@ -91,10 +91,10 @@
         file: pancreas.csv
 
 - title: Human - Fetal Development
-  applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-BBI-0.4
+  applink: https://app.azimuth.hubmapconsortium.org/app/human-fetus
   image: humanfetusumap.png
-  snakemake: https://github.com/satijalab/azimuth-references/pull/3
-  zenodo: https://zenodo.org/record/????????????????????????
+  snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_fetus
+  zenodo: https://zenodo.org/record/4738021#.YJIW4C2ZNQI
   vitessce: /references/human_fetus
   modalities: RNA
   unit: Cells
