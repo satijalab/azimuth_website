@@ -89,3 +89,24 @@
   annotations:
       - name: annotation.l1
         file: pancreas.csv
+
+- title: Human - Fetal Development
+  applink: https://app.azimuth.hubmapconsortium.org/app/human-fetus
+  image: humanfetusumap.png
+  snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_fetus
+  zenodo: https://zenodo.org/record/4738021#.YJIW4C2ZNQI
+  vitessce: /references/human_fetus
+  modalities: RNA
+  unit: Cells
+  nunit: 377,456
+  species: Human
+  demodata: "[Asp et al, Cell 2019](https://doi.org/10.1016/j.cell.2019.11.025); [Enge et al, Cell 2017](https://doi.org/10.1016/j.cell.2017.09.004); [Lindstrom et al, Developmental Cell 2018](https://doi.org/10.1016/j.devcel.2018.05.010); [Cao et al, Science 2020](https://doi.org/10.1126/science.aba7721)"
+  dataref: |
+      [Cao et al, Science 2020](https://doi.org/10.1126/science.aba7721)
+  details: |
+      This reference consists of 378,000 subsampled human fetal cells from Cao et al., 2020. Details of the reference construction procedure can be explored in the Snakemake workflow linked above.
+  annotations:
+      - name: annotation.l2                                                                               
+        file: humanfetus_l2.csv                                                                  
+      - name: annotation.l1                                                                            
+        file: humanfetus_l1.csv
