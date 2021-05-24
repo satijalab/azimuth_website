@@ -110,3 +110,24 @@
         file: humanfetus_l2.csv                                                                  
       - name: annotation.l1                                                                            
         file: humanfetus_l1.csv
+
+- title: Human - Lung
+  applink: https://app.azimuth.hubmapconsortium.org/app/human-lung
+  image: lungumap.png
+  snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_lung
+  zenodo: https://zenodo.org/
+  vitessce: /references/human_lung
+  modalities: RNA
+  unit: Cells
+  nunit: 65,662 
+  species: Human
+  demodata: "[Vieira-Braga et al, Nature Medicine 2019](https://www.nature.com/articles/s41591-019-0468-5)"
+  dataref: |
+      [Travaglini et al, Nature 2020](https://www.nature.com/articles/s41586-020-2922-4)
+  details: |
+        This reference consists of 65,662 human lung cells (10x Genomics v2) from Travaglini et al. 2020. Cells were sourced from three donor patients and from all lung tissue compartments (bronchi, bronchiole, alveoli) as well as circulating blood. 
+  annotations:
+      - name: annotation.l2                                                                               
+        file: humanfetus_l2.csv                                                                  
+      - name: annotation.l1                                                                            
+        file: humanfetus_l1.csv
