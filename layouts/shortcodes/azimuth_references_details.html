@@ -2,6 +2,9 @@
 .h-ref {
     margin-bottom: 0.25rem !important;
 }   
+.button {
+    margin-bottom: 0.25rem !important;
+}
 .buttons {
     margin-bottom: 0.25rem !important;
 }
@@ -19,6 +22,11 @@
 }
 
 .vitessce-btn {
+    background-color: var(--error-main);
+    border-color: var(--error-main);
+}
+
+.cellxgene-btn {
     background-color: var(--error-main);
     border-color: var(--error-main);
 }
@@ -92,9 +100,9 @@ summary {
         <h2 class="title is-2 h-ref" id="{{ .title }}"> {{ .title }} </h2>
         <div class="buttons">
             <a class="button app-btn" href="{{ .applink }}">App</a>
+            <a class="button vitessce-btn" href="{{ .vitessce }}">Reference</a>
             <a class="button zenodo-btn" href="{{ .zenodo }}">Zenodo</a>
             <a class="button snakemake-btn" href="{{ .snakemake }}">Snakemake</a>
-            <a class="button vitessce-btn" href="{{ .vitessce }}">Explore</a>
         </div>
         <div class="card">
             <header class="card-header"> 
@@ -145,6 +153,23 @@ summary {
         </details>
         {{ end }}
         <br>
+		{{ if .mapped }}
+        	<div class="card">
+            	<header class="card-header">
+                	<h4 class="title is-4 card-header-title"> Mapping Results </h4>
+            	</header>
+            	<div class="card-content">
+                	<div class="content">
+                		<a class="button cellxgene-btn" href="{{ .mapped.cellxgene }}">Mapping Results</a>
+					    <a class="button snakemake-btn" href="{{ .mapped.snakemake }}">Mapping Pipeline</a>
+            			<a class="button zenodo-btn" href="{{ .mapped.download}}">Download Results</a>
+						<br><br>
+                    	<p> <b>Total {{ .mapped.unit }} Mapped:</b> {{ .mapped.nunit }} </p>
+						<p> <b>Datasets Mapped:</b> {{ .mapped.datasets | markdownify }} </p>
+                	</div>
+            	</div>
+        	</div>
+		{{ end }}
         {{ end }} 
     </div>
   </div>
