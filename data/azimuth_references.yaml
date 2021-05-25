@@ -127,7 +127,7 @@
   details: |
         This reference consists of 65,662 human lung cells (10x Genomics v2) from Travaglini et al. 2020. Cells were sourced from three donor patients and from all lung tissue compartments (bronchi, bronchiole, alveoli) as well as circulating blood. 
   annotations:
-      - name: annotation.l2                                                                               
-        file: humanfetus_l2.csv                                                                  
       - name: annotation.l1                                                                            
-        file: humanfetus_l1.csv
+        file: lung_l1.csv
+      - name: annotation.l2                                                                               
+        file: lung_l2.csv                                                                  
