@@ -112,9 +112,9 @@
         file: humanfetus_l1.csv
 
 - title: Human - Lung
-  applink: https://app.azimuth.hubmapconsortium.org/app/human-lung
+  applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-lung
   image: lungumap.png
-  snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_lung
+  snakemake: https://github.com/satijalab/azimuth-references/tree/feat/lung
   zenodo: https://zenodo.org/
   vitessce: /references/human_lung
   modalities: RNA
