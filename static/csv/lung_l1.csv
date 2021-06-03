@@ -1,4 +1,4 @@
-"","Label","OBO.Ontology.ID","Markers"
+"","Label","OBO Ontology ID","Markers"
 "1","Alveolar Epithelial Type 1","[type I pneumocyte](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0002062)","EMP2, AGER, GPRC5A, LMO7, RTKN2, ARHGEF26, LAMA3, DST, SPOCK2, SCEL"
 "2","B","[B cell](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0000236)","MS4A1, BANK1, LINC00926, CD79A, BLK, CD79B, VPREB3, SP140, CD22, ADAM28"
 "3","Basal","[basal cell](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0000646)","KRT15, S100A2, KRT17, KRT5, KRT19, PERP, CLDN1, FHL2, DST, ITGA2"
