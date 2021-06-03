@@ -112,16 +112,16 @@
         file: humanfetus_l1.csv
 
 - title: Human - Lung
-  applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-lung
+  applink: https://app.azimuth.hubmapconsortium.org/app/human-lung
   image: lungumap.png
-  snakemake: https://github.com/satijalab/azimuth-references/tree/feat/lung
-  zenodo: https://zenodo.org/
+  snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_lung
+  zenodo: https://zenodo.org/record/4895404
   vitessce: /references/human_lung
   modalities: RNA
   unit: Cells
   nunit: 65,662 
   species: Human
-  demodata: "[Vieira-Braga et al, Nature Medicine 2019](https://www.nature.com/articles/s41591-019-0468-5)"
+  demodata: "[Vieira-Braga et al, Nature Medicine 2019](https://www.nature.com/articles/s41591-019-0468-5) [[Seurat Object](https://seurat.nygenome.org/azimuth/demo_datasets/braga_lung_demo.Rds)]"
   dataref: |
       [Travaglini et al, Nature 2020](https://www.nature.com/articles/s41586-020-2922-4)
   details: |
