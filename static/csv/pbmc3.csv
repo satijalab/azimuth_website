@@ -1,6 +1,6 @@
 "","Label","Expanded Label","OBO Ontology ID","Markers"
 "1","ASDC_mDC","AXL+ myeloid dendritic cell","[myeloid dendritic cell](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0000782)","AXL, LILRA4, SCN9A, CLEC4C, LTK, PPP1R14A, LGMN, SCT, IL3RA, GAS6"
-"2","ASDC_pDC","AXL+ plasmacytoid dendritic cell","[plasmacytoid dendritic cell](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0000784)","LILRA4, CLEC4C, SCT, EPHB1, AXL, PROC, LRRC26, SCN9A, LTK, DNASE1L3"
+"2","ASDC_pDC","AXL+ plasmacytoid dendritic cell","[dendritic cell](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0000451)","LILRA4, CLEC4C, SCT, EPHB1, AXL, PROC, LRRC26, SCN9A, LTK, DNASE1L3"
 "3","B intermediate kappa","Intermediate B cell, kappa light chain","[mature B cell](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0000785)","MS4A1, IGKC, IGHM, LINC01857, MARCKS, IGHD, TNFRSF13B, CD24, FCRL2, BANK1"
 "4","B intermediate lambda","Intermediate B cell, lambda light chain","[mature B cell](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0000785)","MS4A1, IGLC2, IGHM, CD79A, IGLC3, IGHD, BANK1, TNFRSF13C, CD22, TNFRSF13B"
 "5","B memory kappa","Memory B cell, kappa light chain","[memory B cell](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0000787)","BANK1, IGKC, LINC01781, MS4A1, SSPN, CD79A, RALGPS2, TNFRSF13C, LINC00926"
