@@ -79,7 +79,7 @@
   vitessce: /references/human_pancreas
   modalities: RNA
   unit: Cells
-  nunit: 35,674
+  nunit: 35,289
   species: Human
   demodata: "[Enge et al, Cell 2017](https://doi.org/10.1016/j.cell.2017.09.004) [[Seurat Object](https://seurat.nygenome.org/azimuth/demo_datasets/enge.rds)]"
   dataref: |
