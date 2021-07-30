@@ -155,3 +155,113 @@
   details: |
         Script: `/home/jainj/kidney/make_ref.R` in 02
 
+- title: Human Liver
+  applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-liver-revised
+  image: liver_revised.png
+  snakemake:
+  zenodo:
+  vitessce:
+  modalities: RNA
+  unit: Cells
+  nunit: 1
+  species: Human
+  demodata:
+  dataref:
+  details: |
+        Script: `/home/jainj/liver/Aizarani/make_aiz.R` in 02
+        Full reference: `/home/jainj/liver/fullref.rds` in 02
+
+- title: Human Skin
+  applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-skin-revised 
+  image: skin_revised.png
+  snakemake:
+  zenodo:
+  vitessce:
+  modalities: RNA
+  unit: Cells
+  nunit: 1
+  species: Human
+  demodata:
+  dataref:
+  details: |
+        Script: `/home/jainj/skin/make_ref.R` in 02
+        Full reference: `/home/jainj/skin/fullref.rds` in 02
+
+- title: Human Retina
+  applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-retina-revised
+  image: retina_revised.png
+  snakemake:
+  zenodo:
+  vitessce:
+  modalities: RNA
+  unit: Cells
+  nunit: 1
+  species: Human
+  demodata:
+  dataref:
+  details: |
+        Script: `/home/jainj/make_retina.R` in 02
+        Full reference: `/home/jainj/mergedsub.rds` in 02
+
+- title: Human Spleen
+  applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-spleen-revised
+  image: kidney_revised.png
+  snakemake:
+  zenodo:
+  vitessce:
+  modalities: RNA
+  unit: Cells
+  nunit: 1
+  species: Human
+  demodata:
+  dataref:
+  details: |
+        Script: `/home/jainj/spleen/make_ref.R` in 02
+        Full reference: `/home/jainj/spleen/fullref.rds` in 02
+
+- title: Human Colon
+  applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-colon-revised
+  image: colon_revised.png
+  snakemake:
+  zenodo:
+  vitessce:
+  modalities: RNA
+  unit: Cells
+  nunit: 1
+  species: Human
+  demodata:
+  dataref:
+  details: |
+        Script: `/home/jainj/colon/make_ref.R` in 02
+        Full reference: `/home/jainj/colon/fullref.rds` in 02
+
+- title: Human Esophagus
+  applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-esophagus-revised
+  image: esophagus_revised.png
+  snakemake:
+  zenodo:
+  vitessce:
+  modalities: RNA
+  unit: Cells
+  nunit: 1
+  species: Human
+  demodata:
+  dataref:
+  details: |
+        Script: `/home/jainj/esophagus/make_madisoon.R` in 02
+        Full reference: `/home/jainj/esophagus/fullref.rds` in 02
+
+- title: Human Heart
+  applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-heart
+  image: kidney_revised.png
+  snakemake:
+  zenodo:
+  vitessce:
+  modalities: RNA
+  unit: Cells
+  nunit: 1
+  species: Human
+  demodata:
+  dataref:
+  details: |
+        Full reference: `/home/jainj/heart/Teichmann/teichintg.rds` in 02
