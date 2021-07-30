@@ -139,3 +139,21 @@
     download: "https://cellxgene.cziscience.com/collections/2f75d249-1bec-459b-bf2b-b86221097ced"
     snakemake: "https://github.com/satijalab/azimuth-meta-analysis/tree/master/human_lung"
     cellxgene: "https://cellxgene.cziscience.com/e/f72958f5-7f42-4ebb-98da-445b0c6de516.cxg/"
+
+- title: Human Kidney
+  applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-kidney 
+  image: kidney_revised.png
+  snakemake: 
+  zenodo: 
+  vitessce: 
+  modalities: RNA
+  unit: Cells
+  nunit: 
+  species: Human
+  demodata: ""
+  dataref: |
+  details: |
+  	Script: `/home/jainj/kidney/make_ref.R` in 02
+  annotations:
+
+
