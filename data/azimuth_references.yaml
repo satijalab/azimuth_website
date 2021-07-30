@@ -153,8 +153,8 @@
   demodata: 
   dataref:
   details: |
-        Script: `/home/jainj/kidney/make_ref.R` in 02 - 
-        Reference dir: `/home/jainj/new-refs/kidney/` in 02 - 
+        Script: `/home/jainj/kidney/make_ref.R` in 02 // 
+        Reference dir: `/home/jainj/new-refs/kidney/` in 02
 
 - title: Human Liver
   applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-liver-revised
@@ -169,8 +169,8 @@
   demodata:
   dataref:
   details: |
-        Script: `/home/jainj/liver/Aizarani/make_aiz.R` in 02 - 
-        Reference dir: `/home/jainj/new-refs/liver/` in 02 - 
+        Script: `/home/jainj/liver/Aizarani/make_aiz.R` in 02 // 
+        Reference dir: `/home/jainj/new-refs/liver/` in 02 // 
         Full object: `/home/jainj/liver/fullref.rds` in 02 
 
 - title: Human Skin
@@ -186,8 +186,8 @@
   demodata:
   dataref:
   details: |
-        Script: `/home/jainj/skin/make_ref.R` in 02 - 
-        Reference dir: `/home/jainj/new-refs/skin/` in 02 - 
+        Script: `/home/jainj/skin/make_ref.R` in 02 // 
+        Reference dir: `/home/jainj/new-refs/skin/` in 02 // 
         Full object: `/home/jainj/skin/fullref.rds` in 02
 
 - title: Human Retina
@@ -203,8 +203,8 @@
   demodata:
   dataref:
   details: |
-        Script: `/home/jainj/make_retina.R` in 02 - 
-        Reference dir: `/home/jainj/new-refs/retina-revised/` in 02 - 
+        Script: `/home/jainj/make_retina.R` in 02 // 
+        Reference dir: `/home/jainj/new-refs/retina-revised/` in 02 // 
         Full object: `/home/jainj/retina_fullref.rds` in 02
 
 - title: Human Spleen
@@ -220,8 +220,8 @@
   demodata:
   dataref:
   details: |
-        Script: `/home/jainj/spleen/make_ref.R` in 02 - 
-        Reference dir: `/home/jainj/new-refs/spleen-revised/` in 02 - 
+        Script: `/home/jainj/spleen/make_ref.R` in 02 // 
+        Reference dir: `/home/jainj/new-refs/spleen-revised/` in 02 // 
         Full reference: `/home/jainj/spleen/fullref.rds` in 02
 
 - title: Human Colon
@@ -237,8 +237,8 @@
   demodata:
   dataref:
   details: |
-        Script: `/home/jainj/colon/make_ref.R` in 02 - 
-        Reference dir: `/home/jainj/new-refs/colon-revised/` in 02 - 
+        Script: `/home/jainj/colon/make_ref.R` in 02 // 
+        Reference dir: `/home/jainj/new-refs/colon-revised/` in 02 // 
         Full reference: `/home/jainj/colon/fullref.rds` in 02
 
 - title: Human Esophagus
@@ -254,8 +254,8 @@
   demodata:
   dataref:
   details: |
-        Script: `/home/jainj/esophagus/make_madisoon.R` in 02 - 
-        Reference dir: `/home/jainj/new-refs/esophagus-revised/` in 02 -  
+        Script: `/home/jainj/esophagus/make_madisoon.R` in 02 // 
+        Reference dir: `/home/jainj/new-refs/esophagus-revised/` in 02 //  
         Full reference: `/home/jainj/esophagus/fullref.rds` in 02
 
 - title: Human Heart
@@ -271,6 +271,6 @@
   demodata:
   dataref:
   details: |
-        (Note: still runs on older version of Azimuth -- reference dataset is undecided) - 
-        Reference dir: `/home/jainj/new-refs/heart-demo-v4/` in 02 - 
+        (Note: still runs on older version of Azimuth -- reference dataset is undecided) // 
+        Reference dir: `/home/jainj/new-refs/heart-demo-v4/` in 02 // 
         Full reference: `/home/jainj/heart/Teichmann/teichintg.rds` in 02
