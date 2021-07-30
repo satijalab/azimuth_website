@@ -153,8 +153,7 @@
   demodata: 
   dataref:
   details: |
-        Script: `/home/jainj/make_kidney.R` in 02;
-        Full reference: `/home/jainj/kidney_fullref.rds` in 02 
+        Script: `/home/jainj/kidney/make_ref.R` in 02;
 
 - title: Human Liver
   applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-liver-revised
