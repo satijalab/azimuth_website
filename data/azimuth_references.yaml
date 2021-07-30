@@ -153,7 +153,7 @@
   demodata: 
   dataref:
   details: |
-        Script: `/home/jainj/make_kidney.R` in 02
+        Script: `/home/jainj/make_kidney.R` in 02;
         Full reference: `/home/jainj/kidney_fullref.rds` in 02 
 
 - title: Human Liver
@@ -169,7 +169,7 @@
   demodata:
   dataref:
   details: |
-        Script: `/home/jainj/liver/Aizarani/make_aiz.R` in 02
+        Script: `/home/jainj/liver/Aizarani/make_aiz.R` in 02;
         Full reference: `/home/jainj/liver/fullref.rds` in 02
 
 - title: Human Skin
@@ -185,7 +185,7 @@
   demodata:
   dataref:
   details: |
-        Script: `/home/jainj/skin/make_ref.R` in 02
+        Script: `/home/jainj/skin/make_ref.R` in 02;
         Full reference: `/home/jainj/skin/fullref.rds` in 02
 
 - title: Human Retina
@@ -201,7 +201,7 @@
   demodata:
   dataref:
   details: |
-        Script: `/home/jainj/make_retina.R` in 02
+        Script: `/home/jainj/make_retina.R` in 02;
         Full reference: `/home/jainj/mergedsub.rds` in 02
 
 - title: Human Spleen
@@ -217,7 +217,7 @@
   demodata:
   dataref:
   details: |
-        Script: `/home/jainj/spleen/make_ref.R` in 02
+        Script: `/home/jainj/spleen/make_ref.R` in 02;
         Full reference: `/home/jainj/spleen/fullref.rds` in 02
 
 - title: Human Colon
@@ -233,7 +233,7 @@
   demodata:
   dataref:
   details: |
-        Script: `/home/jainj/colon/make_ref.R` in 02
+        Script: `/home/jainj/colon/make_ref.R` in 02;
         Full reference: `/home/jainj/colon/fullref.rds` in 02
 
 - title: Human Esophagus
@@ -249,7 +249,7 @@
   demodata:
   dataref:
   details: |
-        Script: `/home/jainj/esophagus/make_madisoon.R` in 02
+        Script: `/home/jainj/esophagus/make_madisoon.R` in 02; 
         Full reference: `/home/jainj/esophagus/fullref.rds` in 02
 
 - title: Human Heart
