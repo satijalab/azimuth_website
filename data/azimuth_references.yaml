@@ -154,9 +154,4 @@
   dataref:
   details: |
         Script: /home/jainj/kidney/make_ref.R in 02
-  annotations:
-      - name: annotation.l1
-        file: lung_l1.csv
-      - name: annotation.l2
-        file: lung_l2.csv
 
