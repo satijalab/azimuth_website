@@ -222,7 +222,7 @@
   details: |
         Script: `/home/jainj/spleen/make_ref.R` in 02 // 
         Reference dir: `/home/jainj/new-refs/spleen-revised/` in 02 // 
-        Full reference: `/home/jainj/spleen/fullref.rds` in 02
+        Full object: `/home/jainj/spleen/fullref.rds` in 02
 
 - title: Human Colon
   applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-colon-revised
@@ -239,7 +239,7 @@
   details: |
         Script: `/home/jainj/colon/make_ref.R` in 02 // 
         Reference dir: `/home/jainj/new-refs/colon-revised/` in 02 // 
-        Full reference: `/home/jainj/colon/fullref.rds` in 02
+        Full object: `/home/jainj/colon/fullref.rds` in 02
 
 - title: Human Esophagus
   applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-esophagus-revised
@@ -256,7 +256,7 @@
   details: |
         Script: `/home/jainj/esophagus/make_madisoon.R` in 02 // 
         Reference dir: `/home/jainj/new-refs/esophagus-revised/` in 02 //  
-        Full reference: `/home/jainj/esophagus/fullref.rds` in 02
+        Full object: `/home/jainj/esophagus/fullref.rds` in 02
 
 - title: Human Heart
   applink: http://t6e1csrfi8tn8b6.satijalab.org/app/azimuth-heart
@@ -273,4 +273,4 @@
   details: |
         (Note: still runs on older version of Azimuth -- reference dataset is undecided) // 
         Reference dir: `/home/jainj/new-refs/heart-demo-v4/` in 02 // 
-        Full reference: `/home/jainj/heart/Teichmann/teichintg.rds` in 02
+        Full object: `/home/jainj/heart/Teichmann/teichintg.rds` in 02
