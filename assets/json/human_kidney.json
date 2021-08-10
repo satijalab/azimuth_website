@@ -18,7 +18,8 @@
 							}
 						},
 						"factors": [
-					      "obs/celltype",
+					      "obs/annotation.l3",
+								"obs/annotation.l2",
 						  "obs/annotation.l1"
 						]
 					}
@@ -29,8 +30,12 @@
 					"url": "https://azimuth-vitessce.s3.us-west-2.amazonaws.com/human-kidney/vitessce_ref.zarr",
 					"options": [
 						{
-							"groupName": "celltype",
-							"setName": "obs/celltype"
+							"groupName": "annotation.l3",
+							"setName": "obs/annotation.l3"
+						},
+						{
+							"groupName": "annotation.l2",
+							"setName": "obs/annotation.l2"
 						},
 						{
 							"groupName": "annotation.l1",
