@@ -142,7 +142,7 @@
 
 - title: Human - Kidney
   applink: https://app.azimuth.hubmapconsortium.org/app/human-kidney
-  image: lungumap.png
+  image: kidneyumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_kidney
   zenodo: https://zenodo.org/record/4895404
   vitessce: /references/human_kidney
