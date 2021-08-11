@@ -14,10 +14,10 @@
       incard: true
       answer: |
           The source code is available [here](https://github.com/satijalab/azimuth). However, for users interested in performing these analyses outside the context of the Azimuth app, we suggest using Seurat v4 and using our vignette on [Mapping and annotating query datasets](https://satijalab.org/seurat/articles/integration_mapping.html) as an example. You can also download a Seurat v4 R script from the app once your analysis is complete to reproduce the results locally.
-  
+
     - question: The app won’t load!
       incard: true
-      answer: | 
+      answer: |
            If you see a blank screen, try clearing your cache or browser history. A previous session of yours may be interfering with the current one.
 
     - question: Can I open multiple apps simultaneously?
@@ -33,12 +33,12 @@
     - question: How do I cite Azimuth if I use it in my own work?
       incard: false
       answer: |
-          If you use Azimuth, please consider citing [Hao et al, bioRxiv 2020](https://www.biorxiv.org/content/10.1101/2020.10.12.335331v1). We also encourage you to cite the original source of the reference dataset, as indicated [here](/references). For example, if you map to the Human Motor Cortex reference, please consider citing [Bakken  et al, bioRxiv 2020](https://www.biorxiv.org/content/10.1101/2020.03.31.016972v1).
+          If you use Azimuth, please consider citing [Hao et al, Cell 2021](https://www.cell.com/cell/fulltext/S0092-8674(21)00583-3). We also encourage you to cite the original source of the reference dataset, as indicated [here](/references). For example, if you map to the Human Motor Cortex reference, please consider citing [Bakken  et al, bioRxiv 2020](https://www.biorxiv.org/content/10.1101/2020.03.31.016972v1).
 
     - question: How can I explore gene expression patterns in the reference?
       incard: false
       answer: |
-        You can visualize gene expression in each reference using the explore button. This loads a page with a [vitessce](http://vitessce.io/) view of the reference data. Here you can toggle between cell annotations and also view gene expression measurements displayed on the same UMAP plot. For gene expression measurements, the color scale is the plasma option for [viridis](https://bids.github.io/colormap/); a continuous scale between dark purple (low expression) and yellow (high expression). 
+        You can visualize gene expression in each reference using the explore button. This loads a page with a [vitessce](http://vitessce.io/) view of the reference data. Here you can toggle between cell annotations and also view gene expression measurements displayed on the same UMAP plot. For gene expression measurements, the color scale is the plasma option for [viridis](https://bids.github.io/colormap/); a continuous scale between dark purple (low expression) and yellow (high expression).
 
 - category: Uploading Data
   title: Uploading Data
@@ -153,11 +153,11 @@
             * pct_in: percent of cells in the cluster with nonzero feature value
             * pct_out: percent of cells out of the cluster with nonzero feature value
 
-    - question: What if my query dataset contains cell types that aren't present in the reference? 
+    - question: What if my query dataset contains cell types that aren't present in the reference?
       incard: true
       answer: |
          If your query dataset primarily comprises cell types that are not in the reference, the mapping will likely return poor 'Dataset-level' QC metrics  (see Mapping QC section below). Alternately, your query dataset may be mostly comprised of reference cell types, but includes a subset of additional new populations. In this case, these cells will map to the closest cell type in the reference (e.g., neutrophils will map to monocytes in our PBMC reference). However, we expect these cells to receive poor 'cell-level' QC metrics, including low mapping scores (see Mapping QC section below).
-    
+
     - question: Can I visualize my own metadata?
       incard: false
       answer: |

@@ -10,9 +10,9 @@
   species: Human
   dataref: |
       [Hao and Hao et al, bioRvix 2020](https://satijalab.org/v4preprint)
-  demodata: "[11,769 PBMCs from 10x Genomics](https://support.10xgenomics.com/single-cell-gene-expression/datasets/3.0.0/pbmc_10k_v3)" 
+  demodata: "[11,769 PBMCs from 10x Genomics](https://support.10xgenomics.com/single-cell-gene-expression/datasets/3.0.0/pbmc_10k_v3)"
   details: |
-      This PBMC reference dataset was generated as part of the [Hao and Hao et al, bioRvix 2020](https://satijalab.org/v4preprint) paper. It is comprised of data from eight volunteers enrolled in an HIV vaccine trial from which three time point samples were taken at day 0, 3, and 7 following vaccination. All 24 samples were processed with a CITE-seq panel of 228 TotalSeq A antibodies to generate single-cell RNA and ADT data. The data were then integrated using metholody described in the pre-print linked above to generate a weighted nearest neighbor (WNN) representation of the RNA and protein data jointly. This WNN representation is used in the Azimuth app to assign celltypes, embed in the reference UMAP, and impute protein levels for the query dataset.  
+      This PBMC reference dataset was generated as part of the [Hao and Hao et al, bioRvix 2020](https://satijalab.org/v4preprint) paper. It is comprised of data from eight volunteers enrolled in an HIV vaccine trial from which three time point samples were taken at day 0, 3, and 7 following vaccination. All 24 samples were processed with a CITE-seq panel of 228 TotalSeq A antibodies to generate single-cell RNA and ADT data. The data were then integrated using metholody described in the pre-print linked above to generate a weighted nearest neighbor (WNN) representation of the RNA and protein data jointly. This WNN representation is used in the Azimuth app to assign celltypes, embed in the reference UMAP, and impute protein levels for the query dataset.
   annotations:
       - name: celltype.l1
         file: pbmc1.csv
@@ -32,7 +32,7 @@
   nunit: 76,533
   species: Human
   demodata: "Subset of M1C Data ([Portal](https://portal.brain-map.org/atlases-and-data/rnaseq/human-multiple-cortical-areas-smart-seq)) [[Seurat Object](https://seurat.nygenome.org/azimuth/demo_datasets/allen_m1c_2019_ssv4.rds)]"
-  dataref: | 
+  dataref: |
     [Bakken et al, bioRxiv 2020](https://doi.org/10.1101/2020.03.31.016972) ([Portal](https://portal.brain-map.org/atlases-and-data/rnaseq/human-m1-10x))
   details: |
       This reference of human motor cortex was generated from data and annotations available from the Allen Institute. Originally described in [Bakken et al, bioRxiv 2020](https://doi.org/10.1101/2020.03.31.016972), this data was the integrated across the two individual donors to create the Azimuth reference used here. Annotations are provided at the level of _class_ (e.g. GABAergic), _subclass_ (e.g. L2/3 IT), _cluster_ (e.g. Inh L1-2 VIP WNT4), and _cross-species cluster_ (e.g. Sst_6).
@@ -57,19 +57,19 @@
   nunit: 159,738
   species: Mouse
   demodata: "[Yao et al, bioRxiv 2020](https://www.biorxiv.org/content/10.1101/2020.03.30.015214v1) ([Portal](https://portal.brain-map.org/atlases-and-data/rnaseq/mouse-whole-cortex-and-hippocampus-10x)) [[Seurat Object](https://seurat.nygenome.org/azimuth/demo_datasets/allen_mop_2020.rds)]"
-  dataref: | 
+  dataref: |
     [Yao, Liu, Xie, Fischer, et al, bioRxiv 2020](https://www.biorxiv.org/content/10.1101/2020.02.29.970558v1)
   details: |
-      The data used in this reference was generated as part of the effort by [Yao, Liu, Xie, Fischer, et al, bioRxiv 2020](https://www.biorxiv.org/content/10.1101/2020.02.29.970558v1) to generate an integrated transcriptomic and epigenomic atlas of the primary motor cortex in mouse. To generate the reference used in Azimuth, we applied a reference-based integration strategy to harmonize the 10x v3 snRNA-seq data across 12 individual mice. Annotations are provided at the level of _class_ (e.g. GABAergic), _subclass_ (e.g. L2/3 IT), _cluster_ (e.g. L2/3 IT_3), and _cross-species cluster_ (e.g. Sst_6) 
-  annotations:                                                                                      
-      - name: class                                                                                 
-        file: mousebrain_class.csv                                                                  
-      - name: subclass                                                                              
-        file: mousebrain_subclass.csv                                                               
-      - name: cluster                                                                               
-        file: mousebrain_cluster.csv                                                                
-      - name: cross-species cluster                                                                 
-        file: mousebrain_crossspecies.csv    
+      The data used in this reference was generated as part of the effort by [Yao, Liu, Xie, Fischer, et al, bioRxiv 2020](https://www.biorxiv.org/content/10.1101/2020.02.29.970558v1) to generate an integrated transcriptomic and epigenomic atlas of the primary motor cortex in mouse. To generate the reference used in Azimuth, we applied a reference-based integration strategy to harmonize the 10x v3 snRNA-seq data across 12 individual mice. Annotations are provided at the level of _class_ (e.g. GABAergic), _subclass_ (e.g. L2/3 IT), _cluster_ (e.g. L2/3 IT_3), and _cross-species cluster_ (e.g. Sst_6)
+  annotations:
+      - name: class
+        file: mousebrain_class.csv
+      - name: subclass
+        file: mousebrain_subclass.csv
+      - name: cluster
+        file: mousebrain_cluster.csv
+      - name: cross-species cluster
+        file: mousebrain_crossspecies.csv
 
 - title: Human - Pancreas
   applink: https://app.azimuth.hubmapconsortium.org/app/human-pancreas
@@ -106,9 +106,9 @@
   details: |
       This reference consists of 378,000 subsampled human fetal cells from Cao et al., 2020. Details of the reference construction procedure can be explored in the Snakemake workflow linked above.
   annotations:
-      - name: annotation.l2                                                                               
-        file: humanfetus_l2.csv                                                                  
-      - name: annotation.l1                                                                            
+      - name: annotation.l2
+        file: humanfetus_l2.csv
+      - name: annotation.l1
         file: humanfetus_l1.csv
 
 - title: Human - Lung
@@ -119,17 +119,17 @@
   vitessce: /references/human_lung
   modalities: RNA
   unit: Cells
-  nunit: 65,662 
+  nunit: 65,662
   species: Human
   demodata: "[Vieira-Braga et al, Nature Medicine 2019](https://www.nature.com/articles/s41591-019-0468-5) [[Seurat Object](https://seurat.nygenome.org/azimuth/demo_datasets/braga_lung_demo.Rds)]"
   dataref: |
       [Travaglini et al, Nature 2020](https://www.nature.com/articles/s41586-020-2922-4)
   details: |
-        This reference consists of 65,662 human lung cells (10x Genomics v2) from Travaglini et al. 2020. Cells were sourced from three donor patients and from all lung tissue compartments (bronchi, bronchiole, alveoli) as well as circulating blood. 
+        This reference consists of 65,662 human lung cells (10x Genomics v2) from Travaglini et al. 2020. Cells were sourced from three donor patients and from all lung tissue compartments (bronchi, bronchiole, alveoli) as well as circulating blood.
   annotations:
-      - name: annotation.l1                                                                            
+      - name: annotation.l1
         file: lung_l1.csv
-      - name: annotation.l2                                                                               
+      - name: annotation.l2
         file: lung_l2.csv
   mapped:
     unit: Cells
@@ -139,3 +139,26 @@
     download: "https://cellxgene.cziscience.com/collections/2f75d249-1bec-459b-bf2b-b86221097ced"
     snakemake: "https://github.com/satijalab/azimuth-meta-analysis/tree/master/human_lung"
     cellxgene: "https://cellxgene.cziscience.com/e/f72958f5-7f42-4ebb-98da-445b0c6de516.cxg/"
+
+- title: Human - Kidney
+  applink: https://app.azimuth.hubmapconsortium.org/app/human-kidney
+  image: kidneyumap.png
+  snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_kidney
+  zenodo: https://zenodo.org/record/5181818
+  vitessce: /references/human_kidney
+  modalities: RNA
+  unit: Cells
+  nunit: 64,693
+  species: Human
+  demodata: "[Stewart et al., Science 2019](https://science.sciencemag.org/content/365/6460/1461.long) [[Seurat Object](https://seurat.nygenome.org/azimuth/demo_datasets/kidney_demo_stewart.rds)]"
+  dataref: |
+      [Lake et al, bioRxiv 2021](https://www.biorxiv.org/content/10.1101/2021.07.28.454201v1)
+  details: |
+        This reference consists of 64,693 kidney nuclei (10x Genomics snRNA-seq) from healthy reference states generated by investigators in the Human Biomolecular Atlas Program (HuBMAP) and the Kidney Precision Medicine Project (KPMP). The dataset represents 21 samples across 13 patient donors. Samples were derived from nephrectomy, biopsy, or deceased donor tissue, spanning three anatomical regions: medulla, cortex and papilla.
+  annotations:
+      - name: annotation.l3
+        file: kidney_l3.csv
+      - name: annotation.l2
+        file: kidney_l2.csv
+      - name: annotation.l1
+        file: kidney_l1.csv
