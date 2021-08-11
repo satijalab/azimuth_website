@@ -1,4 +1,4 @@
-,cts,obo,markers
+,Label,OBO Ontology ID,Markers
 1,Ascending Thin Limb,"[kidney loop of Henle thin ascending limb epithelial cell
 ](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_1001107)","SH3GL3,PLCB1,LGR4,BICDL1,PAX8,MAL,CACNA2D3,CDR2,PTPN14,PKHD1"
 2,Connecting Tubule,[kidney connecting tubule epithelial cell](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_1000768),"LINC01099,PDE4D,NR3C2,SCN2A,CADPS2,COBLL1,TOX3,DCDC2,SLC14A2,ABTB2"
