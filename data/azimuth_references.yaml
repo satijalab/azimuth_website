@@ -144,7 +144,7 @@
   applink: https://app.azimuth.hubmapconsortium.org/app/human-kidney
   image: kidneyumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_kidney
-  zenodo: https://zenodo.org/record/5177232
+  zenodo: https://zenodo.org/record/5181818
   vitessce: /references/human_kidney
   modalities: RNA
   unit: Cells
