@@ -18,8 +18,7 @@
 							}
 						},
 						"factors": [
-								"obs/celltype.l2",
-						  "obs/celltype.l1"
+								"obs/celltype.l2"
 						]
 					}
 				},
@@ -31,10 +30,6 @@
 						{
 							"groupName": "celltype.l2",
 							"setName": "obs/celltype.l2"
-						},
-						{
-							"groupName": "celltype.l1",
-							"setName": "obs/celltype.l1"
 						}
 					]
 				},
