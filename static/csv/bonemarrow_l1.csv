@@ -1,0 +1,10 @@
+,Label,Expanded Label,OBO Ontology ID,Markers
+1,B,B cell,[lymphocyte of B lineage](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0000945),"LINC00926,CD22,BANK1,MS4A1,ARHGAP24,RALGPS2,FCER2,BLK,TNFRSF13C,CD37"
+2,CD4 T,CD4+ T cell,[T cell](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0000084),"MAL,BCL11B,PIK3IP1,LEPROTL1,IL7R,NOSIP,LTB,CD3G,TRAC,CD3E"
+3,CD8 T,CD8+ T cell,[T cell](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0000084),"CD8B,CD8A,GZMH,CD3D,CCL5,GZMK,CD3E,CD3G,CMC1,CCL4"
+4,DC,dendritic cell,[dendritic cell](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0001056),"CLEC4C,SCT,ENHO,CLEC10A,LILRA4,DNASE1L3,TNFRSF21,LILRB4,FCER1A,CD1C"
+5,HSPC,Hematopoeitic stem and progenitor cell,[hematopoietic precursor cell](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0008001),"CTSE,NMU,AVP,CNRIP1,SPTA1,SMIM10,EPCAM,CMBL,TAL1,RHCE"
+6,Mono,Monocyte,[monocyte](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0000576),"LYPD2,CDA,RBP7,C5AR1,FPR1,APOBEC3A,TREM1,LILRA5,SLC11A1,LILRB2"
+7,NK,natural killer cell,[mature NK cell](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0000814),"KLRC1,IL2RB,KLRF1,CD160,SPON2,GNLY,KLRD1,NKG7,S1PR5,FGFBP2"
+8,Other,Other,,"FRZB,IGFBP5,SDC1,CP,TF,DNAAF1,IGLV5-45,IGLV3-1,NNMT,TNFRSF13B"
+9,Other T,other T cell,[T cell](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0000084),"KLRB1,RORA,GZMK,SPOCK2,IL7R,IL32,DUSP2,LYAR,CD2,TNFAIP3"
