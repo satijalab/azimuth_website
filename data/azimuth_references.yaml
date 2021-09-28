@@ -167,7 +167,7 @@
   applink: https://app.azimuth.hubmapconsortium.org/app/azimuth-bone-marrow
   image: bmumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_bonemarrow
-  zenodo: https://zenodo.org/record/5181818
+  zenodo: https://zenodo.org/record/5521512
   vitessce: /references/human_bonemarrow
   modalities: RNA
   unit: Cells

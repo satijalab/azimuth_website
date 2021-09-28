@@ -3,7 +3,7 @@ type: "static"
 ----
 {{< section >}}
 
-# Human Kidney Reference Explorer
+# Human Bone Marrow Reference Explorer
 
 {{< /section >}}
 
