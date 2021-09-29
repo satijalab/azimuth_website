@@ -162,3 +162,24 @@
         file: kidney_l2.csv
       - name: annotation.l1
         file: kidney_l1.csv
+
+- title: Human - Bone Marrow
+  applink: https://app.azimuth.hubmapconsortium.org/app/azimuth-bone-marrow
+  image: bmumap.png
+  snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_bonemarrow
+  zenodo: https://zenodo.org/record/5521512
+  vitessce: /references/human_bonemarrow
+  modalities: RNA
+  unit: Cells
+  nunit: 297,627
+  species: Human
+  demodata: "[Stuart et al., Cell 2019](https://www.cell.com/cell/fulltext/S0092-8674(19)30559-8) [[Seurat Object](https://seurat.nygenome.org/azimuth/demo_datasets/bmcite_demo.rds)]"
+  dataref: |
+      [[Oetjen et al., 2018]](https://insight.jci.org/articles/view/124928), [[Granja, Klemm, McGinnis, et al. 2019]](https://www.nature.com/articles/s41587-019-0332-7), [[Human Cell Atlas Immune Cell Census]](https://data.humancellatlas.org/explore/projects/cc95ff89-2e68-4a08-a234-480eca21ce79)
+  details: |
+        This reference consists of 297,627 bone marrow cells from 39 donors and 3 different studies: [Oetjen et al., 2018](https://insight.jci.org/articles/view/124928), [Granja, Klemm, McGinnis, et al. 2019](https://www.nature.com/articles/s41587-019-0332-7), and [the Human Cell Atlas Immune Cell Census](https://data.humancellatlas.org/explore/projects/cc95ff89-2e68-4a08-a234-480eca21ce79). All samples, which were generated using 10x Genomics v2, were integrated together and used to define a reference UMAP visualization and list of cell type annotations.
+  annotations:
+      - name: celltype.l2
+        file: bonemarrow_l2.csv
+      - name: celltype.l1
+        file: bonemarrow_l1.csv
