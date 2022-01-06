@@ -18,6 +18,7 @@
 							}
 						},
 						"factors": [
+								"obs/celltype.l1",
 								"obs/celltype.l2"
 						]
 					}
@@ -27,6 +28,10 @@
 					"fileType": "anndata-cell-sets.zarr",
 					"url": "https://azimuth-vitessce.s3.us-west-2.amazonaws.com/human-bonemarrow/vitessce_ref.zarr",
 					"options": [
+						{
+							"groupName": "celltype.l1",
+							"setName": "obs/celltype.l1"
+						},
 						{
 							"groupName": "celltype.l2",
 							"setName": "obs/celltype.l2"
