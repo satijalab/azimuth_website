@@ -125,6 +125,7 @@
   unit: Cells
   nunit: 65,662
   species: Human
+  previous: True
   demodata: "[Vieira-Braga et al, Nature Medicine 2019](https://www.nature.com/articles/s41591-019-0468-5) [[Seurat Object](https://seurat.nygenome.org/azimuth/demo_datasets/braga_lung_demo.Rds)]"
   dataref: |
       [Travaglini et al, Nature 2020](https://www.nature.com/articles/s41586-020-2922-4)
