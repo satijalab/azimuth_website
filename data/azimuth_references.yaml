@@ -191,7 +191,7 @@
       - name: celltype.l1
         file: bonemarrow_l1.csv
 
-- title: Human - Lung v2.0 (Human Lung Cell Atlas)
+- title: Human - Lung v2.0 (HLCA)
   applink: https://app.azimuth.hubmapconsortium.org/app/human-lung
   image: hlcaumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_lung_v2
