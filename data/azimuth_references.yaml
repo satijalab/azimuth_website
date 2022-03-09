@@ -191,19 +191,19 @@
       - name: celltype.l1
         file: bonemarrow_l1.csv
 
-- title: Human - Lung v2.0 (HLCA)
+- title: Human - Lung v2 (HLCA)
   applink: https://app.azimuth.hubmapconsortium.org/app/human-lung
   image: hlca_umap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_lung_v2
-  zenodo: TBD
-  vitessce: /references/human_lung
+  zenodo: https://zenodo.org/record/6342228
+  vitessce: /references/human_lung_v2
   modalities: RNA
   unit: Cells
   nunit: 584,884
   species: Human
   demodata: "[The Tabula Sapiens Consortium et al., bioRxiv 2021](https://doi.org/10.1101/2021.07.19.452956) [[Seurat Object](https://seurat.nygenome.org/hlca_ref_files/ts_opt.rds)]"
   dataref: |
-      TBD
+      [[Travaglini et al., 2020]](https://doi.org/10.1038/s41586-020-2922-4), [[Misharin et al., 2018]](https://doi.org/10.1164/rccm.201806-1037ED), [[Goldfarbmuren et al., 2020]](https://doi.org/10.1038/s41467-020-16239-z), [[Habermann et al., 2020]](https://doi.org/10.1126/sciadv.aba1972), [[Schupp et al., 2021]](https://doi.org/10.1161/CIRCULATIONAHA.120.052318), [[Deprez et al., 2020]](https://doi.org/10.1164/rccm.201911-2199OC ), [[Vieira Braga et al., 2019]](https://doi.org/10.1038/s41591-019-0468-5), [[Morse et al., 2019]](https://doi.org/10.1183/13993003.02441-2018), [[Madissoon et al., 2020]](https://doi.org/10.1186/s13059-019-1906-x)
   details: |
       The Human Lung Cell Atlas (HLCA) has a core consensus reference model of the cellular landscape of the lung and nose. This reference was built by integrating data of 107 individuals from 14 datasets, including major published datasets as well as unpublished data. The cells in the integrated atlas were re-annotated based on originally published labels and inputs from 6 experts, resulting in consensus on 58 cell identities in healthy human lung, along with robust marker genes to identify these. The HLCA is freely available as a universal reference.
   annotations:
