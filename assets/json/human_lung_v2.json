@@ -18,12 +18,12 @@
 							}
 						},
 						"factors": [
+					      "obs/ann_finest_level",
 					      "obs/ann_level_1",
 					      "obs/ann_level_2",
 					      "obs/ann_level_3",
 					      "obs/ann_level_4",
-					      "obs/ann_level_5",
-					      "obs/ann_finest_level"
+					      "obs/ann_level_5"
 						]
 					}
 				},
@@ -32,6 +32,10 @@
 					"fileType": "anndata-cell-sets.zarr",
 					"url": "https://azimuth-vitessce.s3.us-west-2.amazonaws.com/human-lung-v2/vitessce_ref.zarr",
 					"options": [
+						{
+							"groupName": "ann_finest_level",
+							"setName": "obs/ann_finest_level"
+						},
 						{
 							"groupName": "ann_level_1",
 							"setName": "obs/ann_level_1"
@@ -51,10 +55,6 @@
 						{
 							"groupName": "ann_level_5",
 							"setName": "obs/ann_level_5"
-						},
-						{
-							"groupName": "ann_finest_level",
-							"setName": "obs/ann_finest_level"
 						}
 					]
 				},
