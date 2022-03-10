@@ -192,7 +192,7 @@
         file: bonemarrow_l1.csv
 
 - title: Human - Lung v2 (HLCA)
-  applink: https://app.azimuth.hubmapconsortium.org/app/human-lung
+  applink: https://app.azimuth.hubmapconsortium.org/app/human-lung-v2
   image: hlca_umap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_lung_v2
   zenodo: https://zenodo.org/record/6342228
