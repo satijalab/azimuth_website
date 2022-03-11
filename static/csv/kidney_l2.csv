@@ -45,5 +45,5 @@
 42,Proximal Tubule Epithelial Segment 3,[epithelial cell of proximal tubule](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0002306),"AGXT2,CDH9,LINC00671,ACMSD,SLC28A1,SMIM2-AS1,SLC13A1,TINAG,SLC6A13,DPYS"
 43,Renin-positive Juxtaglomerular Granular,[kidney granular cell](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0000648),"ABCC8,REN,COL13A1,CACNB2,ADCY3,PIP5K1B,GRID2,WFDC1,PRKG1,SLIT3"
 44,Schwann / Neural,[Schwann cell](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0002573),"CDH19,NRXN1,PRIMA1,ZNF536,NCAM1,CADM2,SCN7A,GINS3,CYP27C1,KIRREL3"
-45,T,[T cell](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_000084),"IL7R,THEMIS,ITK,BCL11B,LINC01934,SLFN12L,CAMK4,RHOH,CD247,CD96"
+45,T,[T cell](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0000084),"IL7R,THEMIS,ITK,BCL11B,LINC01934,SLFN12L,CAMK4,RHOH,CD247,CD96"
 46,Vascular Smooth Muscle / Pericyte,[vascular associated smooth muscle cell](http://www.ontobee.org/ontology/CL?iri=http://purl.obolibrary.org/obo/CL_0000359),"PDGFRB,CARMN,PRR16,CCDC102B,RGS5,ADGRL3,COL25A1,MAP1B,DLC1,HS6ST3"

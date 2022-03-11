@@ -1,0 +1,15 @@
+<section class="section">
+    <div class="container">
+        <h3 class="title is-3"> Previous Versions</h3>
+        <ul>
+            {{ range $.Site.Data.azimuth_references }}
+                {{ if .previous }}
+                    <li>
+                        <a href="references/#{{ .title }}">{{ .title }}</a>;
+                        <a href="{{ .applink }}">Go to App</a>
+                    </li>
+                {{ end }}
+            {{ end }}
+        </ul>
+    </div>
+</section>

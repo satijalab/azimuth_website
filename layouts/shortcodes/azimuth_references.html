@@ -46,29 +46,30 @@
         <h2 class="title is-2 has-text-centered"> References </h2>
         <div class="columns is-multiline">
             {{ range $.Site.Data.azimuth_references }}
-            <div class="column is-one-quarter-desktop is-half-tablet">
-                    <div class="card card-ref shadow">
-                        <header class="card-header">
-                            <p class="card-header-title is-horizontal-center">
-                                {{ .title }}
-                            </p>
-                        </header>
-                        <div class="card-content is-horizontal-center">
-                            <div class="content">
-                                <figure class="image ref-img">
-                                    <img src= "/img/references/{{ .image }}">
-                                </figure>
+                {{ if not .previous }}
+                    <div class="column is-one-quarter-desktop is-half-tablet">
+                        <div class="card card-ref shadow">
+                            <header class="card-header">
+                                <p class="card-header-title is-horizontal-center">
+                                    {{ .title }}
+                                </p>
+                            </header>
+                            <div class="card-content is-horizontal-center">
+                                <div class="content">
+                                    <figure class="image ref-img">
+                                        <img src= "/img/references/{{ .image }}">
+                                    </figure>
+                                </div>
                             </div>
+                            <footer class="card-footer">
+                                <a class="button is-outlined ref-btn" href="references/#{{ .title }}"> Learn more </a>
+                                <a class="button is-outlined ref-btn" href="{{ .applink }}"> Go to App </a>
+                            </footer>
                         </div>
-                        <footer class="card-footer">
-                            <a class="button is-outlined ref-btn" href="references/#{{ .title }}"> Learn more </a>
-                            <a class="button is-outlined ref-btn" href="{{ .applink }}"> Go to App </a>
-                        </footer>
                     </div>
-                </div>
+                {{ end }}
             {{ end }}
         </div>
 	</div>
 </div>
 </section>
-
