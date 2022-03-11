@@ -113,7 +113,7 @@
       - name: annotation.l1
         file: humanfetus_l1.csv
 
-- title: Human - Lung
+- title: Human - Lung v1
   uberon_iri: http://purl.obolibrary.org/obo/UBERON_0002048
   vitessce_conf_url: https://raw.githubusercontent.com/satijalab/azimuth_website/master/assets/json/human_lung.json
   applink: https://app.azimuth.hubmapconsortium.org/app/human-lung
