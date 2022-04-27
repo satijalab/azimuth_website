@@ -19,7 +19,7 @@ The development of Azimuth is led by the New York Genome Center Mapping Componen
 {{< section >}}
 
 # Run Azimuth Locally
-Use the `RunAzimuth` function as demonstrated in this [tutorial](satijalab.github.io/azimuth/articles/run_azimuth_tutorial.html)
+Use the `RunAzimuth` function as demonstrated in this [tutorial](https://satijalab.github.io/azimuth/articles/run_azimuth_tutorial.html)
 
 # General Workflow
 1. Upload a single-cell gene expression matrix, or click the `Load demo dataset` button.
