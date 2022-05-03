@@ -18,10 +18,13 @@ The development of Azimuth is led by the New York Genome Center Mapping Componen
 
 {{< section >}}
 
+# Run Azimuth Locally
+Use the `RunAzimuth` function as demonstrated in this [tutorial](https://satijalab.github.io/azimuth/articles/run_azimuth_tutorial.html)
+
 # General Workflow
 1. Upload a single-cell gene expression matrix, or click the `Load demo dataset` button.
 2. If desired, filter cells based on common QC metrics in the Preprocessing tab.
-3. Click the `"Map cells to reference` button to launch analysis. A query dataset of 10,000 cells will typically finish processing in less than 1 minute.
+3. Click the `Map cells to reference` button to launch analysis. A query dataset of 10,000 cells will typically finish processing in less than 1 minute.
 4. View results.
     * "Cell Plots" tab: Visualize query cells and annotations projected onto the reference UMAP.
     * "Feature Plots" tab: Explore the expression of individual features (genes) in your data, and automatically identify differentially expressed genes and biomarkers.
