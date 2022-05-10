@@ -18,9 +18,6 @@ The development of Azimuth is led by the New York Genome Center Mapping Componen
 
 {{< section >}}
 
-# Run Azimuth Locally
-Use the `RunAzimuth` function as demonstrated in this [tutorial](https://satijalab.github.io/azimuth/articles/run_azimuth_tutorial.html)
-
 # General Workflow
 1. Upload a single-cell gene expression matrix, or click the `Load demo dataset` button.
 2. If desired, filter cells based on common QC metrics in the Preprocessing tab.
@@ -29,6 +26,9 @@ Use the `RunAzimuth` function as demonstrated in this [tutorial](https://satijal
     * "Cell Plots" tab: Visualize query cells and annotations projected onto the reference UMAP.
     * "Feature Plots" tab: Explore the expression of individual features (genes) in your data, and automatically identify differentially expressed genes and biomarkers.
 5. If desired, download files for further analysis from the "Download Results" tab.
+
+# Run Azimuth Locally
+You can also bypass the web application and run Azimuth on your local computer, directly in R. The following vignette demonstrates how to download a reference and map new data (either in Seurat, h5, or h5ad format), in only a few commands. Check it out [here](https://satijalab.github.io/azimuth/articles/run_azimuth_tutorial.html).
 
 {{< /section >}}
 
