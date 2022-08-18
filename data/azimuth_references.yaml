@@ -239,4 +239,4 @@
       - name: celltype.l1
         file: tonsil_l1.csv
       - name: celltype.l2
-        file: TBD
+        file: tonsil_l2.csv
