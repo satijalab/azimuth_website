@@ -240,3 +240,24 @@
         file: tonsil_l1.csv
       - name: celltype.l2
         file: tonsil_l2.csv
+
+- title: Human - Adipose
+  applink: https://app.azimuth.hubmapconsortium.org/app/human-adipose
+  image: adiposeumap.png
+  snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_adipose
+  zenodo: TBD
+  vitessce: TBD
+  modalities: RNA
+  unit: Cells
+  nunit: 160,089
+  species: Human
+  demodata: "[Emont et al., 2022](https://www.nature.com/articles/s41586-022-04518-2)"
+  dataref: |
+      [Vijay et al., 2020](https://www.nature.com/articles/s42255-019-0152-6)
+  details: |
+      This reference consists of 160,089 adipose cells from 
+  annotations:
+      - name: celltype.l1
+        file: adipose_l1.csv
+      - name: celltype.l2
+        file: adipose_l2.csv
