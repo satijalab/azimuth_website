@@ -261,3 +261,24 @@
         file: adipose_l1.csv
       - name: celltype.l2
         file: adipose_l2.csv
+        
+- title: Human - Heart
+  applink: https://app.azimuth.hubmapconsortium.org/app/human-heart
+  image: heartumap.png
+  snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_heart
+  zenodo: TBD
+  vitessce: TBD
+  modalities: RNA
+  unit: Cells
+  nunit: 656,509
+  species: Human
+  demodata: "[Tucker et al., 2022](https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.119.045401?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed)"
+  dataref: |
+      [[Hocker et al., 2021]](https://www.science.org/doi/10.1126/sciadv.abf1444), [[Koenig et al., 2022]](https://www.nature.com/articles/s44161-022-00028-6), [[Litviňuková et al., 2020]](https://www.nature.com/articles/s41586-020-2797-4)
+  details: |
+      This reference consists of 656,509 heart cells from 
+  annotations:
+      - name: celltype.l1
+        file: heart_l1.csv
+      - name: celltype.l2
+        file: heart_l2.csv
