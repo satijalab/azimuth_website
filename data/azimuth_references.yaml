@@ -234,7 +234,7 @@
   dataref: |
       [Massoni-Badosa et al., 2022](https://doi.org/10.1101/2022.06.24.497299)
   details: |
-      This reference consists of 263,299 cells (10x Genomics 3' v3) from 10 healthy human donors across a range of ages.
+      This reference consists of 263,299 cells (10x Genomics 3' v3) from 10 healthy human donors across a range of ages. The celltype.l2 annotations are derived from the original publication while the celltype.l1 assignment and naming has been modified slightly.
   annotations:
       - name: celltype.l1
         file: tonsil_l1.csv
