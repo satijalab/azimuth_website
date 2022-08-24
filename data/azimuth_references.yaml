@@ -225,7 +225,7 @@
   image: tonsilumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_tonsil
   zenodo: TBD
-  vitessce: TBD
+  vitessce: /references/human_tonsil
   modalities: RNA
   unit: Cells
   nunit: 263,299
@@ -246,7 +246,7 @@
   image: adiposeumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_adipose
   zenodo: TBD
-  vitessce: TBD
+  vitessce: /references/human_adipose
   modalities: RNA
   unit: Cells
   nunit: 160,089
