@@ -267,7 +267,7 @@
   image: heartumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_heart
   zenodo: TBD
-  vitessce: TBD
+  vitessce: /references/human_heart
   modalities: RNA
   unit: Cells
   nunit: 656,509
