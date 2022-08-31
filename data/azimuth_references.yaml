@@ -219,3 +219,66 @@
         file: hlca_level5.csv
       - name: ann_finest_level
         file: hlca_finest_level.csv
+
+- title: Human - Tonsil
+  applink: https://app.azimuth.hubmapconsortium.org/app/human-tonsil
+  image: tonsilumap.png
+  snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_tonsil
+  zenodo: https://zenodo.org/record/7032928
+  vitessce: /references/human_tonsil
+  modalities: RNA
+  unit: Cells
+  nunit: 263,299
+  species: Human
+  demodata: "[King et al., 2021](https://doi.org/10.1126/sciimmunol.abh3768)"
+  dataref: |
+      [Massoni-Badosa et al., 2022](https://doi.org/10.1101/2022.06.24.497299)
+  details: |
+      This reference consists of 263,299 cells (10x Genomics 3' v3) from 10 healthy human donors across a range of ages. The celltype.l2 annotations are derived from the original publication while the celltype.l1 assignment and naming has been modified slightly.
+  annotations:
+      - name: celltype.l1
+        file: tonsil_l1.csv
+      - name: celltype.l2
+        file: tonsil_l2.csv
+
+- title: Human - Adipose
+  applink: https://app.azimuth.hubmapconsortium.org/app/human-adipose
+  image: adiposeumap.png
+  snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_adipose
+  zenodo: https://zenodo.org/record/7032920
+  vitessce: /references/human_adipose
+  modalities: RNA
+  unit: Cells
+  nunit: 160,075
+  species: Human
+  demodata: "[Emont et al., 2022](https://www.nature.com/articles/s41586-022-04518-2)"
+  dataref: |
+      [Vijay et al., 2020](https://www.nature.com/articles/s42255-019-0152-6)
+  details: |
+      This reference consists of 160,075 white adipose cells. scRNA-seq was performed on subcutaneous white adipose tissue from 9 individuals and sNuc-seq was performed on subcutaneous and visceral white adipose tissue from 13 individuals to generate the reference. The celltype.l2 annotations are derived from the original publication while the celltype.l1 assignment and naming has been modified slightly. 
+  annotations:
+      - name: celltype.l1
+        file: adipose_l1.csv
+      - name: celltype.l2
+        file: adipose_l2.csv
+        
+- title: Human - Heart
+  applink: https://app.azimuth.hubmapconsortium.org/app/human-heart
+  image: heartumap.png
+  snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_heart
+  zenodo: https://zenodo.org/record/7032964
+  vitessce: /references/human_heart
+  modalities: RNA
+  unit: Cells
+  nunit: 656,509
+  species: Human
+  demodata: "[Tucker et al., 2022](https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.119.045401?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed)"
+  dataref: |
+      [[Hocker et al., 2021]](https://www.science.org/doi/10.1126/sciadv.abf1444), [[Koenig et al., 2022]](https://www.nature.com/articles/s44161-022-00028-6), [[Litviňuková et al., 2020]](https://www.nature.com/articles/s41586-020-2797-4)
+  details: |
+          This reference consists of 656,509 integrated heart cells from data collected in 3 different studies: [Hocker et al., 2021](https://www.science.org/doi/10.1126/sciadv.abf1444), [Koenig et al., 2022](https://www.nature.com/articles/s44161-022-00028-6), [Litviňuková et al., 2020](https://www.nature.com/articles/s41586-020-2797-4) The atlas was constructed using both scRNA-seq and sNuc-seq samples from a total of 63 human donors over a range of ages.  
+  annotations:
+      - name: celltype.l1
+        file: heart_l1.csv
+      - name: celltype.l2
+        file: heart_l2.csv
