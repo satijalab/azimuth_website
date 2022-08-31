@@ -224,7 +224,7 @@
   applink: https://app.azimuth.hubmapconsortium.org/app/human-tonsil
   image: tonsilumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_tonsil
-  zenodo: TBD
+  zenodo: https://zenodo.org/record/7032928
   vitessce: /references/human_tonsil
   modalities: RNA
   unit: Cells
@@ -245,7 +245,7 @@
   applink: https://app.azimuth.hubmapconsortium.org/app/human-adipose
   image: adiposeumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_adipose
-  zenodo: TBD
+  zenodo: https://zenodo.org/record/7032920
   vitessce: /references/human_adipose
   modalities: RNA
   unit: Cells
@@ -266,7 +266,7 @@
   applink: https://app.azimuth.hubmapconsortium.org/app/human-heart
   image: heartumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_heart
-  zenodo: TBD
+  zenodo: https://zenodo.org/record/7032964
   vitessce: /references/human_heart
   modalities: RNA
   unit: Cells
