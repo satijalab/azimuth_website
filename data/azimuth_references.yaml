@@ -282,3 +282,43 @@
         file: heart_l1.csv
       - name: celltype.l2
         file: heart_l2.csv
+
+- title: Human - Liver
+  applink: https://app.azimuth.hubmapconsortium.org/app/human-liver
+  image: liverumap.png
+  snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_liver
+  zenodo: TBD
+  vitessce: /references/human_liver
+  modalities: RNA
+  unit: Cells
+  nunit: 94,149
+  species: Human
+  demodata: "[Guilliams et al., 2022](https://www.cell.com/cell/fulltext/S0092-8674(21)01481-1)"
+  dataref: |
+      [[Aizarani et al., 2019]](https://www.nature.com/articles/s41586-019-1373-2), [[Ramachandran et al., 2019]](https://www.nature.com/articles/s41586-019-1631-3), [[Zhang et al., 2020]](https://www.sciencedirect.com/science/article/pii/S0168827820303603?via%3Dihub), [[Macparland et al., 2018]](https://www.nature.com/articles/s41467-018-06318-7), [[Payen et al., 2020]](https://www.sciencedirect.com/science/article/pii/S2589555921000549?via%3Dihub)
+  details: |
+          This reference consists of 94,149 integrated liver cells from data collected in 5 different studies: [Aizarani et al., 2019](https://www.nature.com/articles/s41586-019-1373-2), [Ramachandran et al., 2019](https://www.nature.com/articles/s41586-019-1631-3), [Zhang et al., 2020](https://www.sciencedirect.com/science/article/pii/S0168827820303603?via%3Dihub), [Macparland et al., 2018](https://www.nature.com/articles/s41467-018-06318-7), [Payen et al., 2020](https://www.sciencedirect.com/science/article/pii/S2589555921000549?via%3Dihub).
+  annotations:
+      - name: celltype.l1
+        file: TBD
+      - name: celltype.l2
+        file: TBD
+
+- title: Human - Gut
+  applink: https://app.azimuth.hubmapconsortium.org/app/human-gut
+  image: gutumap.png
+  snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_gut
+  zenodo: TBD
+  vitessce: /references/human_gut
+  modalities: RNA
+  unit: Cells
+  nunit: 
+  species: Human
+  demodata: 
+  dataref: |
+  details: |
+  annotations:
+      - name: celltype.l1
+        file: TBD
+      - name: celltype.l2
+        file: TBD
