@@ -312,11 +312,13 @@
   vitessce: /references/human_gut
   modalities: RNA
   unit: Cells
-  nunit: 
+  nunit: 24,986 
   species: Human
   demodata: 
   dataref: |
+          [Elmentaite et al. 2021](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8426186)
   details: |
+          This reference consists of 24,986 gut cells from data generated as described in: [Elmentaite et al. 2021](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8426186)
   annotations:
       - name: celltype.l1
         file: TBD
