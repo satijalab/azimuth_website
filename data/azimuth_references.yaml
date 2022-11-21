@@ -300,9 +300,9 @@
           This reference consists of 94,149 integrated liver cells from data collected in 5 different studies: [Aizarani et al., 2019](https://www.nature.com/articles/s41586-019-1373-2), [Ramachandran et al., 2019](https://www.nature.com/articles/s41586-019-1631-3), [Zhang et al., 2020](https://www.sciencedirect.com/science/article/pii/S0168827820303603?via%3Dihub), [Macparland et al., 2018](https://www.nature.com/articles/s41467-018-06318-7), [Payen et al., 2020](https://www.sciencedirect.com/science/article/pii/S2589555921000549?via%3Dihub).
   annotations:
       - name: celltype.l1
-        file: TBD
+        file: liver_l1.csv
       - name: celltype.l2
-        file: TBD
+        file: liver_l2.csv
 
 - title: Human - Gut
   applink: https://app.azimuth.hubmapconsortium.org/app/human-gut
@@ -321,6 +321,8 @@
           This reference consists of 24,986 gut cells from data generated as described in: [Elmentaite et al. 2021](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8426186)
   annotations:
       - name: celltype.l1
-        file: TBD
+        file: gut_l1.csv
       - name: celltype.l2
-        file: TBD
+        file: gut_l2.csv
+      - name: celltype.l3
+        file: gut_l3.csv
