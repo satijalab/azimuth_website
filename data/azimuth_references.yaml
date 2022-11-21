@@ -284,7 +284,7 @@
         file: heart_l2.csv
 
 - title: Human - Liver
-  applink: https://app.azimuth.hubmapconsortium.org/app/human-liver
+  applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-liver
   image: liverumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_liver
   zenodo: TBD
@@ -305,7 +305,7 @@
         file: liver_l2.csv
 
 - title: Human - Gut
-  applink: https://app.azimuth.hubmapconsortium.org/app/human-gut
+  applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-gut
   image: gutumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_gut
   zenodo: TBD
