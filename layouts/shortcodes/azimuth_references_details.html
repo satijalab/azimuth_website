@@ -12,6 +12,10 @@
     background-color: var(--info-main);
     border-color: var(--info-main);
 }
+.atacapp-btn {
+    background-color: var(--info-main);
+    border-color: var(--info-main);
+}
 .zenodo-btn {
     background-color: var(--warning-main);
     border-color: var(--warning-main);
@@ -100,7 +104,8 @@ summary {
         <h2 class="title is-2 h-ref" id="{{ .title }}"> {{ .title }} </h2>
         <div class="buttons">
             <a class="button app-btn" href="{{ .applink }}">App</a>
-            <a class="button vitessce-btn" href="{{ .vitessce }}">Reference</a>
+            <a class="button atacapp-btn" href="{{ .atacapplink }}">ATAC App</a>
+	    <a class="button vitessce-btn" href="{{ .vitessce }}">Reference</a>
             <a class="button zenodo-btn" href="{{ .zenodo }}">Zenodo</a>
             <a class="button snakemake-btn" href="{{ .snakemake }}">Snakemake</a>
         </div>

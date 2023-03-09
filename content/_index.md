@@ -14,6 +14,8 @@ The development of Azimuth is led by the New York Genome Center Mapping Componen
 
 {{< azimuth_references >}}
 
+{{< azimuth_atac_references >}}
+
 {{< azimuth_references_previous >}}
 
 {{< section >}}
