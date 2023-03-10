@@ -100,17 +100,24 @@ summary {
   <div class="container column is-9">
     <div class="section">
         <h1 class="title is-1"> Azimuth References </h1>
-        {{ range $.Site.Data.azimuth_references }}
+        {{ $include := (slice "Human - PBMC" "Human - Bone Marrow") }}
+	    {{ range $.Site.Data.azimuth_references }}
         <h2 class="title is-2 h-ref" id="{{ .title }}"> {{ .title }} </h2>
-        <div class="buttons">
-            <a class="button app-btn" href="{{ .applink }}">App</a>
-             {{ $include := (slice "Human - PBMC" "Human - Bone Marrow") }}
-	     {{ range where $.Site.Data.azimuth_references ".title" "in" $include }}	
-	     	<a class="button atacapp-btn" href="{{ .atacapplink }}">ATAC App</a>
-	    <a class="button vitessce-btn" href="{{ .vitessce }}">Reference</a>
-            <a class="button zenodo-btn" href="{{ .zenodo }}">Zenodo</a>
-            <a class="button snakemake-btn" href="{{ .snakemake }}">Snakemake</a>
-        </div>
+        {{ if range $.Site.Data.azimuth_references  ".title" "in" $include }}
+            <div class="buttons">
+                <a class="button app-btn" href="{{ .applink }}">App</a>
+                <a class="button atacapp-btn" href="{{ .atacapplink }}">ATAC App</a>
+                <a class="button vitessce-btn" href="{{ .vitessce }}">Reference</a>
+                <a class="button zenodo-btn" href="{{ .zenodo }}">Zenodo</a>
+                <a class="button snakemake-btn" href="{{ .snakemake }}">Snakemake</a>
+            </div>
+        {{ else }}
+            <div class="buttons">
+                <a class="button app-btn" href="{{ .applink }}">App</a>
+                <a class="button vitessce-btn" href="{{ .vitessce }}">Reference</a>
+                <a class="button zenodo-btn" href="{{ .zenodo }}">Zenodo</a>
+                <a class="button snakemake-btn" href="{{ .snakemake }}">Snakemake</a>
+            </div> 
         <div class="card">
             <header class="card-header"> 
                 <h4 class="title is-4 card-header-title"> Overview </h4>
