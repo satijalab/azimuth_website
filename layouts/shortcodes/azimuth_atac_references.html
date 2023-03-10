@@ -43,9 +43,10 @@
 
 <section class="section">
     <div class="container">
-        <h2 class="title is-2 has-text-centered"> References for scATAC-seq Queries /h2>
+        <h2 class="title is-2 has-text-centered"> References for scATAC-seq Queries </h2>
         <div class="columns is-multiline">
-            {{ range $.Site.Data.azimuth_references }}
+	    {{ $include := (slice "Human - PBMC" "Human - Bone Marrow") }}	
+            {{ range where $.Site.Data.azimuth_references ".title" "in" $include }}
                 {{ if not .previous }}
                     <div class="column is-one-quarter-desktop is-half-tablet">
                         <div class="card card-ref shadow">
@@ -63,7 +64,7 @@
                             </div>
                             <footer class="card-footer">
                                 <a class="button is-outlined ref-btn" href="references/#{{ .title }}"> Learn more </a>
-                                <a class="button is-outlined ref-btn" href="{{ .applink }}"> Go to App </a>
+                                <a class="button is-outlined ref-btn" href="{{ .atacapplink }}"> Go to App </a>
                             </footer>
                         </div>
                     </div>
