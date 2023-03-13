@@ -102,8 +102,7 @@ summary {
         <h1 class="title is-1"> Azimuth References </h1>
 	    {{ range $.Site.Data.azimuth_references }}
         <h2 class="title is-2 h-ref" id="{{ .title }}"> {{ .title }} </h2>
-        {{ $include := (slice "Human - PBMC" "Human - Bone Marrow") }}
-        {{ if in $include .title }}
+        {{ if .atacapplink }}
             <div class="buttons">
                 <a class="button app-btn" href="{{ .applink }}">App</a>
                 <a class="button atacapp-btn" href="{{ .atacapplink }}">ATAC App</a>
