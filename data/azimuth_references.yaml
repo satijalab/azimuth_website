@@ -5,7 +5,7 @@
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_pbmc
   zenodo: https://zenodo.org/record/4546839
   vitessce: /references/human_pbmc
-  modalities: RNA, ADT
+  modalities: RNA, ADT, ATAC bridge
   unit: Cells
   nunit: 161,764
   species: Human
@@ -178,7 +178,7 @@
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_bonemarrow
   zenodo: https://zenodo.org/record/5521512
   vitessce: /references/human_bonemarrow
-  modalities: RNA
+  modalities: RNA, ATAC bridge
   unit: Cells
   nunit: 297,627
   species: Human
@@ -305,26 +305,3 @@
         file: liver_l1.csv
       - name: celltype.l2
         file: liver_l2.csv
-
-- title: Human - Gut
-  applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-gut
-  image: gutumap.png
-  snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_gut
-  zenodo: TBD
-  vitessce: /references/human_gut
-  modalities: RNA
-  unit: Cells
-  nunit: 24,986 
-  species: Human
-  demodata: 
-  dataref: |
-          [Elmentaite et al. 2021](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8426186)
-  details: |
-          This reference consists of 24,986 gut cells from data generated as described in: [Elmentaite et al. 2021](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8426186)
-  annotations:
-      - name: celltype.l1
-        file: gut_l1.csv
-      - name: celltype.l2
-        file: gut_l2.csv
-      - name: celltype.l3
-        file: gut_l3.csv
