@@ -1,6 +1,6 @@
 - title: Human - PBMC
   applink: https://app.azimuth.hubmapconsortium.org/app/human-pbmc
-  atacapplink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-pbmc-atac_v5
+  atacapplink: https://app.azimuth.hubmapconsortium.org/app/human-pbmc-atac
   image: pbmcumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_pbmc
   zenodo: https://zenodo.org/record/4546839
@@ -173,7 +173,7 @@
 
 - title: Human - Bone Marrow
   applink: https://app.azimuth.hubmapconsortium.org/app/azimuth-bone-marrow
-  atacapplink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-bonemarrow-atac_v5
+  atacapplink: https://app.azimuth.hubmapconsortium.org/app/azimuth-bone-marrow-atac
   image: bmumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_bonemarrow
   zenodo: https://zenodo.org/record/5521512
@@ -286,7 +286,7 @@
         file: heart_l2.csv
 
 - title: Human - Liver
-  applink: http://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-liver
+  applink: https://app.azimuth.hubmapconsortium.org/app/human-liver
   image: liverumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_liver
   zenodo: TBD
