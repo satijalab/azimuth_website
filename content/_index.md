@@ -5,7 +5,7 @@ type: "static"
 {{< section >}}
 
 <p style='font-size:18px'>
-Azimuth is a web application that uses an annotated reference dataset to <b>automate the processing, analysis, and interpretation of a new single-cell RNA-seq experiment</b>. Azimuth leverages a <b>'reference-based mapping'</b> pipeline that inputs a counts matrix of gene expression in single cells, and performs normalization, visualization, cell annotation, and differential expression (biomarker discovery). All results can be explored within the app, and easily downloaded for additional downstream analysis.
+Azimuth is a web application that uses an annotated reference dataset to <b>automate the processing, analysis, and interpretation of a new single-cell RNA-seq or ATAC-seq experiment</b>. Azimuth leverages a <b>'reference-based mapping'</b> pipeline that inputs a counts matrix and performs normalization, visualization, cell annotation, and differential expression (biomarker discovery). All results can be explored within the app, and easily downloaded for additional downstream analysis.
 </p>
 
 The development of Azimuth is led by the New York Genome Center Mapping Component as part of the [NIH Human Biomolecular Atlas Project (HuBMAP)](https://commonfund.nih.gov/hubmap). Thirteen molecular reference maps are currently available, with more coming soon.
