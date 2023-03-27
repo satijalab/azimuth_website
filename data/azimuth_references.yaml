@@ -1,10 +1,11 @@
 - title: Human - PBMC
   applink: https://app.azimuth.hubmapconsortium.org/app/human-pbmc
+  atacapplink: https://app.azimuth.hubmapconsortium.org/app/human-pbmc-atac
   image: pbmcumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_pbmc
   zenodo: https://zenodo.org/record/4546839
   vitessce: /references/human_pbmc
-  modalities: RNA, ADT
+  modalities: RNA, ADT, ATAC bridge
   unit: Cells
   nunit: 161,764
   species: Human
@@ -172,11 +173,12 @@
 
 - title: Human - Bone Marrow
   applink: https://app.azimuth.hubmapconsortium.org/app/azimuth-bone-marrow
+  atacapplink: https://app.azimuth.hubmapconsortium.org/app/azimuth-bone-marrow-atac
   image: bmumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_bonemarrow
   zenodo: https://zenodo.org/record/5521512
   vitessce: /references/human_bonemarrow
-  modalities: RNA
+  modalities: RNA, ATAC bridge
   unit: Cells
   nunit: 297,627
   species: Human
@@ -282,3 +284,24 @@
         file: heart_l1.csv
       - name: celltype.l2
         file: heart_l2.csv
+
+- title: Human - Liver
+  applink: https://app.azimuth.hubmapconsortium.org/app/human-liver
+  image: liverumap.png
+  snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_liver
+  zenodo: TBD
+  vitessce: /references/human_liver
+  modalities: RNA
+  unit: Cells
+  nunit: 79,492
+  species: Human
+  demodata: "[Guilliams et al., 2022](https://www.cell.com/cell/fulltext/S0092-8674(21)01481-1)"
+  dataref: |
+      [[Aizarani et al., 2019]](https://www.nature.com/articles/s41586-019-1373-2), [[Ramachandran et al., 2019]](https://www.nature.com/articles/s41586-019-1631-3), [[Zhang et al., 2020]](https://www.sciencedirect.com/science/article/pii/S0168827820303603?via%3Dihub), [[Macparland et al., 2018]](https://www.nature.com/articles/s41467-018-06318-7), [[Payen et al., 2020]](https://www.sciencedirect.com/science/article/pii/S2589555921000549?via%3Dihub)
+  details: |
+          This reference consists of 79,492 integrated liver cells from data collected in 5 different studies: [Aizarani et al., 2019](https://www.nature.com/articles/s41586-019-1373-2), [Ramachandran et al., 2019](https://www.nature.com/articles/s41586-019-1631-3), [Zhang et al., 2020](https://www.sciencedirect.com/science/article/pii/S0168827820303603?via%3Dihub), [Macparland et al., 2018](https://www.nature.com/articles/s41467-018-06318-7), [Payen et al., 2020](https://www.sciencedirect.com/science/article/pii/S2589555921000549?via%3Dihub). The atlas represents scRNA-seq samples from a total of 29 donors integrated together. Certain datasets were generated using modified tissue dissociation protocols enriching for hepatocytes, cholangiocytes, and HSCs, so that the reference represents a broad set of cell types in the liver.  
+  annotations:
+      - name: celltype.l1
+        file: liver_l1.csv
+      - name: celltype.l2
+        file: liver_l2.csv
