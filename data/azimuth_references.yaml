@@ -289,7 +289,7 @@
   applink: https://app.azimuth.hubmapconsortium.org/app/human-liver
   image: liverumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_liver
-  zenodo: TBD
+  zenodo: https://zenodo.org/record/7770308
   vitessce: /references/human_liver
   modalities: RNA
   unit: Cells
