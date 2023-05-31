@@ -201,7 +201,7 @@
   vitessce: /references/human_lung_v2
   modalities: RNA
   unit: Cells
-  nunit: 584,884
+  nunit: 584,944
   species: Human
   demodata: "[The Tabula Sapiens Consortium et al., bioRxiv 2021](https://doi.org/10.1101/2021.07.19.452956) [[Seurat Object](https://seurat.nygenome.org/hlca_ref_files/ts_opt.rds)]"
   dataref: |
