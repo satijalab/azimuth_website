@@ -9,7 +9,7 @@
 				{
 					"type": "cells",
 					"fileType": "anndata-cells.zarr",
-					"url": "https://azimuth-vitessce.s3.us-west-2.amazonaws.com/human-lung-v2/vitessce_ref.zarr",
+					"url": "https://azimuth-vitessce.s3.us-west-2.amazonaws.com/human-lung-cell-atlas/vitessce_ref.zarr",
 					"options": {
 						"mappings": {
 							"UMAP": {
@@ -33,7 +33,7 @@
 				{
 					"type": "cell-sets",
 					"fileType": "anndata-cell-sets.zarr",
-					"url": "https://azimuth-vitessce.s3.us-west-2.amazonaws.com/human-lung-v2/vitessce_ref.zarr",
+					"url": "https://azimuth-vitessce.s3.us-west-2.amazonaws.com/human-lung-cell-atlas/vitessce_ref.zarr",
 					"options": [
 						{
 							"groupName": "ann_finest_level",
@@ -64,7 +64,7 @@
 				{
 					"type": "expression-matrix",
 					"fileType": "anndata-expression-matrix.zarr",
-					"url": "https://azimuth-vitessce.s3.us-west-2.amazonaws.com/human-lung-v2/vitessce_ref.zarr",
+					"url": "https://azimuth-vitessce.s3.us-west-2.amazonaws.com/human-lung-cell-atlas/vitessce_ref.zarr",
 					"options": {
 						"matrix": "X"
 					}
