@@ -253,9 +253,9 @@
   unit: Cells
   nunit: 160,075
   species: Human
-  demodata: "[Emont et al., 2022](https://www.nature.com/articles/s41586-022-04518-2)"
+  demodata: "[Vijay et al., 2020](https://www.nature.com/articles/s42255-019-0152-6)"
   dataref: |
-      [Vijay et al., 2020](https://www.nature.com/articles/s42255-019-0152-6)
+      [Emont et al., 2022](https://www.nature.com/articles/s41586-022-04518-2)
   details: |
       This reference consists of 160,075 white adipose cells. scRNA-seq was performed on subcutaneous white adipose tissue from 9 individuals and sNuc-seq was performed on subcutaneous and visceral white adipose tissue from 13 individuals to generate the reference. The celltype.l2 annotations are derived from the original publication while the celltype.l1 assignment and naming has been modified slightly. 
   annotations:
@@ -305,3 +305,24 @@
         file: liver_l1.csv
       - name: celltype.l2
         file: liver_l2.csv
+
+- title: Mouse - Embryo
+  applink: https://app.azimuth.hubmapconsortium.org/app/mouse-embryo
+  image: mouseembryo_umap.png
+  snakemake: https://github.com/satijalab/azimuth-references/tree/master/mouse_embryo
+  zenodo: TBD
+  vitessce: /references/mouse_embryo
+  modalities: RNA
+  unit: Cells
+  nunit: 100,000
+  species: Mouse
+  demodata: "[Pijuan-Sala et al., 2019](https://www.nature.com/articles/s41586-019-0933-9)"
+  dataref: |
+      [Qiu et al., 2023](https://www.biorxiv.org/content/10.1101/2023.04.05.535726v1.full)
+  details: |
+          This reference consists of 100,000 integrated mouse embryo cells from data generated as described in [Qiu et al., 2023](https://www.biorxiv.org/content/10.1101/2023.04.05.535726v1.full). sci-RNA-seq3 was applied to generate 11.4 million nucleus profiles spanning E8.0 to birth. 2 rounds of annotation were performed and are included in the reference. The 'celltype.l1' level was determined using a data-driven approach to cluster the cells into broad groups. The 'celltype.l2' level was created by grouping cells into several larger developmental subsystems and then performing a more biology-driven subclustering. The data was sketched to 100,000 representative cells which make up this reference.
+  annotations:
+      - name: celltype.l1
+        file: mouseembryo_l1.csv
+      - name: celltype.l2
+        file: mouseembryo_l2.csv
