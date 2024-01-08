@@ -307,7 +307,7 @@
         file: liver_l2.csv
 
 - title: Human - Tonsil v2
-  applink: https://app.azimuth.hubmapconsortium.org/app/human-tonsil-v2
+  applink: https://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-tonsil_v2
   image: tonsilumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_tonsil_v2
   zenodo: TBD
