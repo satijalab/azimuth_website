@@ -305,3 +305,24 @@
         file: liver_l1.csv
       - name: celltype.l2
         file: liver_l2.csv
+
+- title: Human - Tonsil v2
+  applink: https://app.azimuth.hubmapconsortium.org/app/human-tonsil-v2
+  image: tonsilumap.png
+  snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_tonsil_v2
+  zenodo: TBD
+  vitessce: /references/human_tonsil_v2
+  modalities: RNA
+  unit: Cells
+  nunit: 263,299
+  species: Human
+  demodata: "[King et al., 2021](https://doi.org/10.1126/sciimmunol.abh3768)"
+  dataref: |
+      [Massoni-Badosa et al., 2022](https://doi.org/10.1101/2022.06.24.497299)
+  details: |
+          This reference consists of 377,963 cells (10x Genomics 3' v3) from 17 healthy human donors across a range of ages. The celltype.l2 annotations are derived from the original publication while the celltype.l1 assignment and naming has been modified slightly to represent a more general annotation. Datasets for each of the major lineages (e.g. CD4 T cells) can be downloaded and explored through HCATonsilData, which also includes a detailed glossary with the references used to annotate each cell type and state.
+  annotations:
+      - name: celltype.l1
+        file: tonsil_l1.csv
+      - name: celltype.l2
+        file: tonsil_l2.csv
