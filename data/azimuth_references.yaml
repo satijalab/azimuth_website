@@ -222,7 +222,7 @@
       - name: ann_finest_level
         file: hlca_finest_level.csv
 
-- title: Human - Tonsil
+- title: Human - Tonsil v1
   applink: https://app.azimuth.hubmapconsortium.org/app/human-tonsil
   image: tonsilumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_tonsil
@@ -232,6 +232,7 @@
   unit: Cells
   nunit: 263,299
   species: Human
+  previous: True
   demodata: "[King et al., 2021](https://doi.org/10.1126/sciimmunol.abh3768)"
   dataref: |
       [Massoni-Badosa et al., 2022](https://doi.org/10.1101/2022.06.24.497299)
