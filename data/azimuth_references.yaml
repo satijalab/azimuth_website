@@ -309,7 +309,7 @@
 
 - title: Human - Tonsil v2
   applink: https://r7fh40zf8hf9d4k.satijalab.org/app/azimuth-tonsil_v2
-  image: tonsilumap.png
+  image: tonsilumapv2.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_tonsil_v2
   zenodo: TBD
   vitessce: /references/human_tonsil_v2
