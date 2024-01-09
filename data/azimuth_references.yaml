@@ -324,6 +324,6 @@
           This reference consists of 377,963 cells (10x Genomics 3' v3) from 17 healthy human donors across a range of ages. The celltype.l2 annotations are derived from the original publication while the celltype.l1 assignment and naming has been modified slightly to represent a more general annotation. Datasets for each of the major lineages (e.g. CD4 T cells) can be downloaded and explored through [HCATonsilData](https://bioconductor.org/packages/release/data/experiment/html/HCATonsilData.html), which also includes a detailed glossary with the references used to annotate each cell type and state.
   annotations:
       - name: celltype.l1
-        file: tonsil_l1.csv
+        file: tonsil_v2_l1.csv
       - name: celltype.l2
-        file: tonsil_l2.csv
+        file: tonsil__v2_l2.csv
