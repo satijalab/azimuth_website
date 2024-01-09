@@ -312,7 +312,7 @@
   image: tonsilumapv2.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_tonsil_v2
   zenodo: TBD
-  vitessce: /references/human_tonsil_v2
+  vitessce: /references/human-tonsil-v2
   modalities: RNA
   unit: Cells
   nunit: 377,963
