@@ -326,4 +326,4 @@
       - name: celltype.l1
         file: tonsil_v2_l1.csv
       - name: celltype.l2
-        file: tonsil__v2_l2.csv
+        file: tonsil_v2_l2.csv
