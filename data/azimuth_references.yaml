@@ -321,7 +321,7 @@
   dataref: |
       [Massoni-Badosa et al., 2022](https://doi.org/10.1101/2022.06.24.497299)
   details: |
-          This reference consists of 377,963 cells (10x Genomics 3' v3) from 17 healthy human donors across a range of ages. The celltype.l2 annotations are derived from the original publication while the celltype.l1 assignment and naming has been modified slightly to represent a more general annotation. Datasets for each of the major lineages (e.g. CD4 T cells) can be downloaded and explored through [HCATonsilData](https://bioconductor.org/packages/release/data/experiment/html/HCATonsilData.html), which also includes a detailed glossary with the references used to annotate each cell type and state.
+          This reference consists of 377,963 cells (10x Genomics 3' v3) from 17 healthy human donors across a range of ages. The celltype.l2 annotations are derived from the original publication while the celltype.l1 assignment and naming has been modified slightly to represent a more general annotation. Datasets for each of the major lineages (e.g. CD4 T cells) can be downloaded and explored through [HCATonsilData](https://bioconductor.org/packages/release/data/experiment/html/HCATonsilData.html), which also includes a detailed glossary with the references used to annotate each cell type and state. The markers we include for the celltype.l2 level below were computationally derived and may differ from the markers that were used to annotate the cells. For a detailed list of markers curated by the annotation team, please refer to the [glossary](https://figshare.com/articles/book/GLOSSARY_TONSIL_ATLAS_pdf/24885063).
   annotations:
       - name: celltype.l1
         file: tonsil_v2_l1.csv
