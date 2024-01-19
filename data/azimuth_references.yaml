@@ -311,7 +311,7 @@
   applink: hhttps://app.azimuth.hubmapconsortium.org/app/human-tonsil-v2
   image: tonsilumapv2.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/human_tonsil_v2
-  zenodo: TBD
+  zenodo: https://zenodo.org/records/10520081
   vitessce: /references/human_tonsil_v2
   modalities: RNA
   unit: Cells
