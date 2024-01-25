@@ -254,9 +254,9 @@
   unit: Cells
   nunit: 160,075
   species: Human
-  demodata: "[Emont et al., 2022](https://www.nature.com/articles/s41586-022-04518-2)"
+  demodata: "[Vijay et al., 2020](https://www.nature.com/articles/s42255-019-0152-6)"
   dataref: |
-      [Vijay et al., 2020](https://www.nature.com/articles/s42255-019-0152-6)
+      [Emont et al., 2022](https://www.nature.com/articles/s41586-022-04518-2)
   details: |
       This reference consists of 160,075 white adipose cells. scRNA-seq was performed on subcutaneous white adipose tissue from 9 individuals and sNuc-seq was performed on subcutaneous and visceral white adipose tissue from 13 individuals to generate the reference. The celltype.l2 annotations are derived from the original publication while the celltype.l1 assignment and naming has been modified slightly. 
   annotations:
