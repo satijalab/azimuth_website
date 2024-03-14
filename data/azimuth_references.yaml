@@ -347,4 +347,4 @@
       - name: Main_cell_type
         file: mouse_pansci_l1.csv
       - name: Sub_cell_type
-        file: mouse_pansci_l1.csv
+        file: mouse_pansci_l2.csv
