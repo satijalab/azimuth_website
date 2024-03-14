@@ -344,7 +344,7 @@
   details: |
           This reference consists of 488,526 cells, with a uniform subsample of 120 cells per subtype from the PanSci mouse organismal aging atlas. Cells were sourced from 14 mouse organs/tissue, including brain, lung, heart, liver, kidney, muscle, stomach, duodenum, jejunum, ileum, colon, brown adipose tissue, inguinal adipose tissue, gonadal adipose tissue, across three different genetic backgrounds: C57BL/6, B6.129S7-Rag1tm1Mom/J, and B6.Cg-Prkdcscid/SzJ. The library for each organ/tissue was constructed using a refined version of the EasySci protocol. For testing, we also provide a downsampled demo dataset of 20,000 mouse white adipose cells from Emont et al, 2022, generated with the 10x 3' v3 Chromium kit, which is loaded automatically with the 'Load demo dataset' button.
   annotations:
-      - name: celltype.l1
+      - name: Main_cell_type
         file: mouse_pansci_l1.csv
-      - name: celltype.l2
-        file: mouse_pansci_l2.csv
+      - name: Sub_cell_type
+        file: mouse_pansci_l1.csv
