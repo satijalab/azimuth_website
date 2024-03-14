@@ -338,7 +338,7 @@
   unit: Cells
   nunit: 488,526
   species: Mouse
-  demodata: "[King et al., 2021](https://doi.org/10.1126/sciimmunol.abh3768)"
+  demodata: "[Emont et al., 2022.](https://www.nature.com/articles/s41586-022-04518-2)"
   dataref: |
       [Zhang et al., 2024](https://www.biorxiv.org/content/10.1101/2024.03.01.583001v1)
   details: |
