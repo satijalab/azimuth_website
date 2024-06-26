@@ -23,7 +23,7 @@
                         "factors": [
                             "obs/Main_cell_type",
                             "obs/Sub_cell_type", 
-                            "obs/Sub_cell_type_organ",
+                            "obs/Sub_cell_type_organ"
                         ]
                     }
                 },
