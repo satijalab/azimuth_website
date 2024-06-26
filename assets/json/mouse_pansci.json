@@ -21,23 +21,28 @@
                             }
                         },
                         "factors": [
-                            "obs/celltype.l1",
-                            "obs/celltype.l2"
+                            "obs/Main_cell_type",
+                            "obs/Sub_cell_type", 
+                            "obs/Sub_cell_type_organ",
                         ]
                     }
                 },
                 {
                     "type": "cell-sets",
                     "fileType": "anndata-cell-sets.zarr",
-                    "url": "https://azimuth-vitessce.s3.us-west-2.amazonaws.com/human_tonsil_v2/vitessce_ref.zarr",
+                    "url": "https://azimuth-vitessce.s3.us-west-2.amazonaws.com/mouse_pansci/vitessce_ref.zarr",
                     "options": [
                         {
-                            "groupName": "celltype.l1",
-                            "setName": "obs/celltype.l1"
+                            "groupName": "Main_cell_type",
+                            "setName": "obs/Main_cell_type"
                         },
                         {
-                            "groupName": "celltype.l2",
-                            "setName": "obs/celltype.l2"
+                            "groupName": "Sub_cell_type",
+                            "setName": "obs/Sub_cell_type"
+                        },
+                        {
+                            "groupName": "Sub_cell_type_organ",
+                            "setName": "obs/Sub_cell_type_organ"
                         }
                     ]
                 },
