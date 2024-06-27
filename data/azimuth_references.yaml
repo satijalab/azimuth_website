@@ -333,7 +333,7 @@
   image: mousepansciumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/mouse_pansci
   zenodo: TBD
-  vitessce: /references/mouse_pansi
+  vitessce: /references/mouse_pansci
   modalities: RNA
   unit: Cells
   nunit: 488,526
