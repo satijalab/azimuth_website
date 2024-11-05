@@ -332,7 +332,7 @@
   applink: https://app.azimuth.hubmapconsortium.org/app/mouse_pansci
   image: mousepansciumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/mouse_pansci
-  zenodo: TBD
+  zenodo: https://zenodo.org/records/14042645
   vitessce: /references/mouse_pansci
   modalities: RNA
   unit: Cells
