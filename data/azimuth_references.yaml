@@ -329,7 +329,7 @@
         file: tonsil_v2_l2.csv
 
 - title: Mouse - Pansci
-  applink: https://app.azimuth.hubmapconsortium.org/app/mouse_pansci
+  applink: https://app.azimuth.hubmapconsortium.org/app/mouse-pansci
   image: mousepansciumap.png
   snakemake: https://github.com/satijalab/azimuth-references/tree/master/mouse_pansci
   zenodo: https://zenodo.org/records/14042645
