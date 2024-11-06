@@ -1,0 +1,106 @@
+{
+    "version": "1.0.0",
+    "name": "Mouse Pansci",
+    "datasets": [
+        {
+            "uid": "mouse-pansci",
+            "name": "Mouse Pansci",
+            "files": [
+                {
+                    "type": "cells",
+                    "fileType": "anndata-cells.zarr",
+                    "url": "https://azimuth-vitessce.s3.us-west-2.amazonaws.com/mouse_pansci/vitessce_ref.zarr",
+                    "options": {
+                        "mappings": {
+                            "UMAP": {
+                                "key": "obsm/X_umap",
+                                "dims": [
+                                    0,
+                                    1
+                                ]
+                            }
+                        },
+                        "factors": [
+                            "obs/Main_cell_type",
+                            "obs/Sub_cell_type", 
+                            "obs/Sub_cell_type_organ"
+                        ]
+                    }
+                },
+                {
+                    "type": "cell-sets",
+                    "fileType": "anndata-cell-sets.zarr",
+                    "url": "https://azimuth-vitessce.s3.us-west-2.amazonaws.com/mouse_pansci/vitessce_ref.zarr",
+                    "options": [
+                        {
+                            "groupName": "Main_cell_type",
+                            "setName": "obs/Main_cell_type"
+                        },
+                        {
+                            "groupName": "Sub_cell_type",
+                            "setName": "obs/Sub_cell_type"
+                        },
+                        {
+                            "groupName": "Sub_cell_type_organ",
+                            "setName": "obs/Sub_cell_type_organ"
+                        }
+                    ]
+                },
+                {
+                    "type": "expression-matrix",
+                    "fileType": "anndata-expression-matrix.zarr",
+                    "url": "https://azimuth-vitessce.s3.us-west-2.amazonaws.com/mouse_pansci/vitessce_ref.zarr",
+                    "options": {
+                        "matrix": "X"
+                    }
+                }
+            ]
+        }
+    ],
+    "initStrategy": "auto",
+    "coordinationSpace": {
+        "embeddingType": {
+            "UMAP": "UMAP"
+        },
+        "embeddingCellRadius": {
+            "UMAP": 0.03
+        },
+        "embeddingCellSetLabelsVisible": {
+            "UMAP": true
+        },
+        "embeddingCellSetLabelSize": {
+            "UMAP": 10
+        }
+    },
+    "layout": [
+        {
+            "component": "cellSets",
+            "h": 3,
+            "w": 3,
+            "x": 9,
+            "y": 0,
+            "coordinationScopes": {}
+        },
+        {
+            "component": "genes",
+            "h": 3,
+            "w": 3,
+            "x": 9,
+            "y": 3,
+            "coordinationScopes": {}
+        },
+        {
+            "component": "scatterplot",
+            "h": 6,
+            "w": 9,
+            "x": 0,
+            "y": 0,
+            "coordinationScopes": {
+                "embeddingType": "UMAP",
+                "embeddingCellRadius": "UMAP",
+                "embeddingCellSetLabelsVisible": "UMAP",
+                "embeddingCellSetLabelSize": "UMAP"
+            }
+        }
+    ]
+}
