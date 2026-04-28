@@ -5,33 +5,31 @@ type: "static"
 {{< section >}}
 
 <p style='font-size:18px'>
-Azimuth is a web application that uses an annotated reference dataset to <b>automate the processing, analysis, and interpretation of a new single-cell RNA-seq or ATAC-seq experiment</b>. Azimuth leverages a <b>'reference-based mapping'</b> pipeline that inputs a counts matrix and performs normalization, visualization, cell annotation, and differential expression (biomarker discovery). All results can be explored within the app, and easily downloaded for additional downstream analysis.
+Azimuth is a toolkit for <b>reference-mapping, annotation, and interpretation of single-cell datasets</b>. We are introducing <b>Pan-Human Azimuth</b>, a neural-network classifier for human single-cell and single-nucleus RNA-seq experiments that maps cells into a consistent hierarchical cell ontology across tissues and technologies.
 </p>
 
-The development of Azimuth is led by the New York Genome Center Mapping Component as part of the [NIH Human Biomolecular Atlas Project (HuBMAP)](https://commonfund.nih.gov/hubmap). Fourteen molecular reference maps are currently available, with more coming soon.
+Pan-Human Azimuth replaces the previous model of choosing separate Azimuth web applications for individual tissue or organ references. Instead, users can map data with a single pan-human, organ-spanning reference trained across 23 human tissues and 380 high-resolution cell types. The classifier returns hierarchical annotations, confidence scores, and Azimuth embeddings that can be used for downstream analysis and quality control.
 
 {{< /section >}}
-
-{{< azimuth_references >}}
-
-{{< azimuth_atac_references >}}
-
-{{< azimuth_references_previous >}}
 
 {{< section >}}
 
-# General Workflow
-1. Upload a single-cell gene expression matrix, or click the `Load demo dataset` button.
-2. If desired, filter cells based on common QC metrics in the Preprocessing tab.
-3. Click the `Map cells to reference` button to launch analysis. A query dataset of 10,000 cells will typically finish processing in less than 1 minute.
-4. View results.
-    * "Cell Plots" tab: Visualize query cells and annotations projected onto the reference UMAP.
-    * "Feature Plots" tab: Explore the expression of individual features (genes) in your data, and automatically identify differentially expressed genes and biomarkers.
-5. If desired, download files for further analysis from the "Download Results" tab.
+# Pan-Human Azimuth
 
-# Run Azimuth Locally
-You can also bypass the web application and run Azimuth on your local computer, directly in R. The following vignette demonstrates how to download a reference and map new data (either in Seurat, h5, or h5ad format), in only a few commands. Check it out [here](https://satijalab.github.io/azimuth/articles/run_azimuth_tutorial.html).
+Pan-Human Azimuth is currently available through a free command-line API/workflow and can be accessed from both R and Python:
+
+* **R users** can run Pan-Human Azimuth directly on Seurat objects with the `CloudAzimuth` interface.
+* **Python users** can run the `panhumanpy` package locally, either from the command line with `annotate` or interactively from Python on AnnData objects.
+* For installation instructions, examples, and support links, see the [Pan-Human Azimuth quick start guide](https://satijalab.org/pan_human_azimuth/).
 
 {{< /section >}}
 
-{{< azimuth_faq >}}
+{{< section >}}
+
+# Existing tissue-specific references
+
+As part of this transition, we are no longer creating or updating tissue-specific Azimuth references, and we are no longer supporting the web applications for individual tissue-specific references.
+
+Users can still map new datasets to the existing Azimuth references in R. The Seurat vignette on [mapping and annotating query datasets](https://satijalab.org/seurat/articles/integration_mapping.html) describes this workflow.
+
+{{< /section >}}
